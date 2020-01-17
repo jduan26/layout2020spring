@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>News Story Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/lwo2pua.css">
+    <style>[v-cloak] { display: none; }</style>
+  </head>
+  <body>
+    <div id="news-template" v-cloak>
+      
+      <!-- Main Story -->
+      <h1 class="title">{{ story.title }}</h1>
+      <h2 class="subtitle">{{ story.subtitle }}</h2>
+      <div class="date">{{ story.date }}
+      <span v-for="tag in story.tags" class="tags">{{ tag }}</span></div>
+      
+      <figure>
+        <img class="img" v-bind:src="story.image.url">
+        <figcaption>
+          <div class="caption">{{ story.image.caption }}
+          <a v-bind:href="story.source.url">{{ story.source.name }}</a></div>
+        </figcaption>
+      </figure>
+
+      <article>
+        <div class="teaser"><span v-html="story.teaser"></span></div>
+        <span class="main" v-html="story.content"></span>
+      </article>
+
+      <!-- Related Stories-->
+      <aside class="related">
+      <h2 class="subtitle">Related Stories</h2>
+      <ul>
+        <li v-for="relatedStory in relatedStories">
+          <div v-on:click="load(relatedStory)">
+            {{ relatedStory.title }}
+            <img v-bind:src="relatedStory.image.url">
+          </div>
+        </li>
+      </ul>
+      </aside>
+
+      <!-- Useful debugging info, you can comment this section out when you don't need it. -->
+      <!-- <pre>The story object: {{ story | json }}</pre>
+      <pre>The relatedStories array: {{ relatedStories | json }}</pre> -->
+
+    </div>
+
+    <!-- Scripts here are what load the Vue library, and the actual story content. -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://abesiemsen.github.io/layout2020spring-resources/projects/news-story-template/data.js"></script>
+  </body>
+</html>

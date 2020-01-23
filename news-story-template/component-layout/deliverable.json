@@ -1,12 +1,12 @@
 {
-  entrypoints: [
+  "entrypoints": [
     {
-      name: "Original Fonts",
-      file: "index.html"
+      "name": "Original Fonts",
+      "file": "index.html"
     },
     {
-      name: "Now with Lust Script",
-      file: "index2.html"
+      "name": "Now with Lust Script",
+      "file": "index2.html"
     },
   ]
 }

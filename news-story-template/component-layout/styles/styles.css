@@ -1,0 +1,114 @@
+body{
+	margin:0;
+}
+
+
+header.component{
+	position:relative;
+	padding-top: 300px;
+}
+header .safe{
+	position:relative;
+	background-color: rgba(0, 0, 0, 0.65);
+	color:white;
+	width:100%;
+	max-width: 100%;
+	padding: 2em 0;
+}
+header .safe > div{
+	max-width:80%;
+	width:700px;
+	margin:auto;
+}
+header.component .safe > :first-child{
+	font-family: rocky, serif;
+	font-size: 28pt;
+	margin-bottom: .5em;
+}
+header.component img{
+	position:absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	width:100%;
+	height:100%;
+}
+
+.component{
+	font-family: freight-sans-pro, sans-serif;
+	font-size: 18pt;
+}
+.safe{
+	max-width: 80%;
+	margin: auto;
+	width: 700px;
+}
+section.component .safe > :first-child{
+	margin-top:1em;
+}
+.caption{
+	font-size: 14pt;
+}
+.date{
+	margin:1em auto;
+	font-weight: 600;
+}
+.tags{
+	margin-right:1em;
+	padding:0.2em 0.5em;
+	background-color: black;
+	color:white;
+	font-size: 14pt;
+}
+.tags:hover{
+	background-color: #4f46eb;
+	transition:0.2s;
+}
+.teaser{
+	font-weight: 600;
+}
+
+.line{
+	background-color: black;
+	width:100%;
+	margin:1em 0;
+	height:2px;
+}
+
+footer.component{
+	font-size: 14pt;
+}
+footer.component aside > :first-child{
+	font-family: rocky, serif;
+	font-size: 28pt;
+	margin-bottom: .5em;
+}
+footer.component img{
+	width:100%;
+	height:200px;
+	object-fit: cover;
+	margin-top:0.5em;
+}
+footer.component .related ul{
+	padding:0;
+}
+footer.component .related li{
+	display:inline-flex;
+	max-width:100%;
+	margin-right: 1em;
+	margin-top: 1em;
+}
+footer.component .related li:hover{
+	color:#4f46eb;
+	transition: 0.2s;
+}
+@media (min-width: 840px){
+	footer.component .related li{
+		margin-top:0;
+		display:inline-flex;
+		max-width:33%;
+		margin-right: 1em;
+		object-position: center;
+	}
+}
+

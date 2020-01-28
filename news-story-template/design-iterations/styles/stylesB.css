@@ -1,0 +1,88 @@
+body{
+	margin:0;
+	background-color:black;
+}
+.line{
+	background-color: white;
+	width:100%;
+	margin:1em 0;
+	height:2px;
+}
+
+.component{
+	font-family: work-sans, sans-serif;
+	font-size: 18pt;
+	color:white;
+	width:50%;
+	margin:auto;
+	margin-top:5em;
+}
+@media(max-width: 840px){
+
+	.component{
+		width:70%;
+	}
+}
+
+header.component img{
+	position:fixed;
+	left:0;
+	top:0;
+	width:100vw;
+	height:100vh;
+	object-fit: cover;
+	z-index: -1;
+	opacity:0.5;
+}
+header.component{
+	margin-top:20em;
+	width:80%;
+}
+header.component .safe > :first-child{
+	font-family: lust-script-display, serif;
+	letter-spacing: 0.5pt;
+	text-align: center;
+	font-size:30pt;
+	margin-bottom: 0.5em;
+}
+header.component .safe > :last-child{
+	width:63%;
+	margin:auto;
+}
+@media(max-width: 840px){
+	header.component{
+		margin-top:5em;
+	}
+	header.component .safe > :last-child{
+		width:88%;
+		margin-top:2em;
+	}
+}
+
+section.component .safe div{
+	margin-top: 1em;
+}
+.date{
+	font-weight: bold;
+}
+.teaser{
+	font-weight: bold;
+}
+
+footer.component .related ul{
+	list-style: none;
+	padding:0;
+}
+footer.component .related li{
+	margin-bottom:1em;
+}
+footer.component .related li p{
+	background-color: rgba(0,0,0,0.6);
+	padding:0.5em;
+	margin-bottom: 0;
+}
+footer.component .related li img{
+	width:100%;
+	height:200px;
+	object-fit: cover;
+}

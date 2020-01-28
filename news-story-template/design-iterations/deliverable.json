@@ -1,0 +1,16 @@
+{
+  "entrypoints": [
+    {
+      "name": "Standard",
+      "file": "original.html"
+    },
+    {
+      "name": "SideImage",
+      "file": "indexA.html"
+    },
+    {
+      "name": "FullImage",
+      "file": "indexB.html"
+    }
+  ]
+}

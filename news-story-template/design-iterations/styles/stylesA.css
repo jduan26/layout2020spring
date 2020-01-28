@@ -8,6 +8,7 @@ header.component{
 	background-color: #faedc0;
 	margin:0;
 	padding-left: 10%;
+	width:100%;
 }
 header.component .safe{
 	padding-top:4em;

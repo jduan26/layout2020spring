@@ -129,5 +129,6 @@ footer.component .related li img{
 	}
 	footer.component .related li img{
 		height:100%;
+		overflow: hidden;
 	}
 }

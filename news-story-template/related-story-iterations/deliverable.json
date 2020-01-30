@@ -1,0 +1,16 @@
+{
+  "entrypoints": [
+    {
+      "name": "Standard",
+      "file": "indexB copy.html"
+    },
+    {
+      "name": "SingleHorizontal",
+      "file": "indexC.html"
+    },
+    {
+      "name": "SideScroll",
+      "file": "indexD.html"
+    }
+  ]
+}

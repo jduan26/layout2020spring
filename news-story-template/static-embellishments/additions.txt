@@ -1,0 +1,5 @@
+- separate related stories (one for general and one for stories that share the same tags)
+- tags and things
+- social media
+- author
+- make another version of the sit that doesn't use the image as the background

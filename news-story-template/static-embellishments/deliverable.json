@@ -1,0 +1,12 @@
+{
+  "entrypoints": [
+    {
+      "name": "Normal",
+      "file": "original.html"
+    },
+    {
+      "name": "Full Bg",
+      "file": "indexBgimg.html"
+    }
+  ]
+}

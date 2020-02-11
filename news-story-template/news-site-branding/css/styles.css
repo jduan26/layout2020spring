@@ -1,0 +1,9 @@
+body{
+	width:70%;
+}
+img{
+	width:100%;
+}
+div{
+	display: inline-flex;
+}

@@ -1,0 +1,12 @@
+{
+  "entrypoints": [
+    {
+      "name": "Desktop",
+      "file": "index.html"
+    },
+    {
+      "name": "Mobile/Tablet",
+      "file": "indexMobile.html"
+    }
+  ]
+}

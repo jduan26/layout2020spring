@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>News Story Template V4</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles/styles.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.typekit.net/lwo2pua.css">
+	<style>[v-cloak] { display: none; }</style>
+
+    <script src="https://kit.fontawesome.com/c86ec7c36c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div id="top">
+        <div>
+        <div><i class="fa fa-bars" aria-hidden="true" v-on:click="toggleTheHamburgerMenu()"></i></div>
+        <div><a href="#">Daily Snail</a></div>
+        </div>
+        <nav v-show="menuIsOpen">
+            <ul class="mainnav">
+                <li><a>News</a>
+                    <ul class="subnav">
+                        <li><a href=#>General</a></li>
+                        <li><a href=#>Politics</a></li>
+                        <li><a href=#>International</a></li>
+                        <li><a href=#>Environment</a></li>
+                        <li><a href=#>Science</a></li>
+                        <li><a href=#>Technology</a></li>
+                        <li><a href=#>Health</a></li>
+                    </ul>
+                </li>
+
+                <li><a>Business</a>
+                    <ul class="subnav">
+                        <li><a href=#>Economics</a></li>
+                        <li><a href=#>Energy</a></li>
+                        <li><a href=#>Market</a></li>
+                        <li><a href=#>Media</a></li>
+                        <!-- <li><a href=#>Entreprenuership</a></li> -->
+                    </ul>
+                </li>
+
+                <li><a>Sports</a>
+                    <ul class="subnav">
+                        <li><a href=#>Soccer</a></li>
+                        <li><a href=#>Basketball</a></li>
+                        <li><a href=#>Football</a></li>
+                        <li><a href=#>Tennis</a></li>
+                        <li><a href=#>Hockey</a></li>
+                    </ul>
+                </li>
+
+                <li><a>Culture</a>
+                    <ul class="subnav">
+                        <li><a href=#>Art & Design</a></li>
+                        <li><a href=#>Film</a></li>
+                        <li><a href=#>Music</a></li>
+                        <li><a href=#>Performance Arts</a></li>
+                        <li><a href=#>Pop Culture</a></li>
+                    </ul>
+                </li>
+
+                <li><a>Opinion</a>
+                    <ul class="subnav">
+                        <li><a href=#>Columnists</a></li>
+                        <li><a href=#>Editorials</a></li>
+                        <li><a href=#>Letters</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+
+	<div id="news-template" v-cloak>
+    
+    <img id="bg" v-bind:src="story.image.url"> 
+
+    <i id="arrow" class="fa fa-chevron-down" aria-hidden="true"></i>
+      <!-- Main Story -->
+
+<!--     <div id="gradient"> -->
+    <div id="cover">
+    <header class="component">
+    	<div class="safe">
+	    	<div>{{ story.title }}</div>
+		    <div>{{ story.subtitle }}</div>
+    	</div>
+
+  	</header> 
+    </div>
+    
+    <section class="component">
+    	<div class="safe">
+	    	<div class="caption">{{ story.image.caption }}
+	        <a class="source" v-bind:href="story.source.url" target="_blank">{{ story.source.name }}</a></div>
+	    	<div class="date">{{ story.date }}</div>
+		    <div><span v-for="tag in story.tags" class="tags">{{ tag }}</span></div>
+
+		    <div class="line"></div>
+
+		</div>
+    </section>
+
+
+    <section class="component">
+    	<div class="safe">
+    		<span class="teaser" v-html="story.teaser"></span>
+        	<span v-html="story.content"></span>
+    	</div>
+    </section>
+
+    <!-- Related Stories-->
+    <footer class="component">
+    	<div class="safe">
+
+    		<div class="line"></div>
+
+            <div class="author">
+                <div>
+                    <img src="assets/default.png">
+                    <p>Written by [Author]</p>
+                </div>
+                <p>Author description goes here</p>
+            </div>
+
+            <div class="line"></div>
+
+<!--             <div>
+                <a class="source" v-bind:href="story.source.url">{{ story.source.name }}</a></div>
+                <div style="margin-top: 1em;"><span v-for="tag in story.tags" class="tags">{{ tag }}</span></div>
+            </div> -->
+
+    		<aside class="related">
+		        <h2>Related Stories</h2>
+		        <ul>
+		        	<li v-for="relatedStory in storiesWithSameTag">
+		        	<div v-on:click="load(relatedStory)">
+		            <p>{{ relatedStory.title }}</p>
+		            <img v-bind:src="relatedStory.image.url">
+		        	</div>
+		        	</li>
+		      	</ul>
+                <!-- <i id="icon" class="fa fa-caret-right" aria-hidden="true"></i> -->
+	    	</aside>
+
+            <aside class="related">
+                <h2>More From This Site</h2>   
+                <ul>
+                    <li v-for="relatedStory in relatedStories">
+                    <div v-on:click="load(relatedStory)">
+                    <p>{{ relatedStory.title }}</p>
+                    <img v-bind:src="relatedStory.image.url">
+                    </div>
+                    </li>
+                </ul>
+                <i id="icon" class="fa fa-caret-right" aria-hidden="true"></i>
+            </aside>
+    	</div>
+    </footer>
+
+      <!-- Useful debugging info, you can comment this section out when you don't need it. -->
+      <!-- <pre>The story object: {{ story | json }}</pre>
+      <pre>The relatedStories array: {{ relatedStories | json }}</pre> -->
+
+    </div>
+
+    <!-- Scripts here are what load the Vue library, and the actual story content. -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://abesiemsen.github.io/layout2020spring-resources/projects/news-story-template/data.js"></script>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+          if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
+            document.getElementById("arrow").style.opacity = "0.0";
+            document.getElementById("top").classList.add("desktop")
+          }
+          if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) {
+            document.getElementById("bg").style.opacity = "0.3";
+            document.getElementById("cover").style.backgroundColor = "rgba(0,0,0,0)";
+          } 
+          else {
+            document.getElementById("bg").style.opacity = "1.0";
+            document.getElementById("arrow").style.opacity = "1.0";
+            document.getElementById("cover").style.backgroundColor = "rgba(0,0,0,0.7)";
+            document.getElementById("top").classList.remove("desktop")
+          }
+        }
+    </script>
+
+    <script>
+      new Vue({
+        el: '#top',
+        data: {
+          menuIsOpen: false
+        },
+        methods: {
+          toggleTheHamburgerMenu: function() {
+            this.menuIsOpen = !this.menuIsOpen
+          }
+        }
+      })
+    </script>
+
+
+
+</body>
+
+</html>

@@ -15,12 +15,12 @@
 
     <div id="top">
         <div>
-        <div><i class="fa fa-bars" aria-hidden="true" v-on:click="toggleTheHamburgerMenu()"></i></div>
+        <div><i class="fa fa-bars" aria-hidden="true" v-on:click="toggleTheHamburgerMenu()" v-bind:class="{ 'menu-is-open': menuIsOpen }"></i></div>
         <div><a href="#">Daily Snail</a></div>
         </div>
-        <nav v-show="menuIsOpen">
-            <ul class="mainnav">
-                <li><a>News</a>
+        <nav >
+            <ul class="mainnav" v-bind:class="{ 'menu-is-open': menuIsOpen }">
+                <li class="expandable"><a>News</a>
                     <ul class="subnav">
                         <li><a href=#>General</a></li>
                         <li><a href=#>Politics</a></li>
@@ -32,7 +32,7 @@
                     </ul>
                 </li>
 
-                <li><a>Business</a>
+                <li class="expandable"><a>Business</a>
                     <ul class="subnav">
                         <li><a href=#>Economics</a></li>
                         <li><a href=#>Energy</a></li>
@@ -42,7 +42,7 @@
                     </ul>
                 </li>
 
-                <li><a>Sports</a>
+                <li class="expandable"><a>Sports</a>
                     <ul class="subnav">
                         <li><a href=#>Soccer</a></li>
                         <li><a href=#>Basketball</a></li>
@@ -52,7 +52,7 @@
                     </ul>
                 </li>
 
-                <li><a>Culture</a>
+                <li class="expandable"><a>Culture</a>
                     <ul class="subnav">
                         <li><a href=#>Art & Design</a></li>
                         <li><a href=#>Film</a></li>
@@ -62,7 +62,7 @@
                     </ul>
                 </li>
 
-                <li><a>Opinion</a>
+                <li class="expandable"><a>Opinion</a>
                     <ul class="subnav">
                         <li><a href=#>Columnists</a></li>
                         <li><a href=#>Editorials</a></li>
@@ -71,14 +71,13 @@
                 </li>
             </ul>
         </nav>
+        <i id="arrow" class="fa fa-chevron-down" aria-hidden="true" v-bind:class="{ 'menu-is-open': menuIsOpen }"></i>
     </div>
     
 
 	<div id="news-template" v-cloak>
     
     <img id="bg" v-bind:src="story.image.url"> 
-
-    <i id="arrow" class="fa fa-chevron-down" aria-hidden="true"></i>
       <!-- Main Story -->
 
 <!--     <div id="gradient"> -->
@@ -202,6 +201,55 @@
           }
         }
       })
+    </script>
+
+    <script>
+      
+      var expandables = document.getElementsByClassName('expandable');
+      var expandedYes = document.getElementsByClassName('expanded');
+      var mainMenu = document.getElementsByClassName('mainnav menu-is-open');
+      
+      for (let expandable of expandables) {
+        let triggerElement = expandable.querySelector('a');
+        triggerElement.addEventListener('click', function(event) {
+          event.preventDefault();
+          closeAllExcept(expandable);
+          expandable.classList.toggle('expanded');
+          checkAndMinimize();
+        })
+      }
+
+      
+      function closeAllExcept(clickedExpandable) {
+        for (let expandable of expandables) {
+          if (expandable !== clickedExpandable) {
+            expandable.classList.remove('expanded');
+          }
+        }
+      }
+      function minimize(openedExpandable){
+        if(openedExpandable){
+            for(let expandable of expandables){
+                expandable.classList.add('other');
+            }
+        }
+        else{
+            for(let expandable of expandables){
+                expandable.classList.remove('other');
+            }
+        }
+      }
+      function checkAndMinimize() {
+        var isExpanded = false;
+        for (let expandable of expandables) {
+            expandable.classList.remove('other');
+            if(expandable.classList.contains('expanded')){
+                isExpanded = true;
+            }
+        }
+        minimize(isExpanded);
+      }
+
     </script>
 
 

@@ -22,9 +22,6 @@ body{
 	top:-2em !important;
 	transition:0.2s;
 }
-#bg{transition:0.2s;}
-#arrow{transition:0.2s;}
-#cover{transition:0.2s;}
 a{
 	text-decoration: none;
 	color:white;
@@ -46,12 +43,6 @@ a:hover{
 	padding:0 1em;
 	position:relative;
 }
-.mainnav li:hover .subnav{
-	display:block;
-}
-.mainnav li:hover > :first-child{
-	color:#FFD700;
-}
 .subnav{
 	position:absolute;
 	padding:0.5em 1em;
@@ -63,18 +54,31 @@ a:hover{
 	display:block;
 	padding:0;
 }
-#top .fa-bars{
+.mainnav li:hover .subnav{
+	display:block;
+}
+.mainnav li:hover > :first-child{
+	color:#FFD700;
+}
+.fa.fa-bars{
 	display:none;
 	color:white;
-}
-#top .fa-bars:active{
-	color:#FFD700;
 }
 
 
 @media(max-width: 420px){
-	#top > nav{
-		transition: 0.2s
+	.mainnav{
+		max-height:0;
+		visibility: hidden;
+		opacity: 0;
+      	transition: opacity 0.3s, visibility 0.3s, transform 0.3s, max-height 0.3s;
+      	transform: translateY(-5em);
+	}
+	.mainnav.menu-is-open{
+		max-height: 100vh;
+		opacity: 1;
+	    visibility: visible;
+	    transform: translateY(0);
 	}
 	#top{
 		font-size: 20pt;
@@ -87,8 +91,15 @@ a:hover{
 		padding: 0.5em 1em;
 		box-sizing: border-box;
 	}
-	#top .fa-bars{
+	.fa.fa-bars{
 		display: inline;
+	}
+	.fa-bars.menu-is-open{
+		color:#FFD700;
+		transition: 0.2s;
+	}
+	#arrow.menu-is-open{
+		opacity: 0;
 	}
 	.mainnav{
 		display:block;
@@ -96,9 +107,24 @@ a:hover{
 	.desktop{
 		top:0 !important;
 	}
-	.mainnav li{
-		padding:2em 1em;
+	.mainnav > .expandable{
+		padding:1.5em 1em;
 		border-top: 2px solid white;
+		transition: padding 0.2s;
+	}
+	.mainnav > .expandable.other{
+		padding: 0.5em 1em;
+		transition: padding 0.2s;
+	}
+	.expandable.expanded > ul{
+		display: block;
+		position: static;
+	}
+	.expandable.expanded > ul > li{
+		padding:0.5em 0;
+	}
+	.expandable.expanded > a{
+		color:#FFD700;
 	}
 }
 
@@ -133,6 +159,7 @@ a:hover{
 	object-fit: cover;
 	z-index: -1;
 	opacity:1.0;
+	transition:0.2s;
 }
 #gradient{
 	background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.7) 8%);
@@ -145,12 +172,14 @@ a:hover{
 	bottom:0%;
 	font-size:35pt;
 	opacity:1.0;
+	transition:0.2s;
 }
 #cover{
 	background-color:rgba(0,0,0,0.7);
 	width:100%;
 	padding: 3em 0;
 	margin-top:34em;
+	transition:0.2s;
 }
 header.component{
 	width:80%;

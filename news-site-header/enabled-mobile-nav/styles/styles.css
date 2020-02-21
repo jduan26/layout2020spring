@@ -107,6 +107,9 @@ a:hover{
 	.desktop{
 		top:0 !important;
 	}
+	.mainnav li:hover .subnav{
+		display:none;
+	}
 	.mainnav > .expandable{
 		padding:1.5em 1em;
 		border-top: 2px solid white;

@@ -16,7 +16,10 @@
     <div id="top">
         <div>
         <div><i class="fa fa-bars" aria-hidden="true" v-on:click="toggleTheHamburgerMenu()" v-bind:class="{ 'menu-is-open': menuIsOpen }"></i></div>
-        <div><a href="#">Daily Frame</a></div>
+            <div>
+                <div><a href="#">DailyFrame</a></div>
+                <div class="signin"><a href="#">Sign In</a></div>
+            </div>
         </div>
         <nav >
             <ul class="mainnav" v-bind:class="{ 'menu-is-open': menuIsOpen }">
@@ -71,11 +74,12 @@
                 </li>
             </ul>
         </nav>
-        <i id="arrow" class="fa fa-chevron-down" aria-hidden="true" v-bind:class="{ 'menu-is-open': menuIsOpen }"></i>
     </div>
     
 
 	<div id="news-template" v-cloak>
+
+    <i id="arrow" class="fa fa-chevron-down" aria-hidden="true" v-bind:class="{ 'menu-is-open': menuIsOpen }"></i>
     
     <img id="bg" v-bind:src="story.image.url"> 
       <!-- Main Story -->
@@ -203,6 +207,20 @@
       })
     </script>
 
+<!--     <script>
+      Vue({
+        el: '#top',
+        data: {
+          signInIsOpen: false
+        },
+        methods: {
+          toggleSignInMenu: function() {
+            this.signInIsOpen = !this.signInIsOpen
+          }
+        }
+      })
+    </script>
+ -->
     <script>
       
       var expandables = document.getElementsByClassName('expandable');

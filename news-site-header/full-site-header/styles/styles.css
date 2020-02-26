@@ -17,10 +17,16 @@ body{
 	top:0;
 	font-family: xants, sans-serif;
 	font-size:40pt;
+	box-sizing: border-box;
+}
+#top > div > :last-child{
+	display: inline-flex;
+	justify-content: space-between;
+	width:100%;
 }
 
 .desktop{
-	top:-2em !important;
+	top:-1.5em !important;
 	transition:0.2s;
 }
 a{
@@ -29,11 +35,22 @@ a{
 }
 a:hover{
 	color:#FFD700;
+	transition: 0.2s;
 }
 nav{
 	font-size: 25pt;
 }
 
+.signin a{
+	font-family: work-sans, sans-serif;
+	font-size: 18pt;
+	padding:0.2em 1em;
+	margin:0 1em;
+	border: 2px solid white;
+}
+.signin a:hover{
+	border: 2px solid gold;
+}
 .mainnav{
 	margin:0;
 	padding:0;
@@ -97,6 +114,22 @@ nav{
 		width:100%;
 		padding: 0.5em 1em;
 		box-sizing: border-box;
+	}
+	#top > div > :last-child{
+		justify-content: flex-end;
+	}
+	#top > div > :last-child > :first-child{
+		flex-grow: 1;
+		text-align: center;
+	}
+	.signin{
+		display: flex;
+	}
+	.signin a{
+		font-size: 12pt;
+		align-self: center;
+		margin:0;
+		padding:0.2em 0.4em;
 	}
 	.fa.fa-bars{
 		display: inline;
@@ -323,7 +356,7 @@ footer.component .related li p{
 	padding:0.5em;
 	margin-bottom: 0;
 }
-footer.component .related li p:hover{
+footer.component .related li:hover p{
 	background-color: white;
 	color:black;
 	transition:0.2s;

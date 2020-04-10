@@ -17,7 +17,7 @@
 	<div class="uk-visible@l uk-padding uk-background-secondary uk-light" 
 	style="position:fixed;width:250px;height:100vh;overflow-y:scroll;box-sizing:border-box;top:50">
 		<ul class="uk-nav uk-nav-primary uk-margin-small-top" uk-nav>
-			<li><a href="index.html">Introduction</a></li>
+			<li><a href="index.html">Overview</a></li>
 			<li class="uk-parent">
 				<a href="" target="_blank">Units</a>
 				<ul class="uk-nav-sub" uk-nav="multiple:true">
@@ -117,7 +117,32 @@
 
 		<h1>Gameplay</h1>
 
-		<p>The player's objective in <span class="uk-text-italic">Dual Strike</span> is to defeat the enemy army with their own army. Except in some campaign missions with special objectives, there are two ways to defeat an opponent: destroy all of the enemy's units or capture their headquarters. The battle system is turn-based tactics. Two to four armies, each headed by one or two commanding officers (COs), take turns building and commanding units on grid-based maps. Every turn, units, which consist of ground, sea and air units, can move across the different types of terrain and attack enemy units or perform other special actions, like capturing bases or resupplying friendly units.</p>
+		<p>The player's objective in <span class="uk-text-italic">Dual Strike</span> is to defeat the enemy army with their own army. Except in some campaign missions with special objectives, there are two ways to defeat an opponent: destroy all of the enemy's units or capture their headquarters. Gameplay is turn-based. Two to four armies, each headed by one or two commanding officers (COs), take turns building and commanding units on grid-based maps. When one army is finished issuing commands to its units, it ends its turn, and the next army moves. To build units, funds (the game's currency) are used. Funds are acquired at a rate of 1000g per allied property per turn. Different CO's (Commanding Officers) have different effects for different units.</p>
+
+		<h3>Commands</h3>
+		<p>Every turn, units, which consist of ground, sea and air units, can move across the different types of terrain and attack enemy units or perform other actions, such as capturing a base or resupplying friendly units. To command a unit, click on it. A list of commands are as follows:
+		<ul uk-accordion="multiple:true">
+			<li class="uk-padding uk-padding-remove-vertical">
+		        <a class="uk-accordion-title" href="#">Move</a>
+		        <div class="uk-accordion-content">
+		            <p>Moves a unit. The range of movement and consumption of fuel depends on the unit and the terrain that is being moved over.</p>
+		        </div></li>
+		    <li class="uk-padding uk-padding-remove-vertical">
+		        <a class="uk-accordion-title" href="#">Wait</a>
+		        <div class="uk-accordion-content">
+		            <p>The unit does nothing, and ends its turn. In the event where unit does not want to be moved, a command is not necessary.</p>
+		        </div></li>
+		    <li class="uk-padding uk-padding-remove-vertical">
+		        <a class="uk-accordion-title" href="#">Fire</a>
+		        <div class="uk-accordion-content">
+		            <p>If in range to attack the enemy, this command will appear. Red squares will show over enemy units that can be attacked. By moving the cursor over an attackable unit, a percentage will be shown. A rating higher than 100% indicates a one-hit-kill. 55% will inflict either a 5HP or 6HP damage to the enemy unit, 42% will most likely do 4 damage, etc.</p>
+		        </div></li>
+		    <li class="uk-padding uk-padding-remove-vertical">
+		        <a class="uk-accordion-title" href="#">Capture</a>
+		        <div class="uk-accordion-content">
+		            <p>This command is exclusive to Infantry and Mechs. This captures buildings that an infantry or mech is standing on top of at a rate of the unit's HP (hit points). All buildings have 20 capture points to start, and capturing a building reduces it's capture points. When it becomes 0, the building is captured.</p>
+		        </div></li>
+		</ul>
 
 		<h3>Units</h3>
 
@@ -127,15 +152,12 @@
 
 		<h3>Combat</h3>
 
-		<p> All units are limited in the types of units they can attack. What dictates a unit's ability to attack different targets are its primary and secondary weapons. For example, the <a href="" class="uk-text-primary">Mech</a> unit has a bazooka that can only be fired at land vehicles, but are more powerful for that purpose than their secondary weapons, machine guns, which Mechs will use against other Mechs, Infantry, and helicopters.</p>
+		<p> All units are limited in the types of units they can attack. What dictates a unit's ability to attack different targets are its primary and secondary weapons. For example, the <a href="" class="uk-text-primary">Mech</a> unit has a bazooka that can only be fired at land vehicles, but are more powerful for that purpose than their secondary weapons, machine guns, which Mechs will use against other Mechs, Infantry, and helicopters. Attacking consumes ammo; if ammo runs out, an unit cannot fire unless it has a secondary weapon (which usually has unlimited ammo) and is applicable to the current target. Against infantry units, secondary weapons will be used on default.</p>
 
 		<p>When entering an combat sequence, the initiating unit will attack first, and the target unit will receive damage. If the target unit is capapble, it will then counterattack. The counterattack is limited by the damage received in the initial attack. Units that can attack do so either directly or indirectly. Direct attacks are made on adjacent enemy units, and can be done before or after moving, but the attacking unit will be susceptible to damage from a follow-up counterattack. Indirect attacks are made on units within a given range, and do not receive counterattacks. However, in order for an indirect attack to be made the attacking unit must not have moved on its turn.</p> 
 
 		<p>The amount of damage done by a unit to an enemy unit in combat, comes down to a number of factors: the number of hit points the attacker has, whether they can use their main weapon (if not, they either cannot, or will use their secondary weapon instead), the type of unit the attacker and the defender are, and the terrain the enemy unit is on; by contrast, if the enemy unit is directly attacked, the same factors determine the damage done when they counter-attack the attacking unit. The majority of units have main weapons with a limited supply of ammunition, with the amount of ammo depending on the type of unit. Units with secondary weapons will resort to these when their primary weapon's ammunition runs out until they are resupplied.</p>
 
-		<h3>Capturing</h3>
-
-		<p>
 
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus arcu commodo, viverra ex et, ornare risus. Vestibulum blandit sapien eget quam ullamcorper tincidunt. Ut varius elit at lectus condimentum aliquam. Fusce mi nisl, pretium a tempor non, tincidunt a dui. Pellentesque et leo varius, pretium lectus quis, venenatis augue. Nunc viverra est quis nunc vulputate, ac accumsan magna finibus. Nullam nec aliquam est, ut pellentesque ex. Phasellus ut tristique nunc, nec rutrum diam.
 

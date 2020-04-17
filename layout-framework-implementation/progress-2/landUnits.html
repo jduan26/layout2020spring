@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advance Wars - Land Units</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+</head>
+<body>
+	<a name="intro"></a>
+	<div class="uk-background-primary" uk-sticky
+	style="height:50px">
+		<img data-src="assets/advance_wars_logo.png" width="250px" height="" alt="" uk-img class="uk-padding-small">
+	</div>
+
+	<div class="uk-visible@l uk-padding uk-background-secondary uk-light" 
+	style="position:fixed;width:250px;height:100vh;overflow-y:scroll;box-sizing:border-box;top:50">
+		<ul class="uk-nav uk-nav-primary uk-margin-small-top" uk-nav>
+			<li class="uk-parent">
+				<a href="#">Overview</a>
+				<ul class="uk-nav-sub" uk-nav>
+					<li><a href="index.html#intro" class="uk-nav-header">Introduction</a></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Gameplay</a>
+						<ul>
+							<li><a href="index.html#commands">Commands</a></li>
+							<li><a href="index.html#units">Units</a></li>
+							<li><a href="index.html#combat">Combat</a></li>
+							<li><a href="index.html#COPower">COs/CO Powers</a>
+							<li><a href="index.html#dual">Dual Front</a>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="uk-parent uk-open">
+				<a href="">Units</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent uk-open">
+						<a href="#" class="uk-nav-header">Land</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#infantry">Infantry</a></li>
+							<li><a href="#mech">Mech</a></li>
+							<li><a href="#">Recon</a></li>
+							<li><a href="#">APC</a></li>
+							<li><a href="#">Tank</a></li>
+							<li><a href="#">Md. Tank</a></li>
+							<li><a href="#">Anti-Air</a></li>
+							<li><a href="#">Artillery</a></li>
+							<li><a href="#">Rocket</a></li>
+							<li><a href="#">Missile</a></li>
+							<li><a href="#">Neotank</a></li>
+							<li><a href="#">Megatank</a></li>
+							<li><a href="#">Piperunner</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Air</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#">T-Copter</a></li>
+							<li><a href="#">B-Copter</a></li>
+							<li><a href="#">Fighter</a></li>
+							<li><a href="#">Bomber</a></li>
+							<li><a href="#">Stealth</a></li>
+							<li><a href="#">Black Bomb</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Sea</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#">Lander</a></li>
+							<li><a href="#">Cruiser</a></li>
+							<li><a href="#">Battleship</a></li>
+							<li><a href="#">Sub</a></li>
+							<li><a href="#">Carrier</a></li>
+							<li><a href="#">Black Boat</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="uk-parent">
+				<a href="">COs</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Orange Star</a>
+						<ul class="uk-nav-sub">
+							<li><a href="COs.html#andy">Andy</a></li>
+							<li><a href="COs.html#max">Max</a></li>
+							<li><a href="COs.html#sami">Sami</a></li>
+							<li><a href="#">Jake</a></li>
+							<li><a href="#">Rachel</a></li>
+							<li><a href="#">Nell</a></li>
+					</ul></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Blue Moon</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#">Olaf</a></li>
+							<li><a href="#">Grit</a></li>
+							<li><a href="#">Colin</a></li>
+							<li><a href="#">Sasha</a></li>
+					</ul></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Green Earth</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#">Drake</a></li>
+							<li><a href="#">Eagle</a></li>
+							<li><a href="#">Jess</a></li>
+							<li><a href="#">Javier</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Yellow Comet</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#">Kanbei</a></li>
+							<li><a href="#">Sonja</a></li>
+							<li><a href="#">Sensei</a></li>
+							<li><a href="#">Grimm</a></li>
+					</ul></li>
+				</ul>
+			</li>
+			<li class="uk-parent">
+				<a href="">Map Elements</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li><a href="map.html" class="uk-nav-header">Fog of War</a></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Terrain</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#">Roads & Bridges</a></li>
+							<li><a href="#">Plains</a></li>
+							<li><a href="#">Properties</a></li>
+							<li><a href="#">HQ</a></li>
+							<li><a href="#">Woods</a></li>
+							<li><a href="#">Mountains</a></li>
+							<li><a href="#">River</a></li>
+							<li><a href="#">Shoal</a></li>
+							<li><a href="#">Sea</a></li>
+							<li><a href="#">Reef</a></li>
+							<li><a href="#">Pipes & Seams</a></li>
+					</ul></li>
+					<li class="uk-nav-sub">
+						<a href="map.html#weather" class="uk-nav-header">Weather</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div class="uk-container uk-container-xsmall uk-margin-medium-top uk-margin-xlarge-bottom">
+
+		<h1 class="uk-heading-small">Land Units</h1>
+		<hr>
+
+		<a name="infantry"></a>
+		<div class="uk-background-muted uk-margin-large uk-margin-remove-horizontal uk-margin-remove-bottom">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Infantry</h3>
+			</div>
+			<div class="uk-padding-small">
+				<p><img data-src="assets/units/Infantry.png" style="image-rendering:crisp-edges;" width="200" class="uk-align-right@s uk-align-center" uk-img>
+				An Infantry's primary function lies in the fact that it is the cheapest unit capable of capturing properties on the map.</p>
+				<p>The secondary function of infantry is to block your more valuable units from being attacked. While weak defensively, infantry can usually take at least one attack from most direct combat units before being destroyed. This prevents the opponent from hitting more valuable units in the process, and also potentially leaves them open to a counterattack from your defended units.</p>
+				<p>Infantry are also effective at blocking certain tiles that you do not want your opponent to take control off, such as cities or other tiles with high defense ratings. Infantry can block air units from flying over them as well.</p>
+
+				<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Stats</a></li>
+					<li><a href="#">Matchups</a></li>
+					<li><a href="#">Notes</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin uk-background-default">
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<tbody>
+								<tr>
+									<td class="uk-table-expand">Cost</td>
+									<td>1000</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Movement</td>
+									<td>3 (Foot)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Fuel</td>
+									<td>99</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Range</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Primary Weapon</td>
+									<td>None</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Ammo</td>
+									<td>N/A</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Secondary Weapon</td>
+									<td>Machine Gun</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Vision</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Special Commands</td>
+									<td>Capture</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<thead>
+						        <tr>
+						            <th class="uk-table-expand">Targetable Unit</th>
+						            <th>Damage Given</th>
+						            <th>Damage Taken</th>
+						        </tr>
+						    </thead>
+							<tbody>
+								<tr>
+									<td>Infantry</td>
+									<td>55</td>
+									<td>55</td>
+								</tr>
+								<tr>
+									<td>Mech</td>
+									<td>45</td>
+									<td>65</td>
+								</tr>
+								<tr>
+									<td>Recon</td>
+									<td>12</td>
+									<td>70</td>
+								</tr>
+								<tr>
+									<td>APC</td>
+									<td>14</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>Tank</td>
+									<td>5</td>
+									<td>75</td>
+								</tr>
+								<tr>
+									<td>Medium Tank</td>
+									<td>1</td>
+									<td>105</td>
+								</tr>
+								<tr>
+									<td>Anti-Air</td>
+									<td>5</td>
+									<td>105</td>
+								</tr>
+								<tr>
+									<td>Artillery</td>
+									<td>15</td>
+									<td>90</td>
+								</tr>
+								<tr>
+									<td>Rocket</td>
+									<td>25</td>
+									<td>95</td>
+								</tr>
+								<tr>
+									<td>Missile</td>
+									<td>25</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>Neoank</td>
+									<td>1</td>
+									<td>125</td>
+								</tr>
+								<tr>
+									<td>Megatank</td>
+									<td>1</td>
+									<td>135</td>
+								</tr>
+								<tr>
+									<td>Piperunner</td>
+									<td>5</td>
+									<td>95</td>
+								</tr>
+								<tr>
+									<td>Megatank</td>
+									<td>1</td>
+									<td>135</td>
+								</tr>
+								<tr>
+									<td>Megatank</td>
+									<td>1</td>
+									<td>135</td>
+								</tr>
+								<tr>
+									<td>Megatank</td>
+									<td>1</td>
+									<td>135</td>
+								</tr>
+								<tr>
+									<td>T-Copter</td>
+									<td>30</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>B-Copter</td>
+									<td>7</td>
+									<td>75</td>
+								</tr>
+								<tr>
+									<td>Bomber</td>
+									<td>-</td>
+									<td>110</td>
+								</tr>
+								<tr>
+									<td>Stealth</td>
+									<td>-</td>
+									<td>90</td>
+								</tr>
+								<tr>
+									<td>Battleship</td>
+									<td>-</td>
+									<td>95</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<ul class="uk-padding-small uk-list uk-list-bullet">
+							<li>The final use of Infantry is a last-ditch attacker. Infantry Machine Guns do minimal damage to most non-infantry targets, but can usually take off 1 HP from lighter-armored units such as Tanks and B-Copters. Be aware that attacking a full-HP Tank will result in your infantry taking much more damage from the counterattack in the process. Infantry are, however, good at finishing off 1 HP units when more valuable units are unavailable or would be put to better use on other targets.</li>
+						    <li>Anti-Airs are particularly strong against Infantry. A full-HP Anti-Air is guaranteed to OHKO an infantry on a road, and with any offensive boost at all, will OHKO infantry on plains as well, quickly opening up an infantry line and allowing you to hit more valuable units.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<a name="mech"></a>
+		<div class="uk-background-muted uk-margin-large uk-margin-remove-horizontal uk-margin-remove-bottom">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Mechanized Infantry</h3>
+			</div>
+			<div class="uk-padding-small">
+				<p><img data-src="assets/units/Mech.png" style="image-rendering:crisp-edges;" width="200" class="uk-align-right@s uk-align-center" uk-img>
+				Stronger, slower, and more expensive than Infantry, Mechanized Infantry (more commonly referred to as Mechs) are still relatively inexpensive and versatile units.</p>
+				<p>Like Infantry, Mechs are also able to Capture Properties on the map. When given a choice, it is generally preferable to have Infantry commit to capturing over Mechs, as Mechs are slower than Infantry, but much more powerful offensively.</p>
+				<p>Offensively, Mechs are comparable to Tanks in terms of power, allowing them to do moderate amounts of damage to lightly armored ground units if allowed to get the first strike. Mechs will use their Machine Guns against B-Copters, however, so it is not advisable to attack B-Copters with Mechs. Against foot soldiers, Mechs are stronger than Infantry both offensively and defensively.</p>
+				<p>While stronger than Infantry defensively, Mechs still have relatively low defense and rely on heavy terrain to survive. Combined with their much higher cost relative to Infantry, Mechs make poor blocking units. They do make strong supporting units, however, deterring opposing light units from attacking your more valuable units without suffering a retaliatory attack from a Mech.</p>
+				<p>While both Mech and Infantry are classified as foot soldiers, Mech's have a set movement range and cost that does not change under any weather or terrain condition.</p>
+
+				<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Stats</a></li>
+					<li><a href="#">Matchups</a></li>
+					<li><a href="#">Notes</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin uk-background-default">
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<tbody>
+								<tr>
+									<td class="uk-table-expand">Cost</td>
+									<td>3000</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Movement</td>
+									<td>2 (Foot)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Fuel</td>
+									<td>70</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Range</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Primary Weapon</td>
+									<td>Bazooka</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Ammo</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Secondary Weapon</td>
+									<td>Machine Gun</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Vision</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Special Commands</td>
+									<td>Capture</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<thead>
+						        <tr>
+						            <th class="uk-table-expand">Targetable Unit</th>
+						            <th>Damage Given</th>
+						            <th>Damage Taken</th>
+						        </tr>
+						    </thead>
+							<tbody>
+								<tr>
+									<td>Infantry</td>
+									<td>55</td>
+									<td>55</td>
+								</tr>
+								<tr>
+									<td>Mech</td>
+									<td>45</td>
+									<td>65</td>
+								</tr>
+								<tr>
+									<td>Recon</td>
+									<td>12</td>
+									<td>70</td>
+								</tr>
+								<tr>
+									<td>APC</td>
+									<td>14</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>Tank</td>
+									<td>5</td>
+									<td>75</td>
+								</tr>
+								<tr>
+									<td>Medium Tank</td>
+									<td>1</td>
+									<td>105</td>
+								</tr>
+								<tr>
+									<td>Anti-Air</td>
+									<td>5</td>
+									<td>105</td>
+								</tr>
+								<tr>
+									<td>Artillery</td>
+									<td>15</td>
+									<td>90</td>
+								</tr>
+								<tr>
+									<td>Rocket</td>
+									<td>25</td>
+									<td>95</td>
+								</tr>
+								<tr>
+									<td>Missile</td>
+									<td>25</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>Neoank</td>
+									<td>1</td>
+									<td>125</td>
+								</tr>
+								<tr>
+									<td>Megatank</td>
+									<td>1</td>
+									<td>135</td>
+								</tr>
+								<tr>
+									<td>Piperunner</td>
+									<td>5</td>
+									<td>95</td>
+								</tr>
+								<tr>
+									<td>Megatank</td>
+									<td>1</td>
+									<td>135</td>
+								</tr>
+								<tr>
+									<td>Megatank</td>
+									<td>1</td>
+									<td>135</td>
+								</tr>
+								<tr>
+									<td>Megatank</td>
+									<td>1</td>
+									<td>135</td>
+								</tr>
+								<tr>
+									<td>T-Copter</td>
+									<td>30</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>B-Copter</td>
+									<td>7</td>
+									<td>75</td>
+								</tr>
+								<tr>
+									<td>Bomber</td>
+									<td>-</td>
+									<td>110</td>
+								</tr>
+								<tr>
+									<td>Stealth</td>
+									<td>-</td>
+									<td>90</td>
+								</tr>
+								<tr>
+									<td>Battleship</td>
+									<td>-</td>
+									<td>95</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<ul class="uk-padding-small uk-list uk-list-bullet">
+							<li>Due to their low movement, Mechs are out-ranged by almost any other direct or indirect-combat unit capable of hitting them.</li>
+						    <li>Infantry are generally the most efficient unit for countering Mechs, being much cheaper while still doing reasonably high damage to them.</li>
+						    <li>B-Copters are also strong at attacking Mechs, as they suffer minimal damage from the Mech's counterattack (since it is always the secondary weapon).</li>
+						    <li>Anti-Airs are just as strong against Mechs as they are against Infantry, but will suffer heavy damage from Mechs if they are allowed to get the first strike.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="uk-container uk-container-xsmall uk-margin-medium-bottom">
+		<p class="uk-text-meta">All content is sourced from the <a href="https://advancewars.fandom.com/wiki/Advance_Wars_Wiki" target="_blank">Advance Wars Wiki</a>, <a href="https://awbw.fandom.com/wiki/Advance_Wars_By_Web_Wiki" target="_blank">Advance Wars By Web (AWBW) Wiki</a> and individual Advance Wars Wikipedia pages. Images and Sprites sourced from Trigononamous and the <a href="https://www.spriters-resource.com/ds_dsi/advancewarsds/" target="_blank">Sprite Resource</a></p>
+	</div>
+</body>
+</html>

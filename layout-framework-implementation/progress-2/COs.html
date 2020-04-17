@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advance Wars - Orange Star</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+</head>
+<body>
+	<a name="intro"></a>
+	<div class="uk-background-primary" uk-sticky
+	style="height:50px">
+		<img data-src="assets/advance_wars_logo.png" width="250px" height="" alt="" uk-img class="uk-padding-small">
+	</div>
+
+	<div class="uk-visible@l uk-padding uk-background-secondary uk-light" 
+	style="position:fixed;width:250px;height:100vh;overflow-y:scroll;box-sizing:border-box;top:50">
+		<ul class="uk-nav uk-nav-primary uk-margin-small-top" uk-nav>
+			<li class="uk-parent">
+				<a href="#">Overview</a>
+				<ul class="uk-nav-sub" uk-nav>
+					<li><a href="index.html#intro" class="uk-nav-header">Introduction</a></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Gameplay</a>
+						<ul>
+							<li><a href="index.html#commands">Commands</a></li>
+							<li><a href="index.html#units">Units</a></li>
+							<li><a href="index.html#combat">Combat</a></li>
+							<li><a href="index.html#COPower">COs/CO Powers</a>
+							<li><a href="index.html#dual">Dual Front</a>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="uk-parent">
+				<a href="">Units</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Land</a>
+						<ul class="uk-nav-sub">
+							<li><a href="landUnits.html#infantry">Infantry</a></li>
+							<li><a href="landUnits.html#mech">Mech</a></li>
+							<li><a href="#">Recon</a></li>
+							<li><a href="#">APC</a></li>
+							<li><a href="#">Tank</a></li>
+							<li><a href="#">Md. Tank</a></li>
+							<li><a href="#">Anti-Air</a></li>
+							<li><a href="#">Artillery</a></li>
+							<li><a href="#">Rocket</a></li>
+							<li><a href="#">Missile</a></li>
+							<li><a href="#">Neotank</a></li>
+							<li><a href="#">Megatank</a></li>
+							<li><a href="#">Piperunner</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Air</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#">T-Copter</a></li>
+							<li><a href="#">B-Copter</a></li>
+							<li><a href="#">Fighter</a></li>
+							<li><a href="#">Bomber</a></li>
+							<li><a href="#">Stealth</a></li>
+							<li><a href="#">Black Bomb</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Sea</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#">Lander</a></li>
+							<li><a href="#">Cruiser</a></li>
+							<li><a href="#">Battleship</a></li>
+							<li><a href="#">Sub</a></li>
+							<li><a href="#">Carrier</a></li>
+							<li><a href="#">Black Boat</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="uk-parent uk-open">
+				<a href="">COs</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent uk-open">
+						<a href="#" class="uk-nav-header">Orange Star</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#andy">Andy</a></li>
+							<li><a href="#max">Max</a></li>
+							<li><a href="#sami">Sami</a></li>
+							<li><a href="#">Jake</a></li>
+							<li><a href="#">Rachel</a></li>
+							<li><a href="#">Nell</a></li>
+					</ul></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Blue Moon</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#">Olaf</a></li>
+							<li><a href="#">Grit</a></li>
+							<li><a href="#">Colin</a></li>
+							<li><a href="#">Sasha</a></li>
+					</ul></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Green Earth</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#">Drake</a></li>
+							<li><a href="#">Eagle</a></li>
+							<li><a href="#">Jess</a></li>
+							<li><a href="#">Javier</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Yellow Comet</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#">Kanbei</a></li>
+							<li><a href="#">Sonja</a></li>
+							<li><a href="#">Sensei</a></li>
+							<li><a href="#">Grimm</a></li>
+					</ul></li>
+				</ul>
+			</li>
+			<li class="uk-parent">
+				<a href="">Map Elements</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li><a href="map.html" class="uk-nav-header">Fog of War</a></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Terrain</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#">Roads & Bridges</a></li>
+							<li><a href="#">Plains</a></li>
+							<li><a href="#">Properties</a></li>
+							<li><a href="#">HQ</a></li>
+							<li><a href="#">Woods</a></li>
+							<li><a href="#">Mountains</a></li>
+							<li><a href="#">River</a></li>
+							<li><a href="#">Shoal</a></li>
+							<li><a href="#">Sea</a></li>
+							<li><a href="#">Reef</a></li>
+							<li><a href="#">Pipes & Seams</a></li>
+					</ul></li>
+					<li class="uk-nav-sub">
+						<a href="map.html#weather" class="uk-nav-header">Weather</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div class="uk-container uk-container-xsmall uk-margin-medium-top uk-margin-xlarge-bottom">
+
+		<h1 class="uk-heading-small">Orange Star COs</h1>
+		<hr>
+
+		<a name="andy"></a>
+		<div class="uk-background-muted uk-margin-large uk-margin-remove-horizontal uk-margin-remove-bottom">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Andy</h3>
+			</div>
+			<div class="uk-padding-small uk-flex">
+				<!-- <div class="uk-flex-last uk-background-top-left uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-middle uk-flex-center" style="background-image:url(assets/co/Andy.png);min-height:200px;min-width:200px;"></div> -->
+				<div class="uk-flex-last uk-visible@m"><img data-src="assets/co/Andy.png" style="object-fit:none;object-position:top left;max-height:600px;min-width:250px;" width="600" uk-img></div>
+				<div>
+					<img data-src="assets/co/AndyIcon.png" style="image-rendering:crisp-edges;" width="100" class="uk-hidden@m uk-align-center" uk-img>
+					<p>Andy is an Orange Star CO whose lack of any strengths or weaknesses allows for more versatile play. As such, Andy is a good CO choice for beginners.</p>
+					<table class="uk-table uk-table-small uk-table-divider uk-table-hover uk-background-default">
+						<tbody>
+							<tr>
+								<td class="uk-table-expand">Power Bar</td>
+								<td><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span></td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Strength</td>
+								<td>None</td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Weakness</td>
+								<td>None</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<dl class="uk-description-list uk-description-list-divider">
+					    <dt>Day-to-Day Effects</dt>
+					    <dd>None. All of Andy's units have regular offense and defense.</dd>
+					    <dt>Power: Hyper Repair</dt>
+					    <dd>Restores 2 HP to all of his Units and increases their defense by 10% (And offense by 10% in Dual Strike).</dd>
+					    <dt>Super Power: Hyper Upgrade</dt>
+					    <dd>Restores 5 HP to all of his Units, increases firepower by 30%, defense by 10%, and movement by 1 space.</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+		<a name="max"></a>
+		<div class="uk-background-muted uk-margin-large uk-margin-remove-horizontal uk-margin-remove-bottom">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Max</h3>
+			</div>
+			<div class="uk-padding-small uk-flex">
+				<!-- <div class="uk-flex-last uk-background-top-left uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-middle uk-flex-center" style="background-image:url(assets/co/Andy.png);min-height:200px;min-width:200px;"></div> -->
+				<div class="uk-flex-last uk-visible@m"><img data-src="assets/co/Max.png" style="object-fit:none;object-position:top left;max-height:600px;min-width:250px;" uk-img></div>
+				<div>
+					<img data-src="assets/co/MaxIcon.png" style="image-rendering:crisp-edges;" width="100" class="uk-hidden@m uk-align-center" uk-img>
+					<p>Max is a direct-combat specialist, possesing significant firepower bonuses to ground, air, and naval direct-attack units. The added firepower is usually enough to overwhelm most other CO's directs and put armies on the defensive, especially on maps spacious enough for direct units to roam free.</p>
+					<p>This advantage is offset by range and firepower penalties for his indirects, usually putting Max into situations where he must gain a decisive advantage before the opposing army fully develops and pushes him back with superior indirects.</p>
+					<table class="uk-table uk-table-small uk-table-divider uk-table-hover uk-background-default">
+						<tbody>
+							<tr>
+								<td class="uk-table-expand">Power Bar</td>
+								<td><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span></td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Strength</td>
+								<td>Direct Combat</td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Weakness</td>
+								<td>Indirect Combat</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<dl class="uk-description-list uk-description-list-divider">
+					    <dt>Day-to-Day Effects</dt>
+					    <dd>All of Max's Direct Combat units have 20% increased offense, and all of his Indirect Combat units suffer -1 Range.</dd>
+					    <dt>Power: Max Force</dt>
+					    <dd>Firepower of all non-infantry Direct Combat is increased by 40%. All units gain a 10% defence bonus.</dd>
+					    <dt>Super Power: Max Blast</dt>
+					    <dd>Firepower of all non-infantry Direct Combat is increased by 60%. All units gain a 10% defence bonus.</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+		<a name="sami"></a>
+		<div class="uk-background-muted uk-margin-large uk-margin-remove-horizontal uk-margin-remove-bottom">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Sami</h3>
+			</div>
+			<div class="uk-padding-small uk-flex">
+				<div class="uk-flex-last uk-visible@m"><img data-src="assets/co/Sami.png" style="object-fit:none;object-position:top left;max-height:600px;min-width:250px;" uk-img></div>
+				<div>
+					<img data-src="assets/co/SamiIcon.png" style="image-rendering:crisp-edges;" width="100" class="uk-hidden@m uk-align-center" uk-img>
+					<p>Sami is a CO who specializes in Foot soldiers and capturing properties. Her increased capture speed will allow her to take contested properties more easily, and her high offensive boost for foot soldiers will ensure any enemy Infantry will take significant damage while she is capturing.</p>
+					<table class="uk-table uk-table-small uk-table-divider uk-table-hover uk-background-default">
+						<tbody>
+							<tr>
+								<td class="uk-table-expand">Power Bar</td>
+								<td><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span></td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Strength</td>
+								<td>Infantry, Transports</td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Weakness</td>
+								<td>Direct Combat</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<dl class="uk-description-list uk-description-list-divider">
+					    <dt>Day-to-Day Effects</dt>
+					    <dd>All of Sami's foot soldiers have 20% increased offense and capture properties 50% faster (rounded down). Direct combat vehicles have 10% decreased offense.</dd>
+					    <dt>Power: Double Time</dt>
+					    <dd>Increases movement range by one for all Infantry and Mechs by 1 space, and their firepower is raised by 60%. They also receive a 10% defence bonus. All other Units get a 10% boost in firepower and defence.</dd>
+					    <dt>Super Power: Victory March</dt>
+					    <dd>Increases movement range of Infantry and Mech units by 2 spaces. All foot soldiers gain a 90% increase in firepower and may capture in one turn, regardless of HP.</dd>
+					</dl>
+					<hr>
+				</div>
+			</div>
+			<div class="uk-padding-small">
+				<p>Below is a table outlining how many Capture Points Sami's foot soldiers progress at each HP level with her Day-to-day and CO Power.</p>
+				<table class="uk-table uk-table-small uk-table-divider uk-background-default">
+						<tbody>
+							<tr>
+								<td>Unit HP</td>
+								<td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td>
+							</tr>
+							<tr>
+								<td>Capture Points</td>
+								<td>15</td><td>13</td><td>12</td><td>10</td><td>9</td><td>7</td><td>6</td><td>4</td><td>3</td><td>1</td>
+							</tr>
+						</tbody>
+					</table>
+			</div>
+		</div>
+
+
+	</div>
+
+	<div class="uk-container uk-container-xsmall uk-margin-medium-bottom">
+		<p class="uk-text-meta">All content is sourced from the <a href="https://advancewars.fandom.com/wiki/Advance_Wars_Wiki" target="_blank">Advance Wars Wiki</a>, <a href="https://awbw.fandom.com/wiki/Advance_Wars_By_Web_Wiki" target="_blank">Advance Wars By Web (AWBW) Wiki</a> and individual Advance Wars Wikipedia pages. Images and Sprites sourced from Trigononamous and the <a href="https://www.spriters-resource.com/ds_dsi/advancewarsds/" target="_blank">Sprite Resource</a></p>
+	</div>
+</body>
+</html>

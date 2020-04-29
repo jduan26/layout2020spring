@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advance Wars - Yellow Comet</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <link href="css/styles.css" rel="stylesheet">
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+        <style>
+        	.uk-background-primary{
+        		background-color: #edaf42
+        	}
+        	a{
+        		color: #edaf42;
+        	}
+        </style>
+</head>
+<body>
+	<a name="intro"></a>
+	<div class="uk-background-primary" uk-sticky style="height:50px">
+		<span uk-icon="icon:menu;ratio:1.2" class="uk-align-right uk-padding-small uk-hidden@l" uk-toggle="target:#mobilenav" style="color:white"></span>
+		<img data-src="assets/advance_wars_logo.png" width="250px" height="" alt="" uk-img class="uk-padding-small">
+	</div>
+
+	<div class="uk-visible@l uk-padding uk-background-secondary uk-light" 
+	style="position:fixed;width:250px;height:100vh;overflow-y:scroll;box-sizing:border-box;top:50">
+		<ul class="uk-nav uk-nav-primary uk-margin-small-top" uk-nav>
+			<li class="uk-parent">
+				<a href="#">Overview</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent uk-open">
+						<a class="uk-hidden"></a>
+						<ul>
+							<li><a href="index.html#intro">Introduction</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Gameplay</a>
+						<ul>
+							<li><a href="index.html#commands">Commands</a></li>
+							<li><a href="index.html#units">Units</a></li>
+							<li><a href="index.html#combat">Combat</a></li>
+							<li><a href="index.html#COPower">COs/CO Powers</a></li>
+							<li><a href="index.html#luck">Luck</a></li>
+							<li><a href="index.html#dual">Dual Front</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="uk-parent">
+				<a href="">Units</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Land</a>
+						<ul class="uk-nav-sub">
+							<li><a href="landUnits.html#infantry">Infantry</a></li>
+							<li><a href="landUnits.html#mech">Mech</a></li>
+							<li><a href="landUnits.html#recon">Recon</a></li>
+							<li><a href="landUnits.html#apc">APC</a></li>
+							<li><a href="landUnits.html#tank">Tank</a></li>
+							<li><a href="landUnits.html#mdtank">Md. Tank</a></li>
+							<li><a href="landUnits.html#antiair">Anti-Air</a></li>
+							<li><a href="landUnits.html#artillery">Artillery</a></li>
+							<li><a href="landUnits.html#rocket">Rocket</a></li>
+							<li><a href="landUnits.html#missile">Missile</a></li>
+							<li><a href="landUnits.html#neotank">Neotank</a></li>
+							<li><a href="landUnits.html#megatank">Megatank</a></li>
+							<li><a href="landUnits.html#piperunner">Piperunner</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Air</a>
+						<ul class="uk-nav-sub">
+							<li><a href="airUnits.html#tcopter">T-Copter</a></li>
+							<li><a href="airUnits.html#bcopter">B-Copter</a></li>
+							<li><a href="airUnits.html#fighter">Fighter</a></li>
+							<li><a href="airUnits.html#bomber">Bomber</a></li>
+							<li><a href="airUnits.html#stealth">Stealth</a></li>
+							<li><a href="airUnits.html#blackbomb">Black Bomb</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Sea</a>
+						<ul class="uk-nav-sub">
+							<li><a href="seaUnits.html#lander">Lander</a></li>
+							<li><a href="seaUnits.html#cruiser">Cruiser</a></li>
+							<li><a href="seaUnits.html#battleship">Battleship</a></li>
+							<li><a href="seaUnits.html#sub">Sub</a></li>
+							<li><a href="seaUnits.html#carrier">Carrier</a></li>
+							<li><a href="seaUnits.html#blackboat">Black Boat</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="uk-parent uk-open">
+				<a href="">COs</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Orange Star</a>
+						<ul class="uk-nav-sub">
+							<li><a href="COs.html#andy">Andy</a></li>
+							<li><a href="COs.html#max">Max</a></li>
+							<li><a href="COs.html#sami">Sami</a></li>
+							<li><a href="COs.html#jake">Jake</a></li>
+							<li><a href="COs.html#rachel">Rachel</a></li>
+							<li><a href="COs.html#nell">Nell</a></li>
+					</ul></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Blue Moon</a>
+						<ul class="uk-nav-sub">
+							<li><a href="BMCOs.html#olaf">Olaf</a></li>
+							<li><a href="BMCOs.html#grit">Grit</a></li>
+							<li><a href="BMCOs.html#colin">Colin</a></li>
+							<li><a href="BMCOs.html#sasha">Sasha</a></li>
+					</ul></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Green Earth</a>
+						<ul class="uk-nav-sub">
+							<li><a href="GECOs.html#drake">Drake</a></li>
+							<li><a href="GECOs.html#eagle">Eagle</a></li>
+							<li><a href="GECOs.html#jess">Jess</a></li>
+							<li><a href="GECOs.html#javier">Javier</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent uk-open">
+						<a href="#" class="uk-nav-header">Yellow Comet</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#kanbei">Kanbei</a></li>
+							<li><a href="#sonja">Sonja</a></li>
+							<li><a href="#sensei">Sensei</a></li>
+							<li><a href="#grimm">Grimm</a></li>
+					</ul></li>
+				</ul>
+			</li>
+			<li class="uk-parent">
+				<a href="">Map Elements</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li><a href="map.html" class="uk-nav-header">Fog of War</a></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Terrain</a>
+						<ul class="uk-nav-sub">
+							<li><a href="map.html#road">Roads & Bridges</a></li>
+							<li><a href="map.html#plain">Plains</a></li>
+							<li><a href="map.html#city">Properties</a></li>
+							<li><a href="map.html#wood">Woods</a></li>
+							<li><a href="map.html#mountain">Mountains</a></li>
+							<li><a href="map.html#river">River</a></li>
+							<li><a href="map.html#shoal">Shoal</a></li>
+							<li><a href="map.html#sea">Sea</a></li>
+							<li><a href="map.html#reef">Reef</a></li>
+							<li><a href="map.html#pipe">Pipes & Seams</a></li>
+					</ul></li>
+					<li class="uk-nav-sub">
+						<a href="map.html#weather" class="uk-nav-header">Weather</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div id="mobilenav" uk-offcanvas="flip:true">
+		<div class="uk-offcanvas-bar uk-padding uk-background-secondary uk-light" style="position:fixed;width:250px;height:100vh;overflow-y:scroll;box-sizing:border-box;top:50">
+			<button class="uk-offcanvas-close" type="button" uk-close></button>
+			<ul class="uk-nav uk-nav-primary uk-margin-small-top" uk-nav>
+				<li class="uk-parent">
+					<a href="#">Overview</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent uk-open">
+							<a class="uk-hidden"></a>
+							<ul>
+								<li><a href="index.html#intro">Introduction</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Gameplay</a>
+							<ul>
+								<li><a href="index.html#commands">Commands</a></li>
+								<li><a href="index.html#units">Units</a></li>
+								<li><a href="index.html#combat">Combat</a></li>
+								<li><a href="index.html#COPower">COs/CO Powers</a></li>
+								<li><a href="index.html#luck">Luck</a></li>
+								<li><a href="index.html#dual">Dual Front</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="uk-parent">
+					<a href="">Units</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Land</a>
+							<ul class="uk-nav-sub">
+								<li><a href="landUnits.html#infantry">Infantry</a></li>
+								<li><a href="landUnits.html#mech">Mech</a></li>
+								<li><a href="landUnits.html#recon">Recon</a></li>
+								<li><a href="landUnits.html#apc">APC</a></li>
+								<li><a href="landUnits.html#tank">Tank</a></li>
+								<li><a href="landUnits.html#mdtank">Md. Tank</a></li>
+								<li><a href="landUnits.html#antiair">Anti-Air</a></li>
+								<li><a href="landUnits.html#artillery">Artillery</a></li>
+								<li><a href="landUnits.html#rocket">Rocket</a></li>
+								<li><a href="landUnits.html#missile">Missile</a></li>
+								<li><a href="landUnits.html#neotank">Neotank</a></li>
+								<li><a href="landUnits.html#megatank">Megatank</a></li>
+								<li><a href="landUnits.html#piperunner">Piperunner</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Air</a>
+							<ul class="uk-nav-sub">
+								<li><a href="airUnits.html#tcopter">T-Copter</a></li>
+								<li><a href="airUnits.html#bcopter">B-Copter</a></li>
+								<li><a href="airUnits.html#fighter">Fighter</a></li>
+								<li><a href="airUnits.html#bomber">Bomber</a></li>
+								<li><a href="airUnits.html#stealth">Stealth</a></li>
+								<li><a href="airUnits.html#blackbomb">Black Bomb</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Sea</a>
+							<ul class="uk-nav-sub">
+								<li><a href="seaUnits.html#lander">Lander</a></li>
+								<li><a href="seaUnits.html#cruiser">Cruiser</a></li>
+								<li><a href="seaUnits.html#battleship">Battleship</a></li>
+								<li><a href="seaUnits.html#sub">Sub</a></li>
+								<li><a href="seaUnits.html#carrier">Carrier</a></li>
+								<li><a href="seaUnits.html#blackboat">Black Boat</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="uk-parent uk-open">
+					<a href="">COs</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Orange Star</a>
+							<ul class="uk-nav-sub">
+								<li><a href="COs.html#andy">Andy</a></li>
+								<li><a href="COs.html#max">Max</a></li>
+								<li><a href="COs.html#sami">Sami</a></li>
+								<li><a href="COs.html#jake">Jake</a></li>
+								<li><a href="COs.html#rachel">Rachel</a></li>
+								<li><a href="COs.html#nell">Nell</a></li>
+						</ul></li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Blue Moon</a>
+							<ul class="uk-nav-sub">
+								<li><a href="BMCOs.html#olaf">Olaf</a></li>
+								<li><a href="BMCOs.html#grit">Grit</a></li>
+								<li><a href="BMCOs.html#colin">Colin</a></li>
+								<li><a href="BMCOs.html#sasha">Sasha</a></li>
+						</ul></li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Green Earth</a>
+							<ul class="uk-nav-sub">
+								<li><a href="GECOs.html#drake">Drake</a></li>
+								<li><a href="GECOs.html#eagle">Eagle</a></li>
+								<li><a href="GECOs.html#jess">Jess</a></li>
+								<li><a href="GECOs.html#javier">Javier</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent uk-open">
+							<a href="#" class="uk-nav-header">Yellow Comet</a>
+							<ul class="uk-nav-sub">
+								<li><a href="#kanbei">Kanbei</a></li>
+								<li><a href="#sonja">Sonja</a></li>
+								<li><a href="#sensei">Sensei</a></li>
+								<li><a href="#grimm">Grimm</a></li>
+						</ul></li>
+					</ul>
+				</li>
+				<li class="uk-parent">
+					<a href="">Map Elements</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li><a href="map.html" class="uk-nav-header">Fog of War</a></li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Terrain</a>
+							<ul class="uk-nav-sub">
+								<li><a href="map.html#road">Roads & Bridges</a></li>
+								<li><a href="map.html#plain">Plains</a></li>
+								<li><a href="map.html#city">Properties</a></li>
+								<li><a href="map.html#wood">Woods</a></li>
+								<li><a href="map.html#mountain">Mountains</a></li>
+								<li><a href="map.html#river">River</a></li>
+								<li><a href="map.html#shoal">Shoal</a></li>
+								<li><a href="map.html#sea">Sea</a></li>
+								<li><a href="map.html#reef">Reef</a></li>
+								<li><a href="map.html#pipe">Pipes & Seams</a></li>
+						</ul></li>
+						<li class="uk-nav-sub">
+							<a href="map.html#weather" class="uk-nav-header">Weather</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="uk-container uk-container-xsmall uk-margin-medium-top uk-margin-xlarge-bottom">
+
+		<h1 class="uk-heading-small">Yellow Comet Commanders</h1>
+		<hr>
+
+		<a name="kanbei" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-medium-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Kanbei</h3>
+			</div>
+			<div class="uk-padding-small uk-flex">
+				<div class="uk-flex-last uk-visible@m"><img data-src="assets/co/Kanbei.png" style="object-fit:none;object-position:top left;max-height:600px;min-width:250px;" width="600" uk-img></div>
+				<div>
+					<img data-src="assets/co/KanbeiIcon.png" style="image-rendering:crisp-edges;" width="100" class="uk-hidden@m uk-align-center" uk-img>
+					<p>Kanbei is a Yellow Comet CO whose units are more expensive and much stronger than regular units, with his CO Power boosts making them nigh untouchable.</p>
+					<table class="uk-table uk-table-small uk-table-divider uk-table-hover uk-background-default">
+						<tbody>
+							<tr>
+								<td class="uk-table-expand">Power Bar</td>
+								<td><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span></td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Strength</td>
+								<td>Stronger Offense/Defense</td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Weakness</td>
+								<td>Higher Costs</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<dl class="uk-description-list uk-description-list-divider">
+					    <dt>Day-to-Day Effects</dt>
+					    <dd>All Kanbei's units have a 20% increase to offence and defence, but they also cost 20% more to deploy.</dd>
+					    <dt>Power: Morale Boost</dt>
+					    <dd>Increases the offence of Kanbei's Units by 60%. They also get a defence bonus of 10%.</dd>
+					    <dt>Super Power: Samurai Spirit</dt>
+					    <dd>Increases the offence and defence of Kanbei's Units by 70%. Firepower doubles when inflicting damage in counter attacks.</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+		<a name="sonja" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Sonja</h3>
+			</div>
+			<div class="uk-padding-small uk-flex">
+				<div class="uk-flex-last uk-visible@m"><img data-src="assets/co/Sonja.png" style="object-fit:none;object-position:top left;max-height:600px;min-width:250px;" uk-img></div>
+				<div>
+					<img data-src="assets/co/SonjaIcon.png" style="image-rendering:crisp-edges;" width="100" class="uk-hidden@m uk-align-center" uk-img>
+					<p>Sonja is a CO who relies on limiting opponent's information to force bad match ups. She is also unfortunately cursed with <a href="index.html#luck">Bad Luck.</a></p>
+					<p>Fog of War is a necessity for Sonja as she is heavily underpowered without its presence..</p>
+					<table class="uk-table uk-table-small uk-table-divider uk-table-hover uk-background-default">
+						<tbody>
+							<tr>
+								<td class="uk-table-expand">Power Bar</td>
+								<td><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span></td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Strength</td>
+								<td>Increased Vision and Counterattacks</td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Weakness</td>
+								<td>Bad Luck</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<dl class="uk-description-list uk-description-list-divider">
+					    <dt>Day-to-Day Effects</dt>
+					    <dd>All of Sonja's units have +1 Vision in Fog of War. Regardless of Fog, Sonja hides her units' HP status from her enemies, who will instead only see a ? (Sonja herself and her allies can still see her HP normally). Sonja's units have 50% increased offense when counterattacking.</dd>
+					    <dt>Power: Enhanced Vision</dt>
+					    <dd>All of Sonja's units gain an additional +1 vision in fog, and can see into Forests and Reefs without having to be adjacent to them. All of Sonja's units gain 10% increased offense and defense.</dd>
+					    <dt>Super Power: Counter Break</dt>
+					    <dd>All of Sonja's units gain the same benefits as the normal CO Power. In addition, when attacked in direct combat, Sonja will always get the first strike for as long as the power is active. Note that the first strike damage is normal (not enhanced by the passive counterattack bonus).</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+		<a name="sensei" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Sensei</h3>
+			</div>
+			<div class="uk-padding-small uk-flex">
+				<div class="uk-flex-last uk-visible@m"><img data-src="assets/co/Sensei.png" style="object-fit:none;object-position:top left;max-height:600px;min-width:250px;" uk-img></div>
+				<div>
+					<img data-src="assets/co/SenseiIcon.png" style="image-rendering:crisp-edges;" width="100" class="uk-hidden@m uk-align-center" uk-img>
+					<p>Sensei is a CO whose strength lies in overwhelming opponents with massive amounts of Footsoldiers and B-Copters.</p>
+					<p>His copters are super powerful, and his infantry are as well. His transports get +1 movement. As such he can beat any CO who cannot shield well against his swarms; on the flip side, he is countered by COs who can. </p>
+					<table class="uk-table uk-table-small uk-table-divider uk-table-hover uk-background-default">
+						<tbody>
+							<tr>
+								<td class="uk-table-expand">Power Bar</td>
+								<td><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span></span></td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Strength</td>
+								<td>Infantry, Copters and Transport</td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Weakness</td>
+								<td>Land and Naval Vehicles</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<dl class="uk-description-list uk-description-list-divider">
+					    <dt>Day-to-Day Effects</dt>
+					    <dd>Sensei's Foot Soldiers have +10% attack. Battle Copters have +50% attack. All naval units suffer a 10% attack penalty. Transport units have +1 movement.</dd>
+					    <dt>Power: Copter Command</dt>
+					    <dd>Increases the firepower of all Battle Copters by 80% and creates Infantry units with 9 HP at every allied city, ready to move.</dd>
+					    <dt>Super Power: Airborne Assault</dt>
+					    <dd>Increases the firepower of all Battle Copters by 80% and a Mech unit with 9 HP is created on every allied city, ready to move.</dd>
+					</dl>
+					<hr>
+				</div>
+			</div>
+		</div>
+
+		<a name="grimm" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Grimm</h3>
+			</div>
+			<div class="uk-padding-small uk-flex">
+				<div class="uk-flex-last uk-visible@m"><img data-src="assets/co/Grimm.png" style="object-fit:none;object-position:top center;max-height:600px;min-width:250px;" uk-img></div>
+				<div>
+					<img data-src="assets/co/GrimmIcon.png" style="image-rendering:crisp-edges;" width="100" class="uk-hidden@m uk-align-center" uk-img>
+					<p>Grimm is a CO who favors crushing foes with raw power, at the expense of defense.</p>
+					<p>His strong offensive boost and terrible defense vastly change the way in which the game is played. First strikes are much more important than in standard gameplay, and defensive terrain does much less to discourage attacks. Attacking a unit on an uncaptured city usually results in a win for the attacker, although captured cities still give a strong advantage to the defender due to the power of repair. </p>
+					<table class="uk-table uk-table-small uk-table-divider uk-table-hover uk-background-default">
+						<tbody>
+							<tr>
+								<td class="uk-table-expand">Power Bar</td>
+								<td><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio: 0.8"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span></td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Strength</td>
+								<td>High Offense</td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Weakness</td>
+								<td>Low Defense</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<dl class="uk-description-list uk-description-list-divider">
+					    <dt>Day-to-Day Effects</dt>
+					    <dd>Grimm's Units have 130% firepower, but only 80% defense.</dd>
+					    <dt>Power: Knuckleduster</dt>
+					    <dd>Increases Grimm's Units' firepower by 60% and defence by 10% (so his units now have 90% defense overall).</dd>
+					    <dt>Super Power: Haymaker</dt>
+					    <dd>Increases Grimm's Units' firepower by 90% and defence by 10%.</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+	<div class="uk-container uk-container-xsmall uk-margin-medium-bottom">
+		<a href="" uk-totop></a>
+		<p class="uk-text-meta">All content is sourced from the <a href="https://advancewars.fandom.com/wiki/Advance_Wars_Wiki" target="_blank">Advance Wars Wiki</a>, <a href="https://awbw.fandom.com/wiki/Advance_Wars_By_Web_Wiki" target="_blank">Advance Wars By Web (AWBW) Wiki</a> and individual Advance Wars Wikipedia pages. Images and Sprites sourced from Trigononamous and the <a href="https://www.spriters-resource.com/ds_dsi/advancewarsds/" target="_blank">Sprite Resource</a></p>
+	</div>
+</body>
+</html>

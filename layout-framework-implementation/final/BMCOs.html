@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advance Wars - Blue Moon</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <link href="css/styles.css" rel="stylesheet">
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+        <style>
+        	.uk-background-primary{
+        		background-color: #7878f8
+        	}
+        	a{
+        		color: #7878f8;
+        	}
+        </style>
+</head>
+<body>
+	<a name="intro"></a>
+	<div class="uk-background-primary" uk-sticky style="height:50px">
+		<span uk-icon="icon:menu;ratio:1.2" class="uk-align-right uk-padding-small uk-hidden@l" uk-toggle="target:#mobilenav" style="color:white"></span>
+		<img data-src="assets/advance_wars_logo.png" width="250px" height="" alt="" uk-img class="uk-padding-small">
+	</div>
+
+	<div class="uk-visible@l uk-padding uk-background-secondary uk-light" 
+	style="position:fixed;width:250px;height:100vh;overflow-y:scroll;box-sizing:border-box;top:50">
+		<ul class="uk-nav uk-nav-primary uk-margin-small-top" uk-nav>
+			<li class="uk-parent">
+				<a href="#">Overview</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent uk-open">
+						<a class="uk-hidden"></a>
+						<ul>
+							<li><a href="index.html#intro">Introduction</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Gameplay</a>
+						<ul>
+							<li><a href="index.html#commands">Commands</a></li>
+							<li><a href="index.html#units">Units</a></li>
+							<li><a href="index.html#combat">Combat</a></li>
+							<li><a href="index.html#COPower">COs/CO Powers</a></li>
+							<li><a href="index.html#luck">Luck</a></li>
+							<li><a href="index.html#dual">Dual Front</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="uk-parent">
+				<a href="">Units</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Land</a>
+						<ul class="uk-nav-sub">
+							<li><a href="landUnits.html#infantry">Infantry</a></li>
+							<li><a href="landUnits.html#mech">Mech</a></li>
+							<li><a href="landUnits.html#recon">Recon</a></li>
+							<li><a href="landUnits.html#apc">APC</a></li>
+							<li><a href="landUnits.html#tank">Tank</a></li>
+							<li><a href="landUnits.html#mdtank">Md. Tank</a></li>
+							<li><a href="landUnits.html#antiair">Anti-Air</a></li>
+							<li><a href="landUnits.html#artillery">Artillery</a></li>
+							<li><a href="landUnits.html#rocket">Rocket</a></li>
+							<li><a href="landUnits.html#missile">Missile</a></li>
+							<li><a href="landUnits.html#neotank">Neotank</a></li>
+							<li><a href="landUnits.html#megatank">Megatank</a></li>
+							<li><a href="landUnits.html#piperunner">Piperunner</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Air</a>
+						<ul class="uk-nav-sub">
+							<li><a href="airUnits.html#tcopter">T-Copter</a></li>
+							<li><a href="airUnits.html#bcopter">B-Copter</a></li>
+							<li><a href="airUnits.html#fighter">Fighter</a></li>
+							<li><a href="airUnits.html#bomber">Bomber</a></li>
+							<li><a href="airUnits.html#stealth">Stealth</a></li>
+							<li><a href="airUnits.html#blackbomb">Black Bomb</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Sea</a>
+						<ul class="uk-nav-sub">
+							<li><a href="seaUnits.html#lander">Lander</a></li>
+							<li><a href="seaUnits.html#cruiser">Cruiser</a></li>
+							<li><a href="seaUnits.html#battleship">Battleship</a></li>
+							<li><a href="seaUnits.html#sub">Sub</a></li>
+							<li><a href="seaUnits.html#carrier">Carrier</a></li>
+							<li><a href="seaUnits.html#blackboat">Black Boat</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="uk-parent uk-open">
+				<a href="">COs</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Orange Star</a>
+						<ul class="uk-nav-sub">
+							<li><a href="COs.html#andy">Andy</a></li>
+							<li><a href="COs.html#max">Max</a></li>
+							<li><a href="COs.html#sami">Sami</a></li>
+							<li><a href="COs.html#jake">Jake</a></li>
+							<li><a href="COs.html#rachel">Rachel</a></li>
+							<li><a href="COs.html#nell">Nell</a></li>
+					</ul></li>
+					<li class="uk-parent uk-open">
+						<a href="#" class="uk-nav-header">Blue Moon</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#olaf">Olaf</a></li>
+							<li><a href="#grit">Grit</a></li>
+							<li><a href="#colin">Colin</a></li>
+							<li><a href="#sasha">Sasha</a></li>
+					</ul></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Green Earth</a>
+						<ul class="uk-nav-sub">
+							<li><a href="GECOs.html#drake">Drake</a></li>
+							<li><a href="GECOs.html#eagle">Eagle</a></li>
+							<li><a href="GECOs.html#jess">Jess</a></li>
+							<li><a href="GECOs.html#javier">Javier</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Yellow Comet</a>
+						<ul class="uk-nav-sub">
+							<li><a href="YCCOs.html#kanbei">Kanbei</a></li>
+							<li><a href="YCCOs.html#sonja">Sonja</a></li>
+							<li><a href="YCCOs.html#sensei">Sensei</a></li>
+							<li><a href="YCCOs.html#grimm">Grimm</a></li>
+					</ul></li>
+				</ul>
+			</li>
+			<li class="uk-parent">
+				<a href="">Map Elements</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li><a href="map.html" class="uk-nav-header">Fog of War</a></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Terrain</a>
+						<ul class="uk-nav-sub">
+							<li><a href="map.html#road">Roads & Bridges</a></li>
+							<li><a href="map.html#plain">Plains</a></li>
+							<li><a href="map.html#city">Properties</a></li>
+							<li><a href="map.html#wood">Woods</a></li>
+							<li><a href="map.html#mountain">Mountains</a></li>
+							<li><a href="map.html#river">River</a></li>
+							<li><a href="map.html#shoal">Shoal</a></li>
+							<li><a href="map.html#sea">Sea</a></li>
+							<li><a href="map.html#reef">Reef</a></li>
+							<li><a href="map.html#pipe">Pipes & Seams</a></li>
+					</ul></li>
+					<li class="uk-nav-sub">
+						<a href="map.html#weather" class="uk-nav-header">Weather</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div id="mobilenav" uk-offcanvas="flip:true">
+		<div class="uk-offcanvas-bar uk-padding uk-background-secondary uk-light" style="position:fixed;width:250px;height:100vh;overflow-y:scroll;box-sizing:border-box;top:50">
+			<button class="uk-offcanvas-close" type="button" uk-close></button>
+			<ul class="uk-nav uk-nav-primary uk-margin-small-top" uk-nav>
+				<li class="uk-parent">
+					<a href="#">Overview</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent uk-open">
+							<a class="uk-hidden"></a>
+							<ul>
+								<li><a href="index.html#intro">Introduction</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Gameplay</a>
+							<ul>
+								<li><a href="index.html#commands">Commands</a></li>
+								<li><a href="index.html#units">Units</a></li>
+								<li><a href="index.html#combat">Combat</a></li>
+								<li><a href="index.html#COPower">COs/CO Powers</a></li>
+								<li><a href="index.html#luck">Luck</a></li>
+								<li><a href="index.html#dual">Dual Front</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="uk-parent">
+					<a href="">Units</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Land</a>
+							<ul class="uk-nav-sub">
+								<li><a href="landUnits.html#infantry">Infantry</a></li>
+								<li><a href="landUnits.html#mech">Mech</a></li>
+								<li><a href="landUnits.html#recon">Recon</a></li>
+								<li><a href="landUnits.html#apc">APC</a></li>
+								<li><a href="landUnits.html#tank">Tank</a></li>
+								<li><a href="landUnits.html#mdtank">Md. Tank</a></li>
+								<li><a href="landUnits.html#antiair">Anti-Air</a></li>
+								<li><a href="landUnits.html#artillery">Artillery</a></li>
+								<li><a href="landUnits.html#rocket">Rocket</a></li>
+								<li><a href="landUnits.html#missile">Missile</a></li>
+								<li><a href="landUnits.html#neotank">Neotank</a></li>
+								<li><a href="landUnits.html#megatank">Megatank</a></li>
+								<li><a href="landUnits.html#piperunner">Piperunner</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Air</a>
+							<ul class="uk-nav-sub">
+								<li><a href="airUnits.html#tcopter">T-Copter</a></li>
+								<li><a href="airUnits.html#bcopter">B-Copter</a></li>
+								<li><a href="airUnits.html#fighter">Fighter</a></li>
+								<li><a href="airUnits.html#bomber">Bomber</a></li>
+								<li><a href="airUnits.html#stealth">Stealth</a></li>
+								<li><a href="airUnits.html#blackbomb">Black Bomb</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Sea</a>
+							<ul class="uk-nav-sub">
+								<li><a href="seaUnits.html#lander">Lander</a></li>
+								<li><a href="seaUnits.html#cruiser">Cruiser</a></li>
+								<li><a href="seaUnits.html#battleship">Battleship</a></li>
+								<li><a href="seaUnits.html#sub">Sub</a></li>
+								<li><a href="seaUnits.html#carrier">Carrier</a></li>
+								<li><a href="seaUnits.html#blackboat">Black Boat</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="uk-parent uk-open">
+					<a href="">COs</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Orange Star</a>
+							<ul class="uk-nav-sub">
+								<li><a href="COs.html#andy">Andy</a></li>
+								<li><a href="COs.html#max">Max</a></li>
+								<li><a href="COs.html#sami">Sami</a></li>
+								<li><a href="COs.html#jake">Jake</a></li>
+								<li><a href="COs.html#rachel">Rachel</a></li>
+								<li><a href="COs.html#nell">Nell</a></li>
+						</ul></li>
+						<li class="uk-parent uk-open">
+							<a href="#" class="uk-nav-header">Blue Moon</a>
+							<ul class="uk-nav-sub">
+								<li><a href="#olaf">Olaf</a></li>
+								<li><a href="#grit">Grit</a></li>
+								<li><a href="#colin">Colin</a></li>
+								<li><a href="#sasha">Sasha</a></li>
+						</ul></li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Green Earth</a>
+							<ul class="uk-nav-sub">
+								<li><a href="GECOs.html#drake">Drake</a></li>
+								<li><a href="GECOs.html#eagle">Eagle</a></li>
+								<li><a href="GECOs.html#jess">Jess</a></li>
+								<li><a href="GECOs.html#javier">Javier</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Yellow Comet</a>
+							<ul class="uk-nav-sub">
+								<li><a href="YCCOs.html#kanbei">Kanbei</a></li>
+								<li><a href="YCCOs.html#sonja">Sonja</a></li>
+								<li><a href="YCCOs.html#sensei">Sensei</a></li>
+								<li><a href="YCCOs.html#grimm">Grimm</a></li>
+						</ul></li>
+					</ul>
+				</li>
+				<li class="uk-parent">
+					<a href="">Map Elements</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li><a href="map.html" class="uk-nav-header">Fog of War</a></li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Terrain</a>
+							<ul class="uk-nav-sub">
+								<li><a href="map.html#road">Roads & Bridges</a></li>
+								<li><a href="map.html#plain">Plains</a></li>
+								<li><a href="map.html#city">Properties</a></li>
+								<li><a href="map.html#wood">Woods</a></li>
+								<li><a href="map.html#mountain">Mountains</a></li>
+								<li><a href="map.html#river">River</a></li>
+								<li><a href="map.html#shoal">Shoal</a></li>
+								<li><a href="map.html#sea">Sea</a></li>
+								<li><a href="map.html#reef">Reef</a></li>
+								<li><a href="map.html#pipe">Pipes & Seams</a></li>
+						</ul></li>
+						<li class="uk-nav-sub">
+							<a href="map.html#weather" class="uk-nav-header">Weather</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="uk-container uk-container-xsmall uk-margin-medium-top uk-margin-xlarge-bottom">
+
+		<h1 class="uk-heading-small">Blue Moon Commanders</h1>
+		<hr>
+
+		<a name="olaf" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-medium-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Olaf</h3>
+			</div>
+			<div class="uk-padding-small uk-flex">
+				<div class="uk-flex-last uk-visible@m"><img data-src="assets/co/Olaf.png" style="object-fit:none;object-position:top left;max-height:600px;min-width:250px;" width="600" uk-img></div>
+				<div>
+					<img data-src="assets/co/OlafIcon.png" style="image-rendering:crisp-edges;" width="100" class="uk-hidden@m uk-align-center" uk-img>
+					<p>Olaf is a Blue Moon CO who shines in snow, suffers in rain, and is otherwise average.</p>
+					<p>Being an all-around average CO, Olaf will play very similarly to Andy, with differences only taking hold as CO Powers begin to take effect.</p>
+					<table class="uk-table uk-table-small uk-table-divider uk-table-hover uk-background-default">
+						<tbody>
+							<tr>
+								<td class="uk-table-expand">Power Bar</td>
+								<td><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span></td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Strength</td>
+								<td>Snow Movement</td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Weakness</td>
+								<td>Rain Movement</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<dl class="uk-description-list uk-description-list-divider">
+					    <dt>Day-to-Day Effects</dt>
+					    <dd>Olaf's units are unaffected by snow, but are slowed in rain equivalently to how other COs are slowed in snow. <a href="map.html#weather">See weather effects for details.</a> In addition, snow also raises Olaf's units' firepower by 20%.</dd>
+					    <dt>Power: Blizzard</dt>
+					    <dd>Olaf changes the map's weather to Snow for 2 days (meaning it snows until his second turn after activating his power), and gains 20% increased offense and defense on the first day, and 10% on the second.</dd>
+					    <dt>Super Power: Winter Fury</dt>
+					    <dd>All enemy units lose 2 HP (but will not fall below 0.1 HP displayed as 1), Olaf changes the map's weather to Snow for 2 days, retaining the same benefits of the normal CO Power.</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+		<a name="grit" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Grit</h3>
+			</div>
+			<div class="uk-padding-small uk-flex">
+				<div class="uk-flex-last uk-visible@m"><img data-src="assets/co/Grit.png" style="object-fit:none;object-position:top left;max-height:600px;min-width:250px;" uk-img></div>
+				<div>
+					<img data-src="assets/co/GritIcon.png" style="image-rendering:crisp-edges;" width="100" class="uk-hidden@m uk-align-center" uk-img>
+					<p>Grit is an indirect combat specialist, capable of outranging and outdamaging enemy indirects day-to-day. His direct units, while considerably weaker offensively, have good enough defense to defend his indirects, leading to situations where trying to attack a well-positioned clump of his indirects, infantry, and tanks is futile due to the heavy indirect counterattacks.</p>
+					<table class="uk-table uk-table-small uk-table-divider uk-table-hover uk-background-default">
+						<tbody>
+							<tr>
+								<td class="uk-table-expand">Power Bar</td>
+								<td><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span></td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Strength</td>
+								<td>Indirect Combat</td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Weakness</td>
+								<td>Direct Combat</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<dl class="uk-description-list uk-description-list-divider">
+					    <dt>Day-to-Day Effects</dt>
+					    <dd>All of Grit's Indirect Combat units have 20% increased offense and +1 Range, but all of his Direct Combat units have 20% decreased offense. Grit's foot soldiers are average.</dd>
+					    <dt>Power: Snipe Attack</dt>
+					    <dd>All of Grit's Indirect Combat units gain 60% increased offense (as opposed to the normal 20%), 10% increased defense and an additional +1 range. All other units gain 10% increased offense and defense.</dd>
+					    <dt>Super Power: Super Snipe</dt>
+					    <dd>All of Grit's Indirect Combat units gain 60% increased offense, 10% increased defense and an additional +2 range. All other units gain 10% increased offense and defense.</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+		<a name="colin" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Colin</h3>
+			</div>
+			<div class="uk-padding-small uk-flex">
+				<div class="uk-flex-last uk-visible@m"><img data-src="assets/co/Colin.png" style="object-fit:none;object-position:top left;max-height:600px;min-width:250px;" uk-img></div>
+				<div>
+					<img data-src="assets/co/ColinIcon.png" style="image-rendering:crisp-edges;" width="100" class="uk-hidden@m uk-align-center" uk-img>
+					<p>Colin is a who uses lowered unit costs (in exchange for lowered unit firepower) and cash-boosting powers to gain a large advantage in battles.</p>
+					<table class="uk-table uk-table-small uk-table-divider uk-table-hover uk-background-default">
+						<tbody>
+							<tr>
+								<td class="uk-table-expand">Power Bar</td>
+								<td><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span></span></td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Strength</td>
+								<td>Lowered Unit Cost</td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Weakness</td>
+								<td>Lowered Attack</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<dl class="uk-description-list uk-description-list-divider">
+					    <dt>Day-to-Day Effects</dt>
+					    <dd>All of Colin's units costs 20% less to build, but have 10% decreased offense.</dd>
+					    <dt>Power: Gold Rush</dt>
+					    <dd>Colin's current Funds are multiplied by 1.5. All of Colin's units gain 10% increased offense and defense.</dd>
+					    <dt>Super Power: Power of Money</dt>
+					    <dd>Colin uses money to increase weapon strength. Every 1000 Funds grants 3.33% additional firepower to all units. Regardless of funds, all of Colin's units gain 10% increased offense and defense as well. This power does not use up Colin's Funds.</dd>
+					</dl>
+					<hr>
+				</div>
+			</div>
+		</div>
+
+		<a name="sasha" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Sasha</h3>
+			</div>
+			<div class="uk-padding-small uk-flex">
+				<div class="uk-flex-last uk-visible@m"><img data-src="assets/co/Sasha.png" style="object-fit:none;object-position:top left;max-height:600px;min-width:250px;" uk-img></div>
+				<div>
+					<img data-src="assets/co/SashaIcon.png" style="image-rendering:crisp-edges;" width="100" class="uk-hidden@m uk-align-center" uk-img>
+					<p>Sasha is a versatile all-around CO, whose Day-To-Day ability is viable on most any map that has a decent amount of properties. Even when keeping up with her opponent in property count, Sasha can build a funds advantage over time, allowing her to build higher-tier units more easily than her opponent.</p>
+					<p>Sasha's biggest weakness is her lack of any combat-related boosts. Even with the 10% increased offense/defense granted from her CO Powers, Sasha's units are middling at best, which may give her difficulty when pushing through defensive lines and closing out games.</p>
+					<table class="uk-table uk-table-small uk-table-divider uk-table-hover uk-background-default">
+						<tbody>
+							<tr>
+								<td class="uk-table-expand">Power Bar</td>
+								<td><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span></td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Strength</td>
+								<td>Increased Income</td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Weakness</td>
+								<td>None</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<dl class="uk-description-list uk-description-list-divider">
+					    <dt>Day-to-Day Effects</dt>
+					    <dd>Every property Sasha owns provide her with an additional 100 funds per day. Only properties that provide funds to begin with gain this bonus.</dd>
+					    <dt>Power: Market Crash</dt>
+					    <dd>All Enemy COs' Power Bars are drained by 10% for every 5000 funds she has. If Sasha has 50,000 Funds or more, all Enemy CO Power Bars are reduced to no charge. All of Sasha's units gain 10% increased offense and defense.</dd>
+					    <dt>Super Power: War Bonds</dt>
+					    <dd>Sasha gains funds equal to 50% of the financial damage her units deal to enemy units, as long as the power is active. For example, if Sasha destroys a Full HP Tank (which costs 7000), she gains 3500 funds. All of Sasha's units gain 10% increased offense and defense.</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+	<div class="uk-container uk-container-xsmall uk-margin-medium-bottom">
+		<a href="" uk-totop></a>
+		<p class="uk-text-meta">All content is sourced from the <a href="https://advancewars.fandom.com/wiki/Advance_Wars_Wiki" target="_blank">Advance Wars Wiki</a>, <a href="https://awbw.fandom.com/wiki/Advance_Wars_By_Web_Wiki" target="_blank">Advance Wars By Web (AWBW) Wiki</a> and individual Advance Wars Wikipedia pages. Images and Sprites sourced from Trigononamous and the <a href="https://www.spriters-resource.com/ds_dsi/advancewarsds/" target="_blank">Sprite Resource</a></p>
+	</div>
+</body>
+</html>

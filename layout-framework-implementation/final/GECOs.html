@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advance Wars - Green Earth</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <link href="css/styles.css" rel="stylesheet">
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+        <style>
+        	.uk-background-primary{
+        		background-color: #489058
+        	}
+        	a{
+        		color: #489058;
+        	}
+        </style>
+</head>
+<body>
+	<a name="intro"></a>
+	<div class="uk-background-primary" uk-sticky style="height:50px">
+		<span uk-icon="icon:menu;ratio:1.2" class="uk-align-right uk-padding-small uk-hidden@l" uk-toggle="target:#mobilenav" style="color:white"></span>
+		<img data-src="assets/advance_wars_logo.png" width="250px" height="" alt="" uk-img class="uk-padding-small">
+	</div>
+
+	<div class="uk-visible@l uk-padding uk-background-secondary uk-light" 
+	style="position:fixed;width:250px;height:100vh;overflow-y:scroll;box-sizing:border-box;top:50">
+		<ul class="uk-nav uk-nav-primary uk-margin-small-top" uk-nav>
+			<li class="uk-parent">
+				<a href="#">Overview</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent uk-open">
+						<a class="uk-hidden"></a>
+						<ul>
+							<li><a href="index.html#intro">Introduction</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Gameplay</a>
+						<ul>
+							<li><a href="index.html#commands">Commands</a></li>
+							<li><a href="index.html#units">Units</a></li>
+							<li><a href="index.html#combat">Combat</a></li>
+							<li><a href="index.html#COPower">COs/CO Powers</a></li>
+							<li><a href="index.html#luck">Luck</a></li>
+							<li><a href="index.html#dual">Dual Front</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="uk-parent">
+				<a href="">Units</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Land</a>
+						<ul class="uk-nav-sub">
+							<li><a href="landUnits.html#infantry">Infantry</a></li>
+							<li><a href="landUnits.html#mech">Mech</a></li>
+							<li><a href="landUnits.html#recon">Recon</a></li>
+							<li><a href="landUnits.html#apc">APC</a></li>
+							<li><a href="landUnits.html#tank">Tank</a></li>
+							<li><a href="landUnits.html#mdtank">Md. Tank</a></li>
+							<li><a href="landUnits.html#antiair">Anti-Air</a></li>
+							<li><a href="landUnits.html#artillery">Artillery</a></li>
+							<li><a href="landUnits.html#rocket">Rocket</a></li>
+							<li><a href="landUnits.html#missile">Missile</a></li>
+							<li><a href="landUnits.html#neotank">Neotank</a></li>
+							<li><a href="landUnits.html#megatank">Megatank</a></li>
+							<li><a href="landUnits.html#piperunner">Piperunner</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Air</a>
+						<ul class="uk-nav-sub">
+							<li><a href="airUnits.html#tcopter">T-Copter</a></li>
+							<li><a href="airUnits.html#bcopter">B-Copter</a></li>
+							<li><a href="airUnits.html#fighter">Fighter</a></li>
+							<li><a href="airUnits.html#bomber">Bomber</a></li>
+							<li><a href="airUnits.html#stealth">Stealth</a></li>
+							<li><a href="airUnits.html#blackbomb">Black Bomb</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Sea</a>
+						<ul class="uk-nav-sub">
+							<li><a href="seaUnits.html#lander">Lander</a></li>
+							<li><a href="seaUnits.html#cruiser">Cruiser</a></li>
+							<li><a href="seaUnits.html#battleship">Battleship</a></li>
+							<li><a href="seaUnits.html#sub">Sub</a></li>
+							<li><a href="seaUnits.html#carrier">Carrier</a></li>
+							<li><a href="seaUnits.html#blackboat">Black Boat</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="uk-parent uk-open">
+				<a href="">COs</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Orange Star</a>
+						<ul class="uk-nav-sub">
+							<li><a href="COs.html#andy">Andy</a></li>
+							<li><a href="COs.html#max">Max</a></li>
+							<li><a href="COs.html#sami">Sami</a></li>
+							<li><a href="COs.html#jake">Jake</a></li>
+							<li><a href="COs.html#rachel">Rachel</a></li>
+							<li><a href="COs.html#nell">Nell</a></li>
+					</ul></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Blue Moon</a>
+						<ul class="uk-nav-sub">
+							<li><a href="BMCOs.html#olaf">Olaf</a></li>
+							<li><a href="BMCOs.html#grit">Grit</a></li>
+							<li><a href="BMCOs.html#colin">Colin</a></li>
+							<li><a href="BMCOs.html#sasha">Sasha</a></li>
+					</ul></li>
+					<li class="uk-parent uk-open">
+						<a href="#" class="uk-nav-header">Green Earth</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#drake">Drake</a></li>
+							<li><a href="#eagle">Eagle</a></li>
+							<li><a href="#jess">Jess</a></li>
+							<li><a href="#javier">Javier</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Yellow Comet</a>
+						<ul class="uk-nav-sub">
+							<li><a href="YCCOs.html#kanbei">Kanbei</a></li>
+							<li><a href="YCCOs.html#sonja">Sonja</a></li>
+							<li><a href="YCCOs.html#sensei">Sensei</a></li>
+							<li><a href="YCCOs.html#grimm">Grimm</a></li>
+					</ul></li>
+				</ul>
+			</li>
+			<li class="uk-parent">
+				<a href="">Map Elements</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li><a href="map.html" class="uk-nav-header">Fog of War</a></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Terrain</a>
+						<ul class="uk-nav-sub">
+							<li><a href="map.html#road">Roads & Bridges</a></li>
+							<li><a href="map.html#plain">Plains</a></li>
+							<li><a href="map.html#city">Properties</a></li>
+							<li><a href="map.html#wood">Woods</a></li>
+							<li><a href="map.html#mountain">Mountains</a></li>
+							<li><a href="map.html#river">River</a></li>
+							<li><a href="map.html#shoal">Shoal</a></li>
+							<li><a href="map.html#sea">Sea</a></li>
+							<li><a href="map.html#reef">Reef</a></li>
+							<li><a href="map.html#pipe">Pipes & Seams</a></li>
+					</ul></li>
+					<li class="uk-nav-sub">
+						<a href="map.html#weather" class="uk-nav-header">Weather</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div id="mobilenav" uk-offcanvas="flip:true">
+		<div class="uk-offcanvas-bar uk-padding uk-background-secondary uk-light" style="position:fixed;width:250px;height:100vh;overflow-y:scroll;box-sizing:border-box;top:50">
+			<button class="uk-offcanvas-close" type="button" uk-close></button>
+			<ul class="uk-nav uk-nav-primary uk-margin-small-top" uk-nav>
+				<li class="uk-parent">
+					<a href="#">Overview</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent uk-open">
+							<a class="uk-hidden"></a>
+							<ul>
+								<li><a href="index.html#intro">Introduction</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Gameplay</a>
+							<ul>
+								<li><a href="index.html#commands">Commands</a></li>
+								<li><a href="index.html#units">Units</a></li>
+								<li><a href="index.html#combat">Combat</a></li>
+								<li><a href="index.html#COPower">COs/CO Powers</a></li>
+								<li><a href="index.html#luck">Luck</a></li>
+								<li><a href="index.html#dual">Dual Front</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="uk-parent">
+					<a href="">Units</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Land</a>
+							<ul class="uk-nav-sub">
+								<li><a href="landUnits.html#infantry">Infantry</a></li>
+								<li><a href="landUnits.html#mech">Mech</a></li>
+								<li><a href="landUnits.html#recon">Recon</a></li>
+								<li><a href="landUnits.html#apc">APC</a></li>
+								<li><a href="landUnits.html#tank">Tank</a></li>
+								<li><a href="landUnits.html#mdtank">Md. Tank</a></li>
+								<li><a href="landUnits.html#antiair">Anti-Air</a></li>
+								<li><a href="landUnits.html#artillery">Artillery</a></li>
+								<li><a href="landUnits.html#rocket">Rocket</a></li>
+								<li><a href="landUnits.html#missile">Missile</a></li>
+								<li><a href="landUnits.html#neotank">Neotank</a></li>
+								<li><a href="landUnits.html#megatank">Megatank</a></li>
+								<li><a href="landUnits.html#piperunner">Piperunner</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Air</a>
+							<ul class="uk-nav-sub">
+								<li><a href="airUnits.html#tcopter">T-Copter</a></li>
+								<li><a href="airUnits.html#bcopter">B-Copter</a></li>
+								<li><a href="airUnits.html#fighter">Fighter</a></li>
+								<li><a href="airUnits.html#bomber">Bomber</a></li>
+								<li><a href="airUnits.html#stealth">Stealth</a></li>
+								<li><a href="airUnits.html#blackbomb">Black Bomb</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Sea</a>
+							<ul class="uk-nav-sub">
+								<li><a href="seaUnits.html#lander">Lander</a></li>
+								<li><a href="seaUnits.html#cruiser">Cruiser</a></li>
+								<li><a href="seaUnits.html#battleship">Battleship</a></li>
+								<li><a href="seaUnits.html#sub">Sub</a></li>
+								<li><a href="seaUnits.html#carrier">Carrier</a></li>
+								<li><a href="seaUnits.html#blackboat">Black Boat</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="uk-parent uk-open">
+					<a href="">COs</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Orange Star</a>
+							<ul class="uk-nav-sub">
+								<li><a href="COs.html#andy">Andy</a></li>
+								<li><a href="COs.html#max">Max</a></li>
+								<li><a href="COs.html#sami">Sami</a></li>
+								<li><a href="COs.html#jake">Jake</a></li>
+								<li><a href="COs.html#rachel">Rachel</a></li>
+								<li><a href="COs.html#nell">Nell</a></li>
+						</ul></li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Blue Moon</a>
+							<ul class="uk-nav-sub">
+								<li><a href="BMCOs.html#olaf">Olaf</a></li>
+								<li><a href="BMCOs.html#grit">Grit</a></li>
+								<li><a href="BMCOs.html#colin">Colin</a></li>
+								<li><a href="BMCOs.html#sasha">Sasha</a></li>
+						</ul></li>
+						<li class="uk-parent uk-open">
+							<a href="#" class="uk-nav-header">Green Earth</a>
+							<ul class="uk-nav-sub">
+								<li><a href="#drake">Drake</a></li>
+								<li><a href="#eagle">Eagle</a></li>
+								<li><a href="#jess">Jess</a></li>
+								<li><a href="#javier">Javier</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Yellow Comet</a>
+							<ul class="uk-nav-sub">
+								<li><a href="YCCOs.html#kanbei">Kanbei</a></li>
+								<li><a href="YCCOs.html#sonja">Sonja</a></li>
+								<li><a href="YCCOs.html#sensei">Sensei</a></li>
+								<li><a href="YCCOs.html#grimm">Grimm</a></li>
+						</ul></li>
+					</ul>
+				</li>
+				<li class="uk-parent">
+					<a href="">Map Elements</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li><a href="map.html" class="uk-nav-header">Fog of War</a></li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Terrain</a>
+							<ul class="uk-nav-sub">
+								<li><a href="map.html#road">Roads & Bridges</a></li>
+								<li><a href="map.html#plain">Plains</a></li>
+								<li><a href="map.html#city">Properties</a></li>
+								<li><a href="map.html#wood">Woods</a></li>
+								<li><a href="map.html#mountain">Mountains</a></li>
+								<li><a href="map.html#river">River</a></li>
+								<li><a href="map.html#shoal">Shoal</a></li>
+								<li><a href="map.html#sea">Sea</a></li>
+								<li><a href="map.html#reef">Reef</a></li>
+								<li><a href="map.html#pipe">Pipes & Seams</a></li>
+						</ul></li>
+						<li class="uk-nav-sub">
+							<a href="map.html#weather" class="uk-nav-header">Weather</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="uk-container uk-container-xsmall uk-margin-medium-top uk-margin-xlarge-bottom">
+
+		<h1 class="uk-heading-small">Green Earth Commanders</h1>
+		<hr>
+
+		<a name="drake" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-medium-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Drake</h3>
+			</div>
+			<div class="uk-padding-small uk-flex">
+				<div class="uk-flex-last uk-visible@m"><img data-src="assets/co/Drake.png" style="object-fit:none;object-position:top center;max-height:600px;min-width:250px;" width="600" uk-img></div>
+				<div>
+					<img data-src="assets/co/DrakeIcon.png" style="image-rendering:crisp-edges;" width="100" class="uk-hidden@m uk-align-center" uk-img>
+					<p>Drake is a Green Earth CO with sturdy Naval units and strong CO Powers, but has the worst Air units in AW. Outside of that, his only saving grace is in his very normal land units and his powers.</p>
+					<table class="uk-table uk-table-small uk-table-divider uk-table-hover uk-background-default">
+						<tbody>
+							<tr>
+								<td class="uk-table-expand">Power Bar</td>
+								<td><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span></td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Strength</td>
+								<td>Naval Units, Rain Movement</td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Weakness</td>
+								<td>Air Units</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<dl class="uk-description-list uk-description-list-divider">
+					    <dt>Day-to-Day Effects</dt>
+					    <dd>Drake's naval units have +20% attack and +1 movement. His air units suffer a 10% attack penalty. Rain does not affect his movement and the chances of rain occurring during random weather is increased by 7%.</dd>
+					    <dt>Power: Tsunami</dt>
+					    <dd>All enemy units lose 1 HP (but will not fall below 0.1 HP displayed as 1) and half of their fuel (rounded down). All of Drake's units gain 10% increased offense and defense.</dd>
+					    <dt>Super Power: Typhoon</dt>
+					    <dd>All enemy units lose 2 HP (but will not fall below 0.1 HP displayed as 1) and half their fuel (rounded down). The weather changes to Rain for one day, and all of Drake's units gain 10% increased offense and defense.</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+		<a name="eagle" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Eagle</h3>
+			</div>
+			<div class="uk-padding-small uk-flex">
+				<div class="uk-flex-last uk-visible@m"><img data-src="assets/co/Eagle.png" style="object-fit:none;object-position:top left;max-height:600px;min-width:250px;" uk-img></div>
+				<div>
+					<img data-src="assets/co/EagleIcon.png" style="image-rendering:crisp-edges;" width="100" class="uk-hidden@m uk-align-center" uk-img>
+					<p>Eagle is an aerial-only specialist; however, the real threat he poses in the battlefield is his Super CO Power, Lightning Strike, which gives all non-footsoldier units an extra turn. Even though he has pretty bland land units, Lightning Strike makes said units deadly enough to beat most COs with better unit stats.</p>
+					<p>He pays for his really strong Lightning Strike with a very long Power bar, and relatively weak land units.</p>
+					<table class="uk-table uk-table-small uk-table-divider uk-table-hover uk-background-default">
+						<tbody>
+							<tr>
+								<td class="uk-table-expand">Power Bar</td>
+								<td><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span></td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Strength</td>
+								<td>Air Units</td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Weakness</td>
+								<td>Naval Units</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<dl class="uk-description-list uk-description-list-divider">
+					    <dt>Day-to-Day Effects</dt>
+					    <dd>All Eagle's flying units have 120% attack, but his naval units have 90%. His air units use 2 less fuel each day compared the baseline.</dd>
+					    <dt>Power: Lightning Drive</dt>
+					    <dd>All his non-infantry units can move and attack again, but their firepower is reduced. Aircraft attack at 70%, vehicles at 60%, naval units at 55%. Standard 10% boost to attack and defense is applied to units moving for the first time.</dd>
+					    <dt>Super Power: Lightning Strike</dt>
+					    <dd>All non-infantry units may move for a second time, with no firepower reduction. All his units receive the standard 10% bonus to attack and defense.</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+		<a name="jess" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Jess</h3>
+			</div>
+			<div class="uk-padding-small uk-flex">
+				<div class="uk-flex-last uk-visible@m"><img data-src="assets/co/Jess.png" style="object-fit:none;object-position:top left;max-height:600px;min-width:250px;" uk-img></div>
+				<div>
+					<img data-src="assets/co/JessIcon.png" style="image-rendering:crisp-edges;" width="100" class="uk-hidden@m uk-align-center" uk-img>
+					<p>Jess is a CO with slight boosts to land vehicles, but penalties for every other unit type.</p>
+					<p>She's therefore suitable for tank rushes and all-out attacks with direct units, but can resort to indirect battle if needed. She can also utilize stealthy units like Submarines and Stealth Planes effectively (despite the attack reduction) due to the refuelling effect of her powers.</p>
+					<table class="uk-table uk-table-small uk-table-divider uk-table-hover uk-background-default">
+						<tbody>
+							<tr>
+								<td class="uk-table-expand">Power Bar</td>
+								<td><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio: 0.8"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span></span></td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Strength</td>
+								<td>Land Vehicles</td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Weakness</td>
+								<td>Naval and Air Units</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<dl class="uk-description-list uk-description-list-divider">
+					    <dt>Day-to-Day Effects</dt>
+					    <dd>Under Jess's command, all vehicles have a 20% firepower boost. All other units have only 90% in firepower. Infantry units have normal firepower.</dd>
+					    <dt>Power: Turbo Charge</dt>
+					    <dd>Replenishes fuel and ammunition for all units. Firepower of all vehicular units increases by 50%, and they receive a +1 movement bonus. All units gain +10% defence.</dd>
+					    <dt>Super Power: Overdrive</dt>
+					    <dd>Firepower of all vehicular units increases by 70% and they receive a +2 movement bonus. All units are also refueled and resupplied. All units gain +10% defence.</dd>
+					</dl>
+					<hr>
+				</div>
+			</div>
+		</div>
+
+		<a name="javier" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Javier</h3>
+			</div>
+			<div class="uk-padding-small uk-flex">
+				<div class="uk-flex-last uk-visible@m"><img data-src="assets/co/Javier.png" style="object-fit:none;object-position:top left;max-height:600px;min-width:250px;" uk-img></div>
+				<div>
+					<img data-src="assets/co/JavierIcon.png" style="image-rendering:crisp-edges;" width="100" class="uk-hidden@m uk-align-center" uk-img>
+					<p>One of the most map-dependent COs in the game, Javier only truly shines where he can use <a href="map.html#city">Comm. Towers.</a></p>
+					<table class="uk-table uk-table-small uk-table-divider uk-table-hover uk-background-default">
+						<tbody>
+							<tr>
+								<td class="uk-table-expand">Power Bar</td>
+								<td><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span></td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Strength</td>
+								<td>Indirect Defense</td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Weakness</td>
+								<td>None</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<dl class="uk-description-list uk-description-list-divider">
+					    <dt>Day-to-Day Effects</dt>
+					    <dd>All of Javier's units take 20% reduced damage from Indirect Fire. Comm. Towers owned by Javier increase his units' defense by 10% in addition to the standard 10% offense boost.</dd>
+					    <dt>Power: Tower Shield</dt>
+					    <dd>All of Javier's units take 40% reduced damage from Indirect Fire and gain 10% increased offense and defense. Towers owned by Javier are twice as effective, each providing his units a total increase in both offense and defense of 20%.</dd>
+					    <dt>Super Power: Tower of Power</dt>
+					    <dd>All of Javier's units take 60% reduced damage from Indirect Fire and gain 10% increased offense and defense. Towers owned by Javier are three times as effective, each providing his units a total increase in both offense and defense of 30%.</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+	<div class="uk-container uk-container-xsmall uk-margin-medium-bottom">
+		<a href="" uk-totop></a>
+		<p class="uk-text-meta">All content is sourced from the <a href="https://advancewars.fandom.com/wiki/Advance_Wars_Wiki" target="_blank">Advance Wars Wiki</a>, <a href="https://awbw.fandom.com/wiki/Advance_Wars_By_Web_Wiki" target="_blank">Advance Wars By Web (AWBW) Wiki</a> and individual Advance Wars Wikipedia pages. Images and Sprites sourced from Trigononamous and the <a href="https://www.spriters-resource.com/ds_dsi/advancewarsds/" target="_blank">Sprite Resource</a></p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,2068 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advance Wars - Land Units</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <link href="css/styles.css" rel="stylesheet">
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+</head>
+<body>
+	<a name="intro"></a>
+	<div class="uk-background-primary" uk-sticky style="height:50px">
+		<span uk-icon="icon:menu;ratio:1.2" class="uk-align-right uk-padding-small uk-hidden@l" uk-toggle="target:#mobilenav" style="color:white"></span>
+		<img data-src="assets/advance_wars_logo.png" width="250px" height="" alt="" uk-img class="uk-padding-small">
+	</div>
+
+
+	<div class="uk-visible@l uk-padding uk-background-secondary uk-light" 
+	style="position:fixed;width:250px;height:100vh;overflow-y:scroll;box-sizing:border-box;top:50">
+		<ul class="uk-nav uk-nav-primary uk-margin-small-top" uk-nav>
+			<li class="uk-parent">
+				<a href="#">Overview</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent uk-open">
+						<a class="uk-hidden"></a>
+						<ul>
+							<li><a href="index.html#intro">Introduction</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Gameplay</a>
+						<ul>
+							<li><a href="index.html#commands">Commands</a></li>
+							<li><a href="index.html#units">Units</a></li>
+							<li><a href="index.html#combat">Combat</a></li>
+							<li><a href="index.html#COPower">COs/CO Powers</a></li>
+							<li><a href="index.html#luck">Luck</a></li>
+							<li><a href="index.html#dual">Dual Front</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="uk-parent uk-open">
+				<a href="">Units</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent uk-open">
+						<a href="#" class="uk-nav-header">Land</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#infantry">Infantry</a></li>
+							<li><a href="#mech">Mech</a></li>
+							<li><a href="#recon">Recon</a></li>
+							<li><a href="#apc">APC</a></li>
+							<li><a href="#tank">Tank</a></li>
+							<li><a href="#mdtank">Md. Tank</a></li>
+							<li><a href="#antiair">Anti-Air</a></li>
+							<li><a href="#artillery">Artillery</a></li>
+							<li><a href="#rocket">Rocket</a></li>
+							<li><a href="#missile">Missile</a></li>
+							<li><a href="#neotank">Neotank</a></li>
+							<li><a href="#megatank">Megatank</a></li>
+							<li><a href="#piperunner">Piperunner</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Air</a>
+						<ul class="uk-nav-sub">
+							<li><a href="airUnits.html#tcopter">T-Copter</a></li>
+							<li><a href="airUnits.html#bcopter">B-Copter</a></li>
+							<li><a href="airUnits.html#fighter">Fighter</a></li>
+							<li><a href="airUnits.html#bomber">Bomber</a></li>
+							<li><a href="airUnits.html#stealth">Stealth</a></li>
+							<li><a href="airUnits.html#blackbomb">Black Bomb</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Sea</a>
+						<ul class="uk-nav-sub">
+							<li><a href="seaUnits.html#lander">Lander</a></li>
+							<li><a href="seaUnits.html#cruiser">Cruiser</a></li>
+							<li><a href="seaUnits.html#battleship">Battleship</a></li>
+							<li><a href="seaUnits.html#sub">Sub</a></li>
+							<li><a href="seaUnits.html#carrier">Carrier</a></li>
+							<li><a href="seaUnits.html#blackboat">Black Boat</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="uk-parent">
+				<a href="">COs</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Orange Star</a>
+						<ul class="uk-nav-sub">
+							<li><a href="COs.html#andy">Andy</a></li>
+							<li><a href="COs.html#max">Max</a></li>
+							<li><a href="COs.html#sami">Sami</a></li>
+							<li><a href="COs.html#jake">Jake</a></li>
+							<li><a href="COs.html#rachel">Rachel</a></li>
+							<li><a href="COs.html#nell">Nell</a></li>
+					</ul></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Blue Moon</a>
+						<ul class="uk-nav-sub">
+							<li><a href="BMCOs.html#olaf">Olaf</a></li>
+							<li><a href="BMCOs.html#grit">Grit</a></li>
+							<li><a href="BMCOs.html#colin">Colin</a></li>
+							<li><a href="BMCOs.html#sasha">Sasha</a></li>
+					</ul></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Green Earth</a>
+						<ul class="uk-nav-sub">
+							<li><a href="GECOs.html#drake">Drake</a></li>
+							<li><a href="GECOs.html#eagle">Eagle</a></li>
+							<li><a href="GECOs.html#jess">Jess</a></li>
+							<li><a href="GECOs.html#javier">Javier</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Yellow Comet</a>
+						<ul class="uk-nav-sub">
+							<li><a href="YCCOs.html#kanbei">Kanbei</a></li>
+							<li><a href="YCCOs.html#sonja">Sonja</a></li>
+							<li><a href="YCCOs.html#sensei">Sensei</a></li>
+							<li><a href="YCCOs.html#grimm">Grimm</a></li>
+					</ul></li>
+				</ul>
+			</li>
+			<li class="uk-parent">
+				<a href="">Map Elements</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li><a href="map.html" class="uk-nav-header">Fog of War</a></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Terrain</a>
+						<ul class="uk-nav-sub">
+							<li><a href="map.html#road">Roads & Bridges</a></li>
+							<li><a href="map.html#plain">Plains</a></li>
+							<li><a href="map.html#city">Properties</a></li>
+							<li><a href="map.html#wood">Woods</a></li>
+							<li><a href="map.html#mountain">Mountains</a></li>
+							<li><a href="map.html#river">River</a></li>
+							<li><a href="map.html#shoal">Shoal</a></li>
+							<li><a href="map.html#sea">Sea</a></li>
+							<li><a href="map.html#reef">Reef</a></li>
+							<li><a href="map.html#pipe">Pipes & Seams</a></li>
+					</ul></li>
+					<li class="uk-nav-sub">
+						<a href="map.html#weather" class="uk-nav-header">Weather</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div id="mobilenav" uk-offcanvas="flip:true">
+		<div class="uk-offcanvas-bar uk-padding uk-background-secondary uk-light" style="position:fixed;width:250px;height:100vh;overflow-y:scroll;box-sizing:border-box;top:50">
+			<button class="uk-offcanvas-close" type="button" uk-close></button>
+			<ul class="uk-nav uk-nav-primary uk-margin-small-top" uk-nav>
+				<li class="uk-parent">
+					<a href="#">Overview</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent uk-open">
+							<a class="uk-hidden"></a>
+							<ul>
+								<li><a href="index.html#intro">Introduction</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Gameplay</a>
+							<ul>
+								<li><a href="index.html#commands">Commands</a></li>
+								<li><a href="index.html#units">Units</a></li>
+								<li><a href="index.html#combat">Combat</a></li>
+								<li><a href="index.html#COPower">COs/CO Powers</a></li>
+								<li><a href="index.html#luck">Luck</a></li>
+								<li><a href="index.html#dual">Dual Front</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="uk-parent uk-open">
+					<a href="">Units</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent uk-open">
+							<a href="#" class="uk-nav-header">Land</a>
+							<ul class="uk-nav-sub">
+								<li><a href="#infantry">Infantry</a></li>
+								<li><a href="#mech">Mech</a></li>
+								<li><a href="#recon">Recon</a></li>
+								<li><a href="#apc">APC</a></li>
+								<li><a href="#tank">Tank</a></li>
+								<li><a href="#mdtank">Md. Tank</a></li>
+								<li><a href="#antiair">Anti-Air</a></li>
+								<li><a href="#artillery">Artillery</a></li>
+								<li><a href="#rocket">Rocket</a></li>
+								<li><a href="#missile">Missile</a></li>
+								<li><a href="#neotank">Neotank</a></li>
+								<li><a href="#megatank">Megatank</a></li>
+								<li><a href="#piperunner">Piperunner</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Air</a>
+							<ul class="uk-nav-sub">
+								<li><a href="airUnits.html#tcopter">T-Copter</a></li>
+								<li><a href="airUnits.html#bcopter">B-Copter</a></li>
+								<li><a href="airUnits.html#fighter">Fighter</a></li>
+								<li><a href="airUnits.html#bomber">Bomber</a></li>
+								<li><a href="airUnits.html#stealth">Stealth</a></li>
+								<li><a href="airUnits.html#blackbomb">Black Bomb</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Sea</a>
+							<ul class="uk-nav-sub">
+								<li><a href="seaUnits.html#lander">Lander</a></li>
+								<li><a href="seaUnits.html#cruiser">Cruiser</a></li>
+								<li><a href="seaUnits.html#battleship">Battleship</a></li>
+								<li><a href="seaUnits.html#sub">Sub</a></li>
+								<li><a href="seaUnits.html#carrier">Carrier</a></li>
+								<li><a href="seaUnits.html#blackboat">Black Boat</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="uk-parent">
+					<a href="">COs</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Orange Star</a>
+							<ul class="uk-nav-sub">
+								<li><a href="COs.html#andy">Andy</a></li>
+								<li><a href="COs.html#max">Max</a></li>
+								<li><a href="COs.html#sami">Sami</a></li>
+								<li><a href="COs.html#jake">Jake</a></li>
+								<li><a href="COs.html#rachel">Rachel</a></li>
+								<li><a href="COs.html#nell">Nell</a></li>
+						</ul></li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Blue Moon</a>
+							<ul class="uk-nav-sub">
+								<li><a href="BMCOs.html#olaf">Olaf</a></li>
+								<li><a href="BMCOs.html#grit">Grit</a></li>
+								<li><a href="BMCOs.html#colin">Colin</a></li>
+								<li><a href="BMCOs.html#sasha">Sasha</a></li>
+						</ul></li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Green Earth</a>
+							<ul class="uk-nav-sub">
+								<li><a href="GECOs.html#drake">Drake</a></li>
+								<li><a href="GECOs.html#eagle">Eagle</a></li>
+								<li><a href="GECOs.html#jess">Jess</a></li>
+								<li><a href="GECOs.html#javier">Javier</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Yellow Comet</a>
+							<ul class="uk-nav-sub">
+								<li><a href="YCCOs.html#kanbei">Kanbei</a></li>
+								<li><a href="YCCOs.html#sonja">Sonja</a></li>
+								<li><a href="YCCOs.html#sensei">Sensei</a></li>
+								<li><a href="YCCOs.html#grimm">Grimm</a></li>
+						</ul></li>
+					</ul>
+				</li>
+				<li class="uk-parent">
+					<a href="">Map Elements</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li><a href="map.html" class="uk-nav-header">Fog of War</a></li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Terrain</a>
+							<ul class="uk-nav-sub">
+								<li><a href="map.html#road">Roads & Bridges</a></li>
+								<li><a href="map.html#plain">Plains</a></li>
+								<li><a href="map.html#city">Properties</a></li>
+								<li><a href="map.html#wood">Woods</a></li>
+								<li><a href="map.html#mountain">Mountains</a></li>
+								<li><a href="map.html#river">River</a></li>
+								<li><a href="map.html#shoal">Shoal</a></li>
+								<li><a href="map.html#sea">Sea</a></li>
+								<li><a href="map.html#reef">Reef</a></li>
+								<li><a href="map.html#pipe">Pipes & Seams</a></li>
+						</ul></li>
+						<li class="uk-nav-sub">
+							<a href="map.html#weather" class="uk-nav-header">Weather</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="sidenote uk-visible@l uk-card uk-card-default uk-card-body">
+		<h3>Reading the Charts</h3>
+		<dl class="uk-description-list">
+		    <dt class="uk-text-primary">Stats</dt>
+		    <dd>Movement is displayed by Value and then Movement Type. If a fuel value has (-) attached, that is how much fuel the unit consumes each day when idle.</dd>
+		    <dt class="uk-text-primary">Matchups</dt>
+		    <dd>Matchup statistics are displayed by Primary Weapon Damage | Secondary Weapon Damage, if applicable. If a particular unit is not listed, that means the two cannot interact whatsoever.</dd>
+		</dl>
+	</div>
+
+	<div class="uk-container uk-container-xsmall uk-margin-medium-top uk-margin-xlarge-bottom">
+
+		<h1 class="uk-heading-small">Land Units</h1>
+		<hr>
+
+		<a name="infantry" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-medium-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Infantry</h3>
+			</div>
+			<div class="uk-padding-small">
+				<p><img data-src="assets/units/Infantry.png" style="image-rendering:crisp-edges;" width="200" class="uk-align-right@s uk-align-center" uk-img>
+				An Infantry's primary function lies in the fact that it is the cheapest unit capable of capturing properties on the map.</p>
+				<p>The secondary function of infantry is to block your more valuable units from being attacked. While weak defensively, infantry can usually take at least one attack from most direct combat units before being destroyed. This prevents the opponent from hitting more valuable units in the process, and also potentially leaves them open to a counterattack from your defended units.</p>
+				<p>Infantry are also effective at blocking certain tiles that you do not want your opponent to take control off, such as cities or other tiles with high defense ratings. Infantry can block air units from flying over them as well.</p>
+
+				<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Stats</a></li>
+					<li><a href="#">Matchups</a></li>
+					<li><a href="#">Notes</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin uk-background-default">
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<tbody>
+								<tr>
+									<td class="uk-table-expand">Cost</td>
+									<td>1000</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Movement</td>
+									<td>3 (Foot)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Fuel</td>
+									<td>99</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Range</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Primary Weapon</td>
+									<td>None</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Ammo</td>
+									<td>N/A</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Secondary Weapon</td>
+									<td>Machine Gun</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Vision</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Special Commands</td>
+									<td>Capture</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<thead>
+						        <tr>
+						            <th class="uk-table-expand">Targetable Unit</th>
+						            <th>Damage Given</th>
+						            <th>Damage Taken</th>
+						        </tr>
+						    </thead>
+							<tbody>
+								<tr>
+									<td>Infantry</td>
+									<td>55</td>
+									<td>55</td>
+								</tr>
+								<tr>
+									<td>Mech</td>
+									<td>45</td>
+									<td>65</td>
+								</tr>
+								<tr>
+									<td>Recon</td>
+									<td>12</td>
+									<td>70</td>
+								</tr>
+								<tr>
+									<td>APC</td>
+									<td>14</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>Tank</td>
+									<td>5</td>
+									<td>75</td>
+								</tr>
+								<tr>
+									<td>Medium Tank</td>
+									<td>1</td>
+									<td>105</td>
+								</tr>
+								<tr>
+									<td>Anti-Air</td>
+									<td>5</td>
+									<td>105</td>
+								</tr>
+								<tr>
+									<td>Artillery</td>
+									<td>15</td>
+									<td>90</td>
+								</tr>
+								<tr>
+									<td>Rocket</td>
+									<td>25</td>
+									<td>95</td>
+								</tr>
+								<tr>
+									<td>Missile</td>
+									<td>25</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>Neotank</td>
+									<td>1</td>
+									<td>125</td>
+								</tr>
+								<tr>
+									<td>Megatank</td>
+									<td>1</td>
+									<td>135</td>
+								</tr>
+								<tr>
+									<td>Piperunner</td>
+									<td>5</td>
+									<td>95</td>
+								</tr>
+								<tr>
+									<td>T-Copter</td>
+									<td>30</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>B-Copter</td>
+									<td>7</td>
+									<td>75</td>
+								</tr>
+								<tr>
+									<td>Bomber</td>
+									<td>-</td>
+									<td>110</td>
+								</tr>
+								<tr>
+									<td>Stealth</td>
+									<td>-</td>
+									<td>90</td>
+								</tr>
+								<tr>
+									<td>Battleship</td>
+									<td>-</td>
+									<td>95</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<ul class="uk-padding-small uk-list uk-list-bullet">
+							<li>The final use of Infantry is a last-ditch attacker. Infantry Machine Guns do minimal damage to most non-infantry targets, but can usually take off 1 HP from lighter-armored units such as Tanks and B-Copters. Be aware that attacking a full-HP Tank will result in your infantry taking much more damage from the counterattack in the process. Infantry are, however, good at finishing off 1 HP units when more valuable units are unavailable or would be put to better use on other targets.</li>
+						    <li>Anti-Airs are particularly strong against Infantry. A full-HP Anti-Air is guaranteed to OHKO an infantry on a road, and with any offensive boost at all, will OHKO infantry on plains as well, quickly opening up an infantry line and allowing you to hit more valuable units.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<a name="mech" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Mechanized Infantry</h3>
+			</div>
+			<div class="uk-padding-small">
+				<p><img data-src="assets/units/Mech.png" style="image-rendering:crisp-edges;" width="200" class="uk-align-right@s uk-align-center" uk-img>
+				Stronger, slower, and more expensive than Infantry, Mechanized Infantry (more commonly referred to as Mechs) are still relatively inexpensive and versatile units.</p>
+				<p>Like Infantry, Mechs are also able to Capture Properties on the map. When given a choice, it is generally preferable to have Infantry commit to capturing over Mechs, as Mechs are slower than Infantry, but much more powerful offensively.</p>
+				<p>Offensively, Mechs are comparable to Tanks in terms of power, allowing them to do moderate amounts of damage to lightly armored ground units if allowed to get the first strike. Against foot soldiers, Mechs are stronger than Infantry both offensively and defensively.</p>
+				<p>While stronger than Infantry defensively, Mechs still have relatively low defense and rely on heavy terrain to survive. Combined with their much higher cost relative to Infantry, Mechs make poor blocking units. They do make strong supporting units, however, deterring opposing light units from attacking your more valuable units without suffering a retaliatory attack from a Mech.</p>
+				<p>While both Mech and Infantry are classified as foot soldiers, Mech's have a set movement range and cost that does not change under any weather or terrain condition.</p>
+
+				<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Stats</a></li>
+					<li><a href="#">Matchups</a></li>
+					<li><a href="#">Notes</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin uk-background-default">
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<tbody>
+								<tr>
+									<td class="uk-table-expand">Cost</td>
+									<td>3000</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Movement</td>
+									<td>2 (Foot)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Fuel</td>
+									<td>70</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Range</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Primary Weapon</td>
+									<td>Bazooka</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Ammo</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Secondary Weapon</td>
+									<td>Machine Gun</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Vision</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Special Commands</td>
+									<td>Capture</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<thead>
+						        <tr>
+						            <th class="uk-table-expand">Targetable Unit</th>
+						            <th>Damage Given</th>
+						            <th>Damage Taken</th>
+						        </tr>
+						    </thead>
+							<tbody>
+								<tr>
+									<td>Infantry</td>
+									<td>65</td>
+									<td>45</td>
+								</tr>
+								<tr>
+									<td>Mech</td>
+									<td>55</td>
+									<td>55</td>
+								</tr>
+								<tr>
+									<td>Recon</td>
+									<td>85 | 18</td>
+									<td>65</td>
+								</tr>
+								<tr>
+									<td>APC</td>
+									<td>75 | 20</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>Tank</td>
+									<td>55 | 6</td>
+									<td>70</td>
+								</tr>
+								<tr>
+									<td>Medium Tank</td>
+									<td>15 | 1</td>
+									<td>95</td>
+								</tr>
+								<tr>
+									<td>Anti-Air</td>
+									<td>65 | 6</td>
+									<td>105</td>
+								</tr>
+								<tr>
+									<td>Artillery</td>
+									<td>70 | 32</td>
+									<td>85</td>
+								</tr>
+								<tr>
+									<td>Rocket</td>
+									<td>85 | 35</td>
+									<td>90</td>
+								</tr>
+								<tr>
+									<td>Missile</td>
+									<td>85 | 35</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>Neotank</td>
+									<td>15 | 1</td>
+									<td>115</td>
+								</tr>
+								<tr>
+									<td>Megatank</td>
+									<td>5 | 1</td>
+									<td>125</td>
+								</tr>
+								<tr>
+									<td>Piperunner</td>
+									<td>55 | 6</td>
+									<td>90</td>
+								</tr>
+								<tr>
+									<td>T-Copter</td>
+									<td>35</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>B-Copter</td>
+									<td>9</td>
+									<td>75</td>
+								</tr>
+								<tr>
+									<td>Bomber</td>
+									<td>-</td>
+									<td>110</td>
+								</tr>
+								<tr>
+									<td>Stealth</td>
+									<td>-</td>
+									<td>90</td>
+								</tr>
+								<tr>
+									<td>Battleship</td>
+									<td>-</td>
+									<td>90</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<ul class="uk-padding-small uk-list uk-list-bullet">
+							<li>Mechs will always use their Machine Guns against B-Copters, so it is not advisable to attack B-Copters with Mechs.</li>
+							<li>Due to their low movement, Mechs are out-ranged by almost any other direct or indirect-combat unit capable of hitting them.</li>
+						    <li>Infantry are generally the most efficient unit for countering Mechs, being much cheaper while still doing reasonably high damage to them.</li>
+						    <li>B-Copters are also strong at attacking Mechs, as they suffer minimal damage from the Mech's counterattack (since it is always the secondary weapon).</li>
+						    <li>Anti-Airs are just as strong against Mechs as they are against Infantry, but will suffer heavy damage from Mechs if they are allowed to get the first strike.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<a name="recon" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Reconnaissance</h3>
+			</div>
+			<div class="uk-padding-small">
+				<p><img data-src="assets/units/Recon.png" style="image-rendering:crisp-edges;" width="200" class="uk-align-right@s uk-align-center" uk-img>
+				Light, fast, and inexpensive, Recons make excellent scouting and harassment units.</p>
+				<p>The primary role of the Recon is to provide vision in Fog of War games. With 5 vision, Recons have the highest vision in the game, tied with Subs, Missiles and foot soldiers on Mountains, while also being much more mobile than the others. Recons are critical for identifying possible targets in Fog, as units cannot attack what they cannot see.</p>
+				<p>Even if Fog of War is not enabled, recons still have situational uses. Being inexpensive and very fast, Recons are excellent at disrupting enemy Capture operations in the early game.</p>
+				<p>In combat, Recons are mediocre attackers at best. They can only deal high damage to foot soldiers, and deal middling damage to Indirect Units. Any other Direct Combat unit (save for other Recons) will handily beat the Recon in combat, unless they are severely weakened. As such, recons are rarely seen outside of the early game or Fog of War matches.</p>
+
+				<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Stats</a></li>
+					<li><a href="#">Matchups</a></li>
+					<li><a href="#">Notes</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin uk-background-default">
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<tbody>
+								<tr>
+									<td class="uk-table-expand">Cost</td>
+									<td>4000</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Movement</td>
+									<td>8 (Wheel)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Fuel</td>
+									<td>80</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Range</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Primary Weapon</td>
+									<td>None</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Ammo</td>
+									<td>N/A</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Secondary Weapon</td>
+									<td>Machine Gun</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Vision</td>
+									<td>5</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<thead>
+						        <tr>
+						            <th class="uk-table-expand">Targetable Unit</th>
+						            <th>Damage Given</th>
+						            <th>Damage Taken</th>
+						        </tr>
+						    </thead>
+							<tbody>
+								<tr>
+									<td>Infantry</td>
+									<td>70</td>
+									<td>12</td>
+								</tr>
+								<tr>
+									<td>Mech</td>
+									<td>65</td>
+									<td>85 | 18</td>
+								</tr>
+								<tr>
+									<td>Recon</td>
+									<td>35</td>
+									<td>35</td>
+								</tr>
+								<tr>
+									<td>APC</td>
+									<td>45</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>Tank</td>
+									<td>6</td>
+									<td>85 | 40</td>
+								</tr>
+								<tr>
+									<td>Medium Tank</td>
+									<td>1</td>
+									<td>105 | 45</td>
+								</tr>
+								<tr>
+									<td>Anti-Air</td>
+									<td>4</td>
+									<td>60</td>
+								</tr>
+								<tr>
+									<td>Artillery</td>
+									<td>45</td>
+									<td>80</td>
+								</tr>
+								<tr>
+									<td>Rocket</td>
+									<td>55</td>
+									<td>90</td>
+								</tr>
+								<tr>
+									<td>Missile</td>
+									<td>28</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>Neotank</td>
+									<td>1</td>
+									<td>125 | 65</td>
+								</tr>
+								<tr>
+									<td>Megatank</td>
+									<td>1</td>
+									<td>195</td>
+								</tr>
+								<tr>
+									<td>Piperunner</td>
+									<td>6</td>
+									<td>90</td>
+								</tr>
+								<tr>
+									<td>T-Copter</td>
+									<td>35</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>B-Copter</td>
+									<td>10</td>
+									<td>55 | 30</td>
+								</tr>
+								<tr>
+									<td>Bomber</td>
+									<td>-</td>
+									<td>105</td>
+								</tr>
+								<tr>
+									<td>Stealth</td>
+									<td>-</td>
+									<td>85</td>
+								</tr>
+								<tr>
+									<td>Battleship</td>
+									<td>-</td>
+									<td>90</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<ul class="uk-padding-small uk-list uk-list-bullet">
+							<li>Note that because of their Movement Type, Recons need long stretches of Roads, Shoals or Properties to travel over to reach the front line quickly, as they are slowed by Plains and slowed even more by Forests.</li>
+						    <li>If there are few routes of transportation that allow it to travel quickly, it may be wise to forgo using Recons. If the Recon fails to disrupt any captures, the Recon purchase becomes cost-inefficient.</li>
+						    <li>In Fog Of War, Recons may be a valuable target to attack. Enemy units cannot engage any units outside of vision range, so neutralizing any Recons may limit the opponent's attack options with severely reduced vision. Complete destruction of the Recon is required for this, as a 1 HP Recon can see just as far as a 10 HP one.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<a name="apc" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Armored Personnel Carrier</h3>
+			</div>
+			<div class="uk-padding-small">
+				<p><img data-src="assets/units/APC.png" style="image-rendering:crisp-edges;" width="200" class="uk-align-right@s uk-align-center" uk-img>
+				The most notable function of the Armored Personnel Carrier (APC) is the loading and transporting of one Infantry or Mech unit at a time, offering them more mobility in open terrain.</p>
+				<p>While loaded, the APC will also protect the unit it is carrying from attack, with the APC taking full damage instead. If the APC is destroyed while a unit is currently loaded in it, the loaded unit will be instantly destroyed along with the APC.</p>
+				<p>Moving the APC will not actually end its turn, and it can be loaded or unloaded as many times at any point during your turn as long as there are adjacent spaces available for foot soldiers to be dropped. When being unloaded, a unit will not be able to take any more actions for the turn.</p>
+				<p>The secondary function of the APC is to resupply any adjacent units of the same army. Doing so will completely refill the Fuel and Ammo stocks of any adjacent units. APCs will automatically resupply adjacent units at the start of your turn, and can also be manually told to resupply in the action menu. Resupplying will end the APCs turn as if it were being told to wait.</p>
+
+				<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Stats</a></li>
+					<li><a href="#">Matchups</a></li>
+					<li><a href="#">Notes</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin uk-background-default">
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<tbody>
+								<tr>
+									<td class="uk-table-expand">Cost</td>
+									<td>5000</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Movement</td>
+									<td>6 (Treads)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Fuel</td>
+									<td>70</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Vision</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Special Commands</td>
+									<td>Supply, Load</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<thead>
+						        <tr>
+						            <th class="uk-table-expand">Targetable Unit</th>
+						            <th>Damage Taken</th>
+						        </tr>
+						    </thead>
+							<tbody>
+								<tr>
+									<td>Infantry</td>
+									<td>14</td>
+								</tr>
+								<tr>
+									<td>Mech</td>
+									<td>75</td>
+								</tr>
+								<tr>
+									<td>Recon</td>
+									<td>45</td>
+								</tr>
+								<tr>
+									<td>Tank</td>
+									<td>75</td>
+								</tr>
+								<tr>
+									<td>Medium Tank</td>
+									<td>105</td>
+								</tr>
+								<tr>
+									<td>Anti-Air</td>
+									<td>50</td>
+								</tr>
+								<tr>
+									<td>Artillery</td>
+									<td>70</td>
+								</tr>
+								<tr>
+									<td>Rocket</td>
+									<td>80</td>
+								</tr>
+								<tr>
+									<td>Neotank</td>
+									<td>125</td>
+								</tr>
+								<tr>
+									<td>Megatank</td>
+									<td>195</td>
+								</tr>
+								<tr>
+									<td>Piperunner</td>
+									<td>80</td>
+								</tr>
+								<tr>
+									<td>B-Copter</td>
+									<td>60</td>
+								</tr>
+								<tr>
+									<td>Bomber</td>
+									<td>105</td>
+								</tr>
+								<tr>
+									<td>Stealth</td>
+									<td>85</td>
+								</tr>
+								<tr>
+									<td>Battleship</td>
+									<td>80</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<ul class="uk-padding-small uk-list uk-list-bullet">
+							<li>APCs are also decent blocking units as they do not lose effectiveness as they lose HP, and are difficult for Infantry to destroy. They are much too expensive to be used solely for this role, but can be useful if the APC has fulfilled its primary role already and can block enemy Infantry from capturing a property.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<a name="tank" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Light Tank</h3>
+			</div>
+			<div class="uk-padding-small">
+				<p><img data-src="assets/units/Tank.png" style="image-rendering:crisp-edges;" width="200" class="uk-align-right@s uk-align-center" uk-img>
+				(Light) Tanks are one of the most important units in the game, with the early and mid game phases typically being decided by who can make better use of their Tanks.</p>
+				<p>The Tank offers a good mix of mobility, firepower, and defense, making for a very versatile unit. Tanks have little to fear from Infantry and Recon units, taking minimal damage from them and doing high damage in return. Tanks are also capable of attacking Artillery units from beyond their range, making them good units for combating exposed Artillery.</p>
+				<p>As the game progresses, Tanks will become less critical to build, but are still vital units to any army, being good escort and support units for higher tier units. Tanks are quite efficient at dealing damage to Anti-Airs and Indirect units, opening up new target opportunities for friendly B-Copters and Land units, respectively.</p>
+
+				<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Stats</a></li>
+					<li><a href="#">Matchups</a></li>
+					<li><a href="#">Notes</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin uk-background-default">
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<tbody>
+								<tr>
+									<td class="uk-table-expand">Cost</td>
+									<td>7000</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Movement</td>
+									<td>6 (Tread)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Fuel</td>
+									<td>70</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Range</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Primary Weapon</td>
+									<td>Light Cannon</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Ammo</td>
+									<td>9</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Secondary Weapon</td>
+									<td>Machine Gun</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Vision</td>
+									<td>3</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<thead>
+						        <tr>
+						            <th class="uk-table-expand">Targetable Unit</th>
+						            <th>Damage Given</th>
+						            <th>Damage Taken</th>
+						        </tr>
+						    </thead>
+							<tbody>
+								<tr><td>Infantry</td><td>75</td><td>5</td>
+								</tr>
+								<tr><td>Mech</td><td>70</td><td>55 | 6</td>
+								</tr>
+								<tr><td>Recon</td><td>85 | 40</td><td>6</td>
+								</tr>
+								<tr><td>APC</td><td>75 | 45</td><td>-</td>
+								</tr>
+								<tr><td>Tank</td><td>55 | 6</td><td>55 | 6</td>
+								</tr>
+								<tr><td>Medium Tank</td><td>15 | 1</td><td>85 | 8</td>
+								</tr>
+								<tr><td>Anti-Air</td><td>65 | 5</td><td>25</td>
+								</tr>
+								<tr><td>Artillery</td><td>70 | 45</td><td>70</td>
+								</tr>
+								<tr><td>Rocket</td><td>85 | 55</td><td>90</td>
+								</tr>
+								<tr><td>Missile</td><td>85 | 30</td><td>-</td>
+								</tr>
+								<tr><td>Neotank</td><td>15 | 1</td><td>105 | 10</td>
+								</tr>
+								<tr><td>Megatank</td><td>10 | 1</td><td>180 | 10</td>
+								</tr>
+								<tr><td>Piperunner</td><td>55 | 6</td><td>80</td>
+								</tr>
+								<tr><td>T-Copter</td><td>40</td><td>-</td>
+								</tr>
+								<tr><td>B-Copter</td><td>10</td><td>55 | 6</td>
+								</tr>
+								<tr><td>Bomber</td><td>-</td><td>105</td>
+								</tr>
+								<tr><td>Stealth</td><td>-</td><td>75</td>
+								</tr>
+								<tr><td>Lander</td><td>10</td><td>-</td>
+								</tr>
+								<tr><td>Cruiser</td><td>5</td><td>-</td>
+								</tr>
+								<tr><td>Battleship</td><td>1</td><td>80</td>
+								</tr>
+								<tr><td>Sub</td><td>1</td><td>-</td>
+								</tr>
+								<tr><td>Carrier</td><td>1</td><td>-</td>
+								</tr>
+								<tr><td>Black Boat</td><td>10</td><td>-</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<ul class="uk-padding-small uk-list uk-list-bullet">
+							<li>Tanks are evenly matched with Mechs and other Tanks, so getting the first strike is critical against these units. Caution should be used when fighting Mechs with Tanks, however; Mechs on heavy Terrain can still do moderate damage on counterattack, despite being less than half the cost.</li>
+							<li>The most readily available counter to a Tank is a B-Copter. B-Copters deal high damage to Tanks, and take little damage in return (due to the fact that all tanks will use their secondary weapon on Copters), all while being able to keep up with the Tank's high movement very easily. They should be avoided when possible unless friendly Anti-Airs or B-Copters are supporting the Tank.</li>
+						    <li>Despite their resilience to small arms fire, Indirect Combat units also deal high damage to any Tanks left in their range, so keep enemy Indirect ranges in mind when positioning Tanks.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<a name="mdtank" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Medium Tank</h3>
+			</div>
+			<div class="uk-padding-small">
+				<p><img data-src="assets/units/MdTank.png" style="image-rendering:crisp-edges;" width="200" class="uk-align-right@s uk-align-center" uk-img>
+				Larger, slower, and considerably more powerful than Tanks, Medium Tanks (Often abbreviated Md. Tank) are forces to be reckoned with.</p>
+				<p>Md. Tanks function similarly to Tanks, but trade 1 Movement point (and less utility overall) for stronger offensive and defensive strength. They will outright destroy or cripple lighter armored units, such as Infantry, Tanks, and indirect combat units. Md. Tanks can hold their own against other Md. Tanks and Neotanks, with whichever getting the first strike coming out ahead.</p>
+				<p>Despite their strengths, it is not recommended to rush purchasing Md. Tanks as soon as possible, as their lower speed and over double price compared to Tanks will reduce early game map presence. If a game is roughly even between players with groups of Tanks, a Md. Tank is a good buy to tip the odds in your favor, as a well-used Md. Tank counters Tanks handily.</p>
+
+				<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Stats</a></li>
+					<li><a href="#">Matchups</a></li>
+					<li><a href="#">Notes</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin uk-background-default">
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<tbody>
+								<tr>
+									<td class="uk-table-expand">Cost</td>
+									<td>16000</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Movement</td>
+									<td>5 (Tread)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Fuel</td>
+									<td>60</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Range</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Primary Weapon</td>
+									<td>Medium Cannon</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Ammo</td>
+									<td>8</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Secondary Weapon</td>
+									<td>Machine Gun</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Vision</td>
+									<td>1</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<thead>
+						        <tr>
+						            <th class="uk-table-expand">Targetable Unit</th>
+						            <th>Damage Given</th>
+						            <th>Damage Taken</th>
+						        </tr>
+						    </thead>
+							<tbody>
+								<tr><td>Infantry</td><td>105</td><td>1</td>
+								</tr>
+								<tr><td>Mech</td><td>95</td><td>15 | 1</td>
+								</tr>
+								<tr><td>Recon</td><td>105 | 45</td><td>1</td>
+								</tr>
+								<tr><td>APC</td><td>105</td><td>-</td>
+								</tr>
+								<tr><td>Tank</td><td>85 | 8</td><td>15 | 1</td>
+								</tr>
+								<tr><td>Medium Tank</td><td>55</td><td>55</td>
+								</tr>
+								<tr><td>Anti-Air</td><td>105 | 7</td><td>10</td>
+								</tr>
+								<tr><td>Artillery</td><td>70 | 45</td><td>70</td>
+								</tr>
+								<tr><td>Rocket</td><td>105</td><td>55</td>
+								</tr>
+								<tr><td>Missile</td><td>105</td><td>-</td>
+								</tr>
+								<tr><td>Neotank</td><td>45</td><td>75</td>
+								</tr>
+								<tr><td>Megatank</td><td>25</td><td>125</td>
+								</tr>
+								<tr><td>Piperunner</td><td>85</td><td>55</td>
+								</tr>
+								<tr><td>T-Copter</td><td>45</td><td>-</td>
+								</tr>
+								<tr><td>B-Copter</td><td>12</td><td>25</td>
+								</tr>
+								<tr><td>Bomber</td><td>-</td><td>95</td>
+								</tr>
+								<tr><td>Stealth</td><td>-</td><td>70</td>
+								</tr>
+								<tr><td>Lander</td><td>35</td><td>-</td>
+								</tr>
+								<tr><td>Cruiser</td><td>55</td><td>-</td>
+								</tr>
+								<tr><td>Battleship</td><td>10</td><td>55</td>
+								</tr>
+								<tr><td>Sub</td><td>10</td><td>-</td>
+								</tr>
+								<tr><td>Carrier</td><td>10</td><td>-</td>
+								</tr>
+								<tr><td>Black Boat</td><td>35</td><td>-</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<ul class="uk-padding-small uk-list uk-list-bullet">
+							<li>They do low damage to Mega Tanks and Naval units, so it is not advisable to attack them with Md. Tanks unless there is no other option. While the Md. Tank's machine gun is much stronger than the Tank's against foot soldiers, it still does very low damage to B-Copters, so attacking them with Md. Tanks should be avoided.</li>
+							<li>As strong as Medium Tanks are against lighter units, they are not invulnerable to them. Artillery and Rockets still do significant damage to them, so care must be taken not to leave them in range of indirect combat units. Mechs, Tanks and B-Copters still do light damage to them despite being significantly cheaper, so if not careful, a Md. Tank can be worn down and overwhelmed by these units.</li>
+						    <li>Bombers and Stealths in particular are also a large threat to Md. Tanks, dealing very high damage to them without fear of counterattack.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<a name="antiair" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Anti-Air Tank</h3>
+			</div>
+			<div class="uk-padding-small">
+				<p><img data-src="assets/units/AntiAir.png" style="image-rendering:crisp-edges;" width="200" class="uk-align-right@s uk-align-center" uk-img>
+				As their name implies, the primary use of an Anti-Air is to fight Air units. They do very high damage to them, especially Copter units. These units have little to fear from B-Copters in particular, taking minimal damage from them while dealing extreme damage in return. Anti-Airs also deal high damage to plane-type air units, while costing significantly less in the process.</p>
+				<p>Anti-Airs are also capable of decimating Infantry and Mech units, with a full-HP Anti-Air capable of instantly destroying them if they are on Roads. This can prove invaluable in punching through a defensive line of Infantry that Tanks could not otherwise handle on their own.</p>
+				<p>Anti-Airs are also decently effective at attacking light-armored units, such as Indirects, but less powerful than Tanks in this regard. Anti-Airs deal poor damage to Tanks, and next to no damage to any heavier tanks, so those units should be avoided.</p>
+
+				<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Stats</a></li>
+					<li><a href="#">Matchups</a></li>
+					<li><a href="#">Notes</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin uk-background-default">
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<tbody>
+								<tr>
+									<td class="uk-table-expand">Cost</td>
+									<td>8000</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Movement</td>
+									<td>6 (Tread)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Fuel</td>
+									<td>60</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Range</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Primary Weapon</td>
+									<td>Vulcan Cannon</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Ammo</td>
+									<td>9</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Secondary Weapon</td>
+									<td>None</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Vision</td>
+									<td>2</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<thead>
+						        <tr>
+						            <th class="uk-table-expand">Targetable Unit</th>
+						            <th>Damage Given</th>
+						            <th>Damage Taken</th>
+						        </tr>
+						    </thead>
+							<tbody>
+								<tr><td>Infantry</td><td>105</td><td>5</td>
+								</tr>
+								<tr><td>Mech</td><td>105</td><td>65 | 6</td>
+								</tr>
+								<tr><td>Recon</td><td>60</td><td>4</td>
+								</tr>
+								<tr><td>APC</td><td>50</td><td>-</td>
+								</tr>
+								<tr><td>Tank</td><td>25</td><td>65 | 5</td>
+								</tr>
+								<tr><td>Medium Tank</td><td>10</td><td>105 | 7</td>
+								</tr>
+								<tr><td>Anti-Air</td><td>45</td><td>45</td>
+								</tr>
+								<tr><td>Artillery</td><td>50</td><td>75</td>
+								</tr>
+								<tr><td>Rocket</td><td>55</td><td>85</td>
+								</tr>
+								<tr><td>Missile</td><td>55</td><td>-</td>
+								</tr>
+								<tr><td>Neotank</td><td>5</td><td>115 | 17</td>
+								</tr>
+								<tr><td>Megatank</td><td>1</td><td>195 | 17</td>
+								</tr>
+								<tr><td>Piperunner</td><td>25</td><td>85</td>
+								</tr>
+								<tr><td>T-Copter</td><td>105</td><td>-</td>
+								</tr>
+								<tr><td>B-Copter</td><td>105</td><td>25 | 6</td>
+								</tr>
+								<tr><td>Fighter</td><td>65</td><td>-</td>
+								</tr>
+								<tr><td>Bomber</td><td>75</td><td>95</td>
+								</tr>
+								<tr><td>Stealth</td><td>75</td><td>50</td>
+								</tr>
+								<tr><td>Black Bomb</td><td>120</td><td>-</td>
+								</tr>
+								<tr><td>Battleship</td><td>-</td><td>85</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<ul class="uk-padding-small uk-list uk-list-bullet">
+							<li>Despite their increased defense against Air Units and higher cost than Tanks, Anti-Airs have worse armor than Tanks in terms of Ground combat. Tanks, Mechs, and Indirect Units will all do significant damage to an Anti-Air, so care must be taken around these units.</li>
+							<li>Bombers will heavily damage Anti-Airs if they can get the first strike, which is fairly easy given the Bomber's increased movement range and ability to fly over terrain.</li>
+						    <li>Again, getting the first strike is critical, as Bombers will take heavy damage from the Anti-Air otherwise. Anti-Airs are also incapable of attacking a hidden Stealth, and risk taking significant damage from them without retaliation.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<a name="artillery" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Artillery</h3>
+			</div>
+			<div class="uk-padding-small">
+				<p><img data-src="assets/units/Artillery.png" style="image-rendering:crisp-edges;" width="200" class="uk-align-right@s uk-align-center" uk-img>
+				Artillery are low-cost indirect vehicles. They serve as the primary defensive unit projecting power across front-lines.</p>
+				<p>Artillery sacrifice overall mobility for increased damage output. Their attacks deal moderate to high damage against Land and Naval units, with the exception of the Mega Tank, and so are considered the most cost-effective counters to Medium Tanks and Neotanks.</p>
+				<p>Artillery are also better-equipped to handle certain terrain elements that hinder or stop land units, being able to fire over Mountains, Rivers, and Pipes. Due to these properties, Artillery are fundamental to most army compositions.</p>
+				<p>Despite their strengths, exclusive use of Artillery will not win battles. Artillery have poor defense in addition to being unable to counterattack; they take significant damage from all units, including multiple Infantry attacks. Artillery have limited mobility and therefore work best when protected by other units such as infantry.</p>
+
+				<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Stats</a></li>
+					<li><a href="#">Matchups</a></li>
+					<li><a href="#">Notes</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin uk-background-default">
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<tbody>
+								<tr>
+									<td class="uk-table-expand">Cost</td>
+									<td>6000</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Movement</td>
+									<td>5 (Tread)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Fuel</td>
+									<td>50</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Range</td>
+									<td>2-3</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Primary Weapon</td>
+									<td>Cannon</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Ammo</td>
+									<td>9</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Secondary Weapon</td>
+									<td>None</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Vision</td>
+									<td>1</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<thead>
+						        <tr>
+						            <th class="uk-table-expand">Targetable Unit</th>
+						            <th>Damage Given</th>
+						            <th>Damage Taken</th>
+						        </tr>
+						    </thead>
+							<tbody>
+								<tr><td>Infantry</td><td>90</td><td>15</td>
+								</tr>
+								<tr><td>Mech</td><td>85</td><td>70 | 32</td>
+								</tr>
+								<tr><td>Recon</td><td>80</td><td>45</td>
+								</tr>
+								<tr><td>APC</td><td>70</td><td>-</td>
+								</tr>
+								<tr><td>Tank</td><td>70</td><td>70 | 45</td>
+								</tr>
+								<tr><td>Medium Tank</td><td>45</td><td>105 | 45</td>
+								</tr>
+								<tr><td>Anti-Air</td><td>75</td><td>50</td>
+								</tr>
+								<tr><td>Artillery</td><td>75</td><td>75</td>
+								</tr>
+								<tr><td>Rocket</td><td>80</td><td>80</td>
+								</tr>
+								<tr><td>Missile</td><td>80</td><td>-</td>
+								</tr>
+								<tr><td>Neotank</td><td>40</td><td>115 | 65</td>
+								</tr>
+								<tr><td>Megatank</td><td>15</td><td>195 | 65</td>
+								</tr>
+								<tr><td>Piperunner</td><td>70</td><td>80</td>
+								</tr>
+								<tr><td>B-Copter</td><td>-</td><td>65 | 25</td>
+								</tr>
+								<tr><td>Bomber</td><td>-</td><td>105</td>
+								</tr>
+								<tr><td>Stealth</td><td>-</td><td>75</td>
+								</tr>
+								<tr><td>Lander</td><td>55</td><td>-</td>
+								</tr>
+								<tr><td>Cruiser</td><td>50</td><td>-</td>
+								</tr>
+								<tr><td>Battleship</td><td>40</td><td>80</td>
+								</tr>
+								<tr><td>Sub</td><td>60</td><td>-</td>
+								</tr>
+								<tr><td>Carrier</td><td>45</td><td>-</td>
+								</tr>
+								<tr><td>Black Boat</td><td>55</td><td>-</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<ul class="uk-padding-small uk-list uk-list-bullet">
+							<li>Since they have little vision on ther own, Artillery units rely on the vision of other units to hit their targets during Fog of War.</li>
+							<li>B-Copters are quite effective at combating Artillery, as they can deal damage to shielding units without fear of retaliation from the Artillery, and are not slowed by most terrain features that would otherwise protect the Artillery.</li>
+						    <li>The longer range of Rockets will also prove to be threatening to Artillery, capable of bombarding the Artillery's shielding units and leaving it exposed to attacks.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<a name="rocket" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Rocket Launcher</h3>
+			</div>
+			<div class="uk-padding-small">
+				<p><img data-src="assets/units/Rocket.png" style="image-rendering:crisp-edges;" width="200" class="uk-align-right@s uk-align-center" uk-img>
+				The more advanced version of Artillery, Rockets trade higher damage and a much larger range for lighter armor and a more restrictive movement type.</p>
+				<p>Like Artillery, Rockets are Indirect Combat units. Rockets possess a much higher maximum range of attack compared to Artillery, but also a higher minimum range. While Artillery are only incapable of hitting units adjacent to them, Rockets may not hit any units within two spaces of them. As such, Rockets need to be more carefully placed in formations.</p>
+				<p>In addition to higher range, Rockets have higher damage potential compared to Artillery, being roughly 10% stronger offensively on average.</p>
+
+				<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Stats</a></li>
+					<li><a href="#">Matchups</a></li>
+					<li><a href="#">Notes</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin uk-background-default">
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<tbody>
+								<tr>
+									<td class="uk-table-expand">Cost</td>
+									<td>15000</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Movement</td>
+									<td>5 (Wheel)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Fuel</td>
+									<td>50</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Range</td>
+									<td>3-5</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Primary Weapon</td>
+									<td>Rockets</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Ammo</td>
+									<td>6</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Secondary Weapon</td>
+									<td>None</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Vision</td>
+									<td>1</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<thead>
+						        <tr>
+						            <th class="uk-table-expand">Targetable Unit</th>
+						            <th>Damage Given</th>
+						            <th>Damage Taken</th>
+						        </tr>
+						    </thead>
+							<tbody>
+								<tr><td>Infantry</td><td>95</td><td>25</td>
+								</tr>
+								<tr><td>Mech</td><td>90</td><td>85 | 35</td>
+								</tr>
+								<tr><td>Recon</td><td>90</td><td>55</td>
+								</tr>
+								<tr><td>APC</td><td>80</td><td>-</td>
+								</tr>
+								<tr><td>Tank</td><td>90</td><td>85 | 55</td>
+								</tr>
+								<tr><td>Medium Tank</td><td>55</td><td>105</td>
+								</tr>
+								<tr><td>Anti-Air</td><td>85</td><td>55</td>
+								</tr>
+								<tr><td>Artillery</td><td>80</td><td>80</td>
+								</tr>
+								<tr><td>Rocket</td><td>85</td><td>85</td>
+								</tr>
+								<tr><td>Missile</td><td>90</td><td>-</td>
+								</tr>
+								<tr><td>Neotank</td><td>50</td><td>125</td>
+								</tr>
+								<tr><td>Megatank</td><td>25</td><td>195</td>
+								</tr>
+								<tr><td>Piperunner</td><td>80</td><td>85</td>
+								</tr>
+								<tr><td>B-Copter</td><td>-</td><td>65 | 25</td>
+								</tr>
+								<tr><td>Bomber</td><td>-</td><td>105</td>
+								</tr>
+								<tr><td>Stealth</td><td>-</td><td>85</td>
+								</tr>
+								<tr><td>Lander</td><td>60</td><td>-</td>
+								</tr>
+								<tr><td>Cruiser</td><td>85</td><td>-</td>
+								</tr>
+								<tr><td>Battleship</td><td>55</td><td>85</td>
+								</tr>
+								<tr><td>Sub</td><td>85</td><td>-</td>
+								</tr>
+								<tr><td>Carrier</td><td>60</td><td>-</td>
+								</tr>
+								<tr><td>Black Boat</td><td>60</td><td>-</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<ul class="uk-padding-small uk-list uk-list-bullet">
+							<li>Their poor movement type means Rockets will be very difficult units to move quickly off of Roads and Properties. They also have weaker armor than Artillery, taking high damage from even Infantry attacks. Combined with their minimum range, Rockets work best with at least two other units acting as a buffer to keep it protected.</li>
+							<li>Much like Artillery, Rockets are defenseless against Air units on their own. B-Copters may sit within their range of fire, attacking units with impunity, as long as there are no anti-air units in the vicinity.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<a name="missile" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Anti-Air Missile Launcher</h3>
+			</div>
+			<div class="uk-padding-small">
+				<p><img data-src="assets/units/Missile.png" style="image-rendering:crisp-edges;" width="200" class="uk-align-right@s uk-align-center" uk-img>
+				Missiles are highly specialized units, only able to hit Air units from range. They can be considered to be the equivalent of Rockets versus Air units, but tend to be less effective due to Air units having better movement.</p>
+				<p>Missiles are designed to destroy Air units, either instantly destroying or dealing very high damage to any Air units that venture into its range. In typical games however, this rarely happens, as all Air units have higher movement ranges than Missiles have firing ranges. Combined with its low movement speed and bad movement type, Missiles are extremely easy to outmaneuver with Air units.</p>
+				<p>Despite this weakness, Missiles can be used to deny Air unit attacks on a group of units, as long as the Missile is well protected and the units are all within Missile range.</p>
+
+				<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Stats</a></li>
+					<li><a href="#">Matchups</a></li>
+					<li><a href="#">Notes</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin uk-background-default">
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<tbody>
+								<tr>
+									<td class="uk-table-expand">Cost</td>
+									<td>12000</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Movement</td>
+									<td>4 (Wheel)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Fuel</td>
+									<td>50</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Range</td>
+									<td>3-5</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Primary Weapon</td>
+									<td>Missiles</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Ammo</td>
+									<td>6</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Secondary Weapon</td>
+									<td>None</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Vision</td>
+									<td>5</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<thead>
+						        <tr>
+						            <th class="uk-table-expand">Targetable Unit</th>
+						            <th>Damage Given</th>
+						            <th>Damage Taken</th>
+						        </tr>
+						    </thead>
+							<tbody>
+								<tr><td>Infantry</td><td>-</td><td>25</td>
+								</tr>
+								<tr><td>Mech</td><td>-</td><td>85 | 35</td>
+								</tr>
+								<tr><td>Recon</td><td>-</td><td>28</td>
+								</tr>
+								<tr><td>Tank</td><td>-</td><td>85 | 30</td>
+								</tr>
+								<tr><td>Medium Tank</td><td>-</td><td>105</td>
+								</tr>
+								<tr><td>Anti-Air</td><td>-</td><td>55</td>
+								</tr>
+								<tr><td>Artillery</td><td>-</td><td>80</td>
+								</tr>
+								<tr><td>Rocket</td><td>-</td><td>90</td>
+								</tr>
+								<tr><td>Neotank</td><td>-</td><td>125</td>
+								</tr>
+								<tr><td>Megatank</td><td>-</td><td>195</td>
+								</tr>
+								<tr><td>Piperunner</td><td>-</td><td>90</td>
+								</tr>
+								<tr><td>T-Copter</td><td>120</td><td>-</td>
+								</tr>
+								<tr><td>B-Copter</td><td>120</td><td>65</td>
+								</tr>
+								<tr><td>Fighter</td><td>100</td><td>-</td>
+								</tr>
+								<tr><td>Bomber</td><td>120</td><td>105</td>
+								</tr>
+								<tr><td>Stealth</td><td>100</td><td>95</td>
+								</tr>
+								<tr><td>Black Bomb</td><td>120</td><td>-</td>
+								</tr>
+								<tr><td>Battleship</td><td>-</td><td>90</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<ul class="uk-padding-small uk-list uk-list-bullet">
+							<li>Unlike Anti-Airs, Missiles do not expose themselves to possible Tank counterattacks when attacking Air units, so they have a place, albeit very niche, in a formation.</li>
+							<li>Missiles take high damage from all units, including Infantry and Air units, so an exposed Missile is easily destroyed. Missiles are easily avoided however, so it may be safe to ignore Missiles unless you need to open the area for Air units to travel.</li>
+						    <li>Missiles are often used to effectively prevent an Airport from being able to build units by moving it into range of the Airport. Generally speaking, however, if the opponent allows this to happen, the game tends to be already won.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<a name="neotank" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Neotank</h3>
+			</div>
+			<div class="uk-padding-small">
+				<p><img data-src="assets/units/Neotank.png" style="image-rendering:crisp-edges;" width="200" class="uk-align-right@s uk-align-center" uk-img>
+				Being very similar to Md. Tanks, Neotanks fulfill many of the same purposes. They, however, have 1 additional movement point, and are roughly 20% stronger offensively and 10% stronger defensively when compared to a Md. Tank.</p>
+				<p>The main benefit of a Neotank over a Md. Tank is it is much more reliable to completely destroy Full-HP Tank units, something that Md. Tanks cannot do without multiple boosts to its offense. It is also much more able to destroy other units, such as Infantry and Artillery with one attack, even if the Neotank has sustained some damage. Its increased movement capabilities will also allow it to close gaps slightly more efficiently than Md. Tanks.</p>
+				<p>The main fault of a Neotank is its price; for the same price of a Neotank, one can buy both a Md. Tank and an Artillery, which is usually a much more efficient use of funds. Neotanks still take high damage from Indirect fire, even with its slightly increased defense, so care must be taken around those units.</p>
+
+				<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Stats</a></li>
+					<li><a href="#">Matchups</a></li>
+					<li><a href="#">Notes</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin uk-background-default">
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<tbody>
+								<tr>
+									<td class="uk-table-expand">Cost</td>
+									<td>22000</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Movement</td>
+									<td>6 (Tread)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Fuel</td>
+									<td>99</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Range</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Primary Weapon</td>
+									<td>Neo Cannon</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Ammo</td>
+									<td>9</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Secondary Weapon</td>
+									<td>Machine Gun</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Vision</td>
+									<td>1</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<thead>
+						        <tr>
+						            <th class="uk-table-expand">Targetable Unit</th>
+						            <th>Damage Given</th>
+						            <th>Damage Taken</th>
+						        </tr>
+						    </thead>
+							<tbody>
+								<tr><td>Infantry</td><td>125</td><td>1</td>
+								</tr>
+								<tr><td>Mech</td><td>115</td><td>15 | 1</td>
+								</tr>
+								<tr><td>Recon</td><td>125 | 65</td><td>1</td>
+								</tr>
+								<tr><td>APC</td><td>125</td><td>-</td>
+								</tr>
+								<tr><td>Tank</td><td>105 | 10</td><td>15 | 1</td>
+								</tr>
+								<tr><td>Medium Tank</td><td>45</td><td>75</td>
+								</tr>
+								<tr><td>Anti-Air</td><td>115 | 17</td><td>5</td>
+								</tr>
+								<tr><td>Artillery</td><td>115 | 65</td><td>40</td>
+								</tr>
+								<tr><td>Rocket</td><td>125</td><td>50</td>
+								</tr>
+								<tr><td>Missile</td><td>125</td><td>-</td>
+								</tr>
+								<tr><td>Neotank</td><td>55</td><td>55</td>
+								</tr>
+								<tr><td>Megatank</td><td>35</td><td>115</td>
+								</tr>
+								<tr><td>Piperunner</td><td>105</td><td>50</td>
+								</tr>
+								<tr><td>T-Copter</td><td>55</td><td>-</td>
+								</tr>
+								<tr><td>B-Copter</td><td>22</td><td>20</td>
+								</tr>
+								<tr><td>Bomber</td><td>-</td><td>90</td>
+								</tr>
+								<tr><td>Stealth</td><td>-</td><td>60</td>
+								</tr>
+								<tr><td>Lander</td><td>50</td><td>-</td>
+								</tr>
+								<tr><td>Cruiser</td><td>50</td><td>-</td>
+								</tr>
+								<tr><td>Battleship</td><td>15</td><td>50</td>
+								</tr>
+								<tr><td>Sub</td><td>15</td><td>-</td>
+								</tr>
+								<tr><td>Carrier</td><td>15</td><td>-</td>
+								</tr>
+								<tr><td>Black Boat</td><td>40</td><td>-</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<ul class="uk-padding-small uk-list uk-list-bullet">
+							<li>Neotanks largely share the same weaknesses as Md. Tanks; Indirect attacks and B-Copters, in particular. They may not deal incredibly high damage to Neotanks, but they cost less than half the amount of one, as well as taking little damage from them in return.</li>
+							<li>As stated before, Neotanks cost the same as a combination of a Md. Tank and an Artillery, a unit combination that is generally very effective at combating Neotanks. Md. Tanks can still do considerable damage to Neotanks, going even with them if they are able to get the first strike.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<a name="megatank" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Megatank</h3>
+			</div>
+			<div class="uk-padding-small">
+				<p><img data-src="assets/units/Megatank.png" style="image-rendering:crisp-edges;" width="200" class="uk-align-right@s uk-align-center" uk-img>
+				Slow and expensive, but boasting massive amounts of offensive and defensive power, Mega Tanks are the ultimate in ground-based firepower.</p>
+				<p>The Mega Tank is a unit that deals in extremes. Its cannon is capable of completely obliterating any Land unit in one shot, save for other Mega Tanks. They will need to be close to full HP to do this to Md. Tanks and Neotanks. Against lighter-armored Ground units, Mega Tanks can still destroy whole units when they are at 6 or 7 HP, depending on terrain.</p>
+				<p>This firepower comes at the price of low ammo capacity, however. With only 3 shots before needing to resupply, a Mega Tank can easily run out of ammo if not careful, losing a ton of firepower in the process.</p>
+				<p>Similarly to its raw offensive power, a Mega Tank has sky-high defense, taking low to middling damage from any other unit, save for other Mega Tanks. As a result of its heavy armor, the Mega Tank is also a very slow unit, usually being the slowest ground vehicle and taking a considerable amount of time to reach the front lines.</p>
+
+				<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Stats</a></li>
+					<li><a href="#">Matchups</a></li>
+					<li><a href="#">Notes</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin uk-background-default">
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<tbody>
+								<tr>
+									<td class="uk-table-expand">Cost</td>
+									<td>28000</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Movement</td>
+									<td>4 (Tread)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Fuel</td>
+									<td>50</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Range</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Primary Weapon</td>
+									<td>Mega Cannon</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Ammo</td>
+									<td>3</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Secondary Weapon</td>
+									<td>Machine Gun</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Vision</td>
+									<td>1</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<thead>
+						        <tr>
+						            <th class="uk-table-expand">Targetable Unit</th>
+						            <th>Damage Given</th>
+						            <th>Damage Taken</th>
+						        </tr>
+						    </thead>
+							<tbody>
+								<tr><td>Infantry</td><td>135</td><td>1</td>
+								</tr>
+								<tr><td>Mech</td><td>125</td><td>5 | 1</td>
+								</tr>
+								<tr><td>Recon</td><td>195</td><td>1</td>
+								</tr>
+								<tr><td>APC</td><td>195</td><td>-</td>
+								</tr>
+								<tr><td>Tank</td><td>180 | 10</td><td>10 | 1</td>
+								</tr>
+								<tr><td>Medium Tank</td><td>125</td><td>25</td>
+								</tr>
+								<tr><td>Anti-Air</td><td>195 | 17</td><td>1</td>
+								</tr>
+								<tr><td>Artillery</td><td>195 | 65</td><td>15</td>
+								</tr>
+								<tr><td>Rocket</td><td>195</td><td>25</td>
+								</tr>
+								<tr><td>Missile</td><td>195</td><td>-</td>
+								</tr>
+								<tr><td>Neotank</td><td>115</td><td>35</td>
+								</tr>
+								<tr><td>Megatank</td><td>65</td><td>65</td>
+								</tr>
+								<tr><td>Piperunner</td><td>180</td><td>25</td>
+								</tr>
+								<tr><td>T-Copter</td><td>55</td><td>-</td>
+								</tr>
+								<tr><td>B-Copter</td><td>22</td><td>20</td>
+								</tr>
+								<tr><td>Bomber</td><td>-</td><td>35</td>
+								</tr>
+								<tr><td>Stealth</td><td>-</td><td>15</td>
+								</tr>
+								<tr><td>Lander</td><td>75</td><td>-</td>
+								</tr>
+								<tr><td>Cruiser</td><td>65</td><td>-</td>
+								</tr>
+								<tr><td>Battleship</td><td>45</td><td>25</td>
+								</tr>
+								<tr><td>Sub</td><td>45</td><td>-</td>
+								</tr>
+								<tr><td>Black Boat</td><td>45</td><td>-</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<ul class="uk-padding-small uk-list uk-list-bullet">
+							<li>Due to its high firepower, defenses, and low ammo and movement, Mega Tanks are often built for defending a front. As a nigh-untouchable unit, they can be a hard-to-dislodge piece in a wall of other units, and can also do a good job of defending against an overwhelming number of enemy land units by itself.</li>
+							<li>Air units are generally good for fighting Mega Tanks, as they are still defenseless against Bombers and Stealths.</li> 
+							<li>Their Machine Guns are also no more effective against Copter units than a Neotank's, so using them to attack copters is inadvisable.</li>
+							<li>Mega Tanks take very low damage from Indirect Units, but still cannot retaliate against them, so they can prove useful in whittling it down to a more manageable state.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<a name="piperunner" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Piperunner</h3>
+			</div>
+			<div class="uk-padding-small">
+				<p><img data-src="assets/units/Piperunner.png" style="image-rendering:crisp-edges;" width="200" class="uk-align-right@s uk-align-center" uk-img>
+				Very fast, very strong, but completely map-dependent in terms of their viability, Piperunners are unique, if situational units. Unit strategy will assume that a Piperunner being used will actually have pipes to travel along.</p>
+				<p>Piperunners are incredibly versatile Indirect Combat units, being able to attack any other unit in the game with the exception of dived Subs and hidden Stealths. Their combat power is not to be underestimated either, dealing high damage to any enemy unit hit, comparable in firepower to a Battleship.</p>
+				<p>The largest shortcoming of the Piperunner is its incredibly limited movement, being able to only traverse Pipes, Pipe Seams, and Bases. If a Piperunner is built on a base without any connecting pipes, it will be completely immobile. However, Piperunners are incredibly nimble, being able to travel very quickly along pipes and are not slowed by any weather conditions.</p>
+
+				<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Stats</a></li>
+					<li><a href="#">Matchups</a></li>
+					<li><a href="#">Notes</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin uk-background-default">
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<tbody>
+								<tr>
+									<td class="uk-table-expand">Cost</td>
+									<td>20000</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Movement</td>
+									<td>9 (Pipe)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Fuel</td>
+									<td>99</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Range</td>
+									<td>2-5</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Primary Weapon</td>
+									<td>Pipe Cannon</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Ammo</td>
+									<td>9</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Secondary Weapon</td>
+									<td>None</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Vision</td>
+									<td>4</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<thead>
+						        <tr>
+						            <th class="uk-table-expand">Targetable Unit</th>
+						            <th>Damage Given</th>
+						            <th>Damage Taken</th>
+						        </tr>
+						    </thead>
+							<tbody>
+								<tr><td>Infantry</td><td>95</td><td>5</td>
+								</tr>
+								<tr><td>Mech</td><td>90</td><td>55 | 6</td>
+								</tr>
+								<tr><td>Recon</td><td>90</td><td>6</td>
+								</tr>
+								<tr><td>APC</td><td>80</td><td>-</td>
+								</tr>
+								<tr><td>Tank</td><td>80</td><td>55 | 6</td>
+								</tr>
+								<tr><td>Medium Tank</td><td>55</td><td>85</td>
+								</tr>
+								<tr><td>Anti-Air</td><td>85</td><td>25</td>
+								</tr>
+								<tr><td>Artillery</td><td>80</td><td>70</td>
+								</tr>
+								<tr><td>Rocket</td><td>85</td><td>80</td>
+								</tr>
+								<tr><td>Missile</td><td>90</td><td>-</td>
+								</tr>
+								<tr><td>Neotank</td><td>50</td><td>105</td>
+								</tr>
+								<tr><td>Megatank</td><td>25</td><td>180</td>
+								</tr>
+								<tr><td>Piperunner</td><td>80</td><td>80</td>
+								</tr>
+								<tr><td>T-Copter</td><td>105</td><td>-</td>
+								</tr>
+								<tr><td>B-Copter</td><td>105</td><td>55</td>
+								</tr>
+								<tr><td>Figher</td><td></td><td></td>
+								</tr>
+								<tr><td>Bomber</td><td>75</td><td>105</td>
+								</tr>
+								<tr><td>Stealth</td><td>75</td><td>80</td>
+								</tr>
+								<tr><td>Black Bomb</td><td>120</td><td>-</td>
+								</tr>
+								<tr><td>Lander</td><td>60</td><td>-</td>
+								</tr>
+								<tr><td>Cruiser</td><td>85</td><td>-</td>
+								</tr>
+								<tr><td>Battleship</td><td>55</td><td>80</td>
+								</tr>
+								<tr><td>Sub</td><td>85</td><td>-</td>
+								</tr>
+								<tr><td>Carrier</td><td>60</td><td>-</td>
+								</tr>
+								<tr><td>Black Boat</td><td>60</td><td>-</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<ul class="uk-padding-small uk-list uk-list-bullet">
+							<li>The same tactics for combating other Indirect units will apply to Piperunners. Despite their incredibly high movement, they still cannot move and attack in the same turn.</li>
+							<li>An advantage of Piperunners is that they are somewhat easier to defend than other Indirect Combat units, thanks to any adjacent Pipe tiles being completely impassible to any opposing non-Piperunner units.</li>
+							<li>Nonetheless, they must be protected from attack as their weak armor, combined with the fact that Pipes provide no terrain stars, means they will take significant damage from most units.</li> 
+							<li>If there is a Pipe Seam on the Piperunner's path, destroying it will also greatly hinder its mobility, as Piperunners cannot travel over broken Seams.</li>
+							<li>Tanks and B-Copters are good candidates for attacking Piperunners, being significantly cheaper, able to move farther than a Piperunner can shoot, and still capable of dealing considerable damage to them. They have a lower minimum range than Rockets, so it may be more difficult to find an opportunity to get within range.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="uk-container uk-container-xsmall uk-margin-medium-bottom">
+		<a href="" uk-totop></a>
+		<p class="uk-text-meta">All content is sourced from the <a href="https://advancewars.fandom.com/wiki/Advance_Wars_Wiki" target="_blank">Advance Wars Wiki</a>, <a href="https://awbw.fandom.com/wiki/Advance_Wars_By_Web_Wiki" target="_blank">Advance Wars By Web (AWBW) Wiki</a> and individual Advance Wars Wikipedia pages. Images and Sprites sourced from Trigononamous and the <a href="https://www.spriters-resource.com/ds_dsi/advancewarsds/" target="_blank">Sprite Resource</a></p>
+	</div>
+</body>
+</html>

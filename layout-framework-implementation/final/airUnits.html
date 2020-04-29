@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advance Wars - Air Units</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <link href="css/styles.css" rel="stylesheet">
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+</head>
+<body>
+	<a name="intro"></a>
+	<div class="uk-background-primary" uk-sticky style="height:50px">
+		<span uk-icon="icon:menu;ratio:1.2" class="uk-align-right uk-padding-small uk-hidden@l" uk-toggle="target:#mobilenav" style="color:white"></span>
+		<img data-src="assets/advance_wars_logo.png" width="250px" height="" alt="" uk-img class="uk-padding-small">
+	</div>
+
+	<div class="uk-visible@l uk-padding uk-background-secondary uk-light" 
+	style="position:fixed;width:250px;height:100vh;overflow-y:scroll;box-sizing:border-box;top:50">
+		<ul class="uk-nav uk-nav-primary uk-margin-small-top" uk-nav>
+			<li class="uk-parent">
+				<a href="#">Overview</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent uk-open">
+						<a class="uk-hidden"></a>
+						<ul>
+							<li><a href="index.html#intro">Introduction</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Gameplay</a>
+						<ul>
+							<li><a href="index.html#commands">Commands</a></li>
+							<li><a href="index.html#units">Units</a></li>
+							<li><a href="index.html#combat">Combat</a></li>
+							<li><a href="index.html#COPower">COs/CO Powers</a></li>
+							<li><a href="index.html#luck">Luck</a></li>
+							<li><a href="index.html#dual">Dual Front</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="uk-parent uk-open">
+				<a href="">Units</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Land</a>
+						<ul class="uk-nav-sub">
+							<li><a href="landUnits.html#infantry">Infantry</a></li>
+							<li><a href="landUnits.html#mech">Mech</a></li>
+							<li><a href="landUnits.html#recon">Recon</a></li>
+							<li><a href="landUnits.html#apc">APC</a></li>
+							<li><a href="landUnits.html#tank">Tank</a></li>
+							<li><a href="landUnits.html#mdtank">Md. Tank</a></li>
+							<li><a href="landUnits.html#antiair">Anti-Air</a></li>
+							<li><a href="landUnits.html#artillery">Artillery</a></li>
+							<li><a href="landUnits.html#rocket">Rocket</a></li>
+							<li><a href="landUnits.html#missile">Missile</a></li>
+							<li><a href="landUnits.html#neotank">Neotank</a></li>
+							<li><a href="landUnits.html#megatank">Megatank</a></li>
+							<li><a href="landUnits.html#piperunner">Piperunner</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent uk-open">
+						<a href="#" class="uk-nav-header">Air</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#tcopter">T-Copter</a></li>
+							<li><a href="#bcopter">B-Copter</a></li>
+							<li><a href="#fighter">Fighter</a></li>
+							<li><a href="#bomber">Bomber</a></li>
+							<li><a href="#stealth">Stealth</a></li>
+							<li><a href="#blackbomb">Black Bomb</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Sea</a>
+						<ul class="uk-nav-sub">
+							<li><a href="seaUnits.html#lander">Lander</a></li>
+							<li><a href="seaUnits.html#cruiser">Cruiser</a></li>
+							<li><a href="seaUnits.html#battleship">Battleship</a></li>
+							<li><a href="seaUnits.html#sub">Sub</a></li>
+							<li><a href="seaUnits.html#carrier">Carrier</a></li>
+							<li><a href="seaUnits.html#blackboat">Black Boat</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="uk-parent">
+				<a href="">COs</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Orange Star</a>
+						<ul class="uk-nav-sub">
+							<li><a href="COs.html#andy">Andy</a></li>
+							<li><a href="COs.html#max">Max</a></li>
+							<li><a href="COs.html#sami">Sami</a></li>
+							<li><a href="COs.html#jake">Jake</a></li>
+							<li><a href="COs.html#rachel">Rachel</a></li>
+							<li><a href="COs.html#nell">Nell</a></li>
+					</ul></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Blue Moon</a>
+						<ul class="uk-nav-sub">
+							<li><a href="BMCOs.html#olaf">Olaf</a></li>
+							<li><a href="BMCOs.html#grit">Grit</a></li>
+							<li><a href="BMCOs.html#colin">Colin</a></li>
+							<li><a href="BMCOs.html#sasha">Sasha</a></li>
+					</ul></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Green Earth</a>
+						<ul class="uk-nav-sub">
+							<li><a href="GECOs.html#drake">Drake</a></li>
+							<li><a href="GECOs.html#eagle">Eagle</a></li>
+							<li><a href="GECOs.html#jess">Jess</a></li>
+							<li><a href="GECOs.html#javier">Javier</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Yellow Comet</a>
+						<ul class="uk-nav-sub">
+							<li><a href="YCCOs.html#kanbei">Kanbei</a></li>
+							<li><a href="YCCOs.html#sonja">Sonja</a></li>
+							<li><a href="YCCOs.html#sensei">Sensei</a></li>
+							<li><a href="YCCOs.html#grimm">Grimm</a></li>
+					</ul></li>
+				</ul>
+			</li>
+			<li class="uk-parent">
+				<a href="">Map Elements</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li><a href="map.html" class="uk-nav-header">Fog of War</a></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Terrain</a>
+						<ul class="uk-nav-sub">
+							<li><a href="map.html#road">Roads & Bridges</a></li>
+							<li><a href="map.html#plain">Plains</a></li>
+							<li><a href="map.html#city">Properties</a></li>
+							<li><a href="map.html#wood">Woods</a></li>
+							<li><a href="map.html#mountain">Mountains</a></li>
+							<li><a href="map.html#river">River</a></li>
+							<li><a href="map.html#shoal">Shoal</a></li>
+							<li><a href="map.html#sea">Sea</a></li>
+							<li><a href="map.html#reef">Reef</a></li>
+							<li><a href="map.html#pipe">Pipes & Seams</a></li>
+					</ul></li>
+					<li class="uk-nav-sub">
+						<a href="map.html#weather" class="uk-nav-header">Weather</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div id="mobilenav" uk-offcanvas="flip:true">
+		<div class="uk-offcanvas-bar uk-padding uk-background-secondary uk-light" style="position:fixed;width:250px;height:100vh;overflow-y:scroll;box-sizing:border-box;top:50">
+			<button class="uk-offcanvas-close" type="button" uk-close></button>
+			<ul class="uk-nav uk-nav-primary uk-margin-small-top" uk-nav>
+				<li class="uk-parent">
+					<a href="#">Overview</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent uk-open">
+							<a class="uk-hidden"></a>
+							<ul>
+								<li><a href="index.html#intro">Introduction</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Gameplay</a>
+							<ul>
+								<li><a href="index.html#commands">Commands</a></li>
+								<li><a href="index.html#units">Units</a></li>
+								<li><a href="index.html#combat">Combat</a></li>
+								<li><a href="index.html#COPower">COs/CO Powers</a></li>
+								<li><a href="index.html#luck">Luck</a></li>
+								<li><a href="index.html#dual">Dual Front</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="uk-parent uk-open">
+					<a href="">Units</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Land</a>
+							<ul class="uk-nav-sub">
+								<li><a href="landUnits.html#infantry">Infantry</a></li>
+								<li><a href="landUnits.html#mech">Mech</a></li>
+								<li><a href="landUnits.html#recon">Recon</a></li>
+								<li><a href="landUnits.html#apc">APC</a></li>
+								<li><a href="landUnits.html#tank">Tank</a></li>
+								<li><a href="landUnits.html#mdtank">Md. Tank</a></li>
+								<li><a href="landUnits.html#antiair">Anti-Air</a></li>
+								<li><a href="landUnits.html#artillery">Artillery</a></li>
+								<li><a href="landUnits.html#rocket">Rocket</a></li>
+								<li><a href="landUnits.html#missile">Missile</a></li>
+								<li><a href="landUnits.html#neotank">Neotank</a></li>
+								<li><a href="landUnits.html#megatank">Megatank</a></li>
+								<li><a href="landUnits.html#piperunner">Piperunner</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent uk-open">
+							<a href="#" class="uk-nav-header">Air</a>
+							<ul class="uk-nav-sub">
+								<li><a href="#tcopter">T-Copter</a></li>
+								<li><a href="#bcopter">B-Copter</a></li>
+								<li><a href="#fighter">Fighter</a></li>
+								<li><a href="#bomber">Bomber</a></li>
+								<li><a href="#stealth">Stealth</a></li>
+								<li><a href="#blackbomb">Black Bomb</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Sea</a>
+							<ul class="uk-nav-sub">
+								<li><a href="seaUnits.html#lander">Lander</a></li>
+								<li><a href="seaUnits.html#cruiser">Cruiser</a></li>
+								<li><a href="seaUnits.html#battleship">Battleship</a></li>
+								<li><a href="seaUnits.html#sub">Sub</a></li>
+								<li><a href="seaUnits.html#carrier">Carrier</a></li>
+								<li><a href="seaUnits.html#blackboat">Black Boat</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="uk-parent">
+					<a href="">COs</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Orange Star</a>
+							<ul class="uk-nav-sub">
+								<li><a href="COs.html#andy">Andy</a></li>
+								<li><a href="COs.html#max">Max</a></li>
+								<li><a href="COs.html#sami">Sami</a></li>
+								<li><a href="COs.html#jake">Jake</a></li>
+								<li><a href="COs.html#rachel">Rachel</a></li>
+								<li><a href="COs.html#nell">Nell</a></li>
+						</ul></li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Blue Moon</a>
+							<ul class="uk-nav-sub">
+								<li><a href="BMCOs.html#olaf">Olaf</a></li>
+								<li><a href="BMCOs.html#grit">Grit</a></li>
+								<li><a href="BMCOs.html#colin">Colin</a></li>
+								<li><a href="BMCOs.html#sasha">Sasha</a></li>
+						</ul></li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Green Earth</a>
+							<ul class="uk-nav-sub">
+								<li><a href="GECOs.html#drake">Drake</a></li>
+								<li><a href="GECOs.html#eagle">Eagle</a></li>
+								<li><a href="GECOs.html#jess">Jess</a></li>
+								<li><a href="GECOs.html#javier">Javier</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Yellow Comet</a>
+							<ul class="uk-nav-sub">
+								<li><a href="YCCOs.html#kanbei">Kanbei</a></li>
+								<li><a href="YCCOs.html#sonja">Sonja</a></li>
+								<li><a href="YCCOs.html#sensei">Sensei</a></li>
+								<li><a href="YCCOs.html#grimm">Grimm</a></li>
+						</ul></li>
+					</ul>
+				</li>
+				<li class="uk-parent">
+					<a href="">Map Elements</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li><a href="map.html" class="uk-nav-header">Fog of War</a></li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Terrain</a>
+							<ul class="uk-nav-sub">
+								<li><a href="map.html#road">Roads & Bridges</a></li>
+								<li><a href="map.html#plain">Plains</a></li>
+								<li><a href="map.html#city">Properties</a></li>
+								<li><a href="map.html#wood">Woods</a></li>
+								<li><a href="map.html#mountain">Mountains</a></li>
+								<li><a href="map.html#river">River</a></li>
+								<li><a href="map.html#shoal">Shoal</a></li>
+								<li><a href="map.html#sea">Sea</a></li>
+								<li><a href="map.html#reef">Reef</a></li>
+								<li><a href="map.html#pipe">Pipes & Seams</a></li>
+						</ul></li>
+						<li class="uk-nav-sub">
+							<a href="map.html#weather" class="uk-nav-header">Weather</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="sidenote uk-visible@l uk-card uk-card-default uk-card-body">
+		<h3>Reading the Charts</h3>
+		<dl class="uk-description-list">
+		    <dt class="uk-text-primary">Stats</dt>
+		    <dd>Movement is displayed by Value and then Movement Type. If a fuel value has (-) attached, that is how much fuel the unit consumes each day when idle.</dd>
+		    <dt class="uk-text-primary">Matchups</dt>
+		    <dd>Matchup statistics are displayed by Primary Weapon Damage | Secondary Weapon Damage, if applicable. If a particular unit is not listed, that means the two cannot interact whatsoever.</dd>
+		</dl>
+	</div>
+
+	<div class="uk-container uk-container-xsmall uk-margin-medium-top uk-margin-xlarge-bottom">
+
+		<h1 class="uk-heading-small">Air Units</h1>
+		<hr>
+
+		<a name="tcopter" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-medium-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Transport Helicopter</h3>
+			</div>
+			<div class="uk-padding-small">
+				<p><img data-src="assets/units/TCopter.png" style="image-rendering:crisp-edges;" width="200" class="uk-align-right@s uk-align-center" uk-img>
+				Like APCs, T-Copters are capable of transporting one Infantry or Mech unit, moving them across any terrain without being slowed, thanks to their Air movement. Their inability to utilize terrain defense often leaves them vulnerable, however, so care must be taken as losing the T-Copter will also destroy any unit inside of it.</p>
+				<p>Unlike APCs, T-Copters cannot resupply adjacent units. Instead, T-Copters are able to travel over Mountains and Oceans, as well as not being slowed down by forests, allowing them to reach certain areas faster than APCs.</p>
+
+				<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Stats</a></li>
+					<li><a href="#">Matchups</a></li>
+					<li><a href="#">Notes</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin uk-background-default">
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<tbody>
+								<tr>
+									<td class="uk-table-expand">Cost</td>
+									<td>5000</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Movement</td>
+									<td>6 (Air)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Fuel</td>
+									<td>99 (-2)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Vision</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Special Commands</td>
+									<td>Load</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<thead>
+						        <tr>
+						            <th class="uk-table-expand">Targetable Unit</th>
+						            <th>Damage Taken</th>
+						        </tr>
+						    </thead>
+							<tbody>
+								<tr><td>Infantry</td><td>30</td>
+								</tr>
+								<tr><td>Mech</td><td>35</td>
+								</tr>
+								<tr><td>Recon</td><td>35</td>
+								</tr>
+								<tr><td>Tank</td><td>40</td>
+								</tr>
+								<tr><td>Medium Tank</td><td>45</td>
+								</tr>
+								<tr><td>Anti-Air</td><td>105</td>
+								</tr>
+								<tr><td>Missile</td><td>120</td>
+								</tr>
+								<tr><td>Neotank</td><td>55</td>
+								</tr>
+								<tr><td>Megatank</td><td>55</td>
+								</tr>
+								<tr><td>Piperunner</td><td>105</td>
+								</tr>
+								<tr><td>B-Copter</td><td>95</td>
+								</tr>
+								<tr><td>Fighter</td><td>100</td>
+								</tr>
+								<tr><td>Stealth</td><td>95</td>
+								</tr>
+								<tr><td>Cruiser</td><td>115</td>
+								</tr>
+								<tr><td>Carrier</td><td>115</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<ul class="uk-padding-small uk-list uk-list-bullet">
+							<li>T-Copters cannot sustain much small arms fire, only being able to take one attack from almost any unit before being put at dangerously low HP, so using them to block units will not last very long.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<a name="bcopter" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Battle Helicopter</h3>
+			</div>
+			<div class="uk-padding-small">
+				<p><img data-src="assets/units/BCopter.png" style="image-rendering:crisp-edges;" width="200" class="uk-align-right@s uk-align-center" uk-img>
+				Mobile, inexpensive, and packing a decent punch, Battle Copters (Often shortened to B-Copters) are incredibly versatile air units.</p>
+				<p>B-Copters will deal moderate to high damage to almost all foot soldiers and light-armored ground vehicles, taking little damage in return. Against Md. Tanks and Neotanks, B-Copters are still viable options (because the former two default to their Machine Guns), dealing about as much damage as they'd take from them, while also being much cheaper units.</p>
+				<p>Against other Air units, B-Copters can deal high damage to other Copter units. They are defenseless against Plane-Type air units, so Fighters and Stealths should be avoided when possible.</p>
+				<p>B-Copters fare well against naval units as well, dealing high damage to Cruisers if they can get the first strike. Most other naval units are defenseless against B-Copters.</p>
+
+				<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Stats</a></li>
+					<li><a href="#">Matchups</a></li>
+					<li><a href="#">Notes</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin uk-background-default">
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<tbody>
+								<tr>
+									<td class="uk-table-expand">Cost</td>
+									<td>9000</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Movement</td>
+									<td>6 (Air)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Fuel</td>
+									<td>99 (-2)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Range</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Primary Weapon</td>
+									<td>Air to Surface Missiles</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Ammo</td>
+									<td>6</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Secondary Weapon</td>
+									<td>Machine Gun</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Vision</td>
+									<td>3</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<thead>
+						        <tr>
+						            <th class="uk-table-expand">Targetable Unit</th>
+						            <th>Damage Given</th>
+						            <th>Damage Taken</th>
+						        </tr>
+						    </thead>
+							<tbody>
+								<tr><td>Infantry</td><td>75</td><td>7</td>
+								</tr>
+								<tr><td>Mech</td><td>75</td><td>9</td>
+								</tr>
+								<tr><td>Recon</td><td>55 | 30</td><td>10</td>
+								</tr>
+								<tr><td>APC</td><td>60</td><td>-</td>
+								</tr>
+								<tr><td>Tank</td><td>55 | 6</td><td>10</td>
+								</tr>
+								<tr><td>Medium Tank</td><td>25</td><td>12</td>
+								</tr>
+								<tr><td>Anti-Air</td><td>25 | 6</td><td>105</td>
+								</tr>
+								<tr><td>Artillery</td><td>65 | 25</td><td>-</td>
+								</tr>
+								<tr><td>Rocket</td><td>65 | 25</td><td>-</td>
+								</tr>
+								<tr><td>Missile</td><td>65</td><td>105</td>
+								</tr>
+								<tr><td>Neotank</td><td>20</td><td>22</td>
+								</tr>
+								<tr><td>Megatank</td><td>20</td><td>22</td>
+								</tr>
+								<tr><td>Piperunner</td><td>55</td><td>105</td>
+								</tr>
+								<tr><td>T-Copter</td><td>95</td><td>-</td>
+								</tr>
+								<tr><td>B-Copter</td><td>65</td><td>65</td>
+								</tr>
+								<tr><td>Stealth</td><td>-</td><td>85</td>
+								</tr>
+								<tr><td>Lander</td><td>25</td><td>-</td>
+								</tr>
+								<tr><td>Cruiser</td><td>55</td><td>115</td>
+								</tr>
+								<tr><td>Battleship</td><td>25</td><td>-</td>
+								</tr>
+								<tr><td>Sub</td><td>25</td><td>-</td>
+								</tr>
+								<tr><td>Carrier</td><td>25</td><td>115</td>
+								</tr>
+								<tr><td>Black Boat</td><td>25</td><td>-</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<ul class="uk-padding-small uk-list uk-list-bullet">
+							<li>Mega Tanks take low damage from B-Copters, but also deal low damage in return. Anti-Airs should be avoided at all costs however, as B-Copters deal minimal damage to them, and taking very high damage on the counterattack.</li>
+							<li>The only two cost-efficient units readily available to take out B-Copters, for the most part, are Anti-Airs and other B-Copters.</li>
+							<li>B-Copters are a straight counter to Tanks, but a highly cost-inefficient one if the B-Copter is shot down after one attack. If you are lacking in readily available Anti-Air, you may need to fall back a bit to prevent any free attacks from the enemy.</li>
+						    <li>After sustaining a few attacks, a B-Copter's HP will generally degrade over time. Unlike Tanks, B-Copters are much less capable of finding a repair spot, usually having to fall back a considerable amount to find a friendly airport.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<a name="fighter" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Fighter</h3>
+			</div>
+			<div class="uk-padding-small">
+				<p><img data-src="assets/units/Fighter.png" style="image-rendering:crisp-edges;" width="200" class="uk-align-right@s uk-align-center" uk-img>
+				Fighters have one purpose: to destroy other Air units.</p>
+				<p>They will outright destroy or severely cripple other Air units, with the exception of other Fighters, which they still do moderately high damage to. This power comes at a price, however; Fighters are completely incapable of attacking Land or Sea units, being unable to interact at all with the former.</p>
+
+				<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Stats</a></li>
+					<li><a href="#">Matchups</a></li>
+					<li><a href="#">Notes</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin uk-background-default">
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<tbody>
+								<tr>
+									<td class="uk-table-expand">Cost</td>
+									<td>20000</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Movement</td>
+									<td>9 (Air)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Fuel</td>
+									<td>99 (-5)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Range</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Primary Weapon</td>
+									<td>Missiles</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Ammo</td>
+									<td>9</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Secondary Weapon</td>
+									<td>None</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Vision</td>
+									<td>2</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<thead>
+						        <tr>
+						            <th class="uk-table-expand">Targetable Unit</th>
+						            <th>Damage Given</th>
+						            <th>Damage Taken</th>
+						        </tr>
+						    </thead>
+							<tbody>
+								<tr><td>Anti-Air</td><td>-</td><td>65</td>
+								</tr>
+								<tr><td>Missile</td><td>-</td><td>100</td>
+								</tr>
+								<tr><td>Piperunner</td><td>-</td><td>65</td>
+								</tr>
+								<tr><td>T-Copter</td><td>100</td><td>-</td>
+								</tr>
+								<tr><td>B-Copter</td><td>100</td><td>-</td>
+								</tr>
+								<tr><td>Fighter</td><td>55</td><td>55</td>
+								</tr>
+								<tr><td>Bomber</td><td>100</td><td>-</td>
+								</tr>
+								<tr><td>Stealth</td><td>85</td><td>45</td>
+								</tr>
+								<tr><td>Black Bomb</td><td>120</td><td>-</td>
+								</tr>
+								<tr><td>Cruiser</td><td>-</td><td>55</td>
+								</tr>
+								<tr><td>Carrier</td><td>-</td><td>100</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<ul class="uk-padding-small uk-list uk-list-bullet">
+							<li>Fighters are also one of the only units capable of hitting a hidden Stealth, the only other unit being other Stealths. With their high movement and high damage output, Fighters can keep a very large area free from enemy Air units.</li>
+							<li>Even with their high movement, Fighters cannot attack any units if their attack paths are blocked by a Land unit.</li>
+							<li>Their 9-space movement speed also allows them to quickly engage any air units on the map. Some players may also use Fighters to scout out any indirect units hiding in Woods.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<a name="bomber" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Bomber</h3>
+			</div>
+			<div class="uk-padding-small">
+				<p><img data-src="assets/units/Bomber.png" style="image-rendering:crisp-edges;" width="200" class="uk-align-right@s uk-align-center" uk-img>
+				Specialized in Air-To-Ground combat, Bombers are capable of devastating almost any ground or sea unit in one attack.</p>
+				<p>Bombers are the counterpart to Fighters; They deal very high damage to Ground units, but are unable to attack Air units. Full-HP Bombers will outright destroy most Ground units in one attack, or leave them with minimal HP. Even Mega Tanks, which are normally very resilient units, take moderate damage from Bombers.</p>
+				<p>Bombers excel when near full HP, as Bombers below 9 HP will lose most of their OHKO potential; severely hindering their ability to open up the path of attack for other units. It may be advisable to invest in repairing damaged Bombers where possible.</p>
+
+				<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Stats</a></li>
+					<li><a href="#">Matchups</a></li>
+					<li><a href="#">Notes</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin uk-background-default">
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<tbody>
+								<tr>
+									<td class="uk-table-expand">Cost</td>
+									<td>22000</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Movement</td>
+									<td>7 (Air)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Fuel</td>
+									<td>99 (-5)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Range</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Primary Weapon</td>
+									<td>Bombs</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Ammo</td>
+									<td>9</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Secondary Weapon</td>
+									<td>None</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Vision</td>
+									<td>2</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<thead>
+						        <tr>
+						            <th class="uk-table-expand">Targetable Unit</th>
+						            <th>Damage Given</th>
+						            <th>Damage Taken</th>
+						        </tr>
+						    </thead>
+							<tbody>
+								<tr><td>Infantry</td><td>110</td><td>-</td>
+								</tr>
+								<tr><td>Mech</td><td>110</td><td>-</td>
+								</tr>
+								<tr><td>Recon</td><td>105</td><td>-</td>
+								</tr>
+								<tr><td>APC</td><td>105</td><td>-</td>
+								</tr>
+								<tr><td>Tank</td><td>105</td><td>-</td>
+								</tr>
+								<tr><td>Medium Tank</td><td>95</td><td>-</td>
+								</tr>
+								<tr><td>Anti-Air</td><td>95</td><td>75</td>
+								</tr>
+								<tr><td>Artillery</td><td>105</td><td>-</td>
+								</tr>
+								<tr><td>Rocket</td><td>105</td><td>-</td>
+								</tr>
+								<tr><td>Missile</td><td>105</td><td>100</td>
+								</tr>
+								<tr><td>Neotank</td><td>90</td><td>-</td>
+								</tr>
+								<tr><td>Megatank</td><td>35</td><td>-</td>
+								</tr>
+								<tr><td>Piperunner</td><td>105</td><td>75</td>
+								</tr>
+								<tr><td>Fighter</td><td>-</td><td>100</td>
+								</tr>
+								<tr><td>Stealth</td><td>-</td><td>70</td>
+								</tr>
+								<tr><td>Lander</td><td>95</td><td>-</td>
+								</tr>
+								<tr><td>Cruiser</td><td>85</td><td>65</td>
+								</tr>
+								<tr><td>Battleship</td><td>75</td><td>-</td>
+								</tr>
+								<tr><td>Sub</td><td>95</td><td>-</td>
+								</tr>
+								<tr><td>Carrier</td><td>75</td><td>100</td>
+								</tr>
+								<tr><td>Black Boat</td><td>95</td><td>-</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<ul class="uk-padding-small uk-list uk-list-bullet">
+							<li>B-Copters cannot attack Bombers, but they can block a Bomber from hitting more valuable units. This goes for other Bombers as well.</li>
+							<li>Fighters and Stealths will also make quick work of a Bomber, so care must be taken when those units are on the field.</li>
+						    <li>Just as well, Anti-Airs will also do moderately high damage to a Bomber, but only if they can get the first strike; Bombers are just as deadly to Anti-Airs as Anti-Airs are to Bombers. With their higher movement and lack of terrain movement penalties, Bombers can easily outmaneuver Anti-Airs when used correctly.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<a name="stealth" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Stealth Fighter</h3>
+			</div>
+			<div class="uk-padding-small">
+				<p><img data-src="assets/units/Stealth.png" style="image-rendering:crisp-edges;" width="200" class="uk-align-right@s uk-align-center" uk-img>
+				The aerial counterpart to Subs, Stealths are much more threatening due to their much higher degree of versatility.</p>
+				<p>Stealths are the most versatile attackers in the game; the only target a Stealth is not capable of hitting is a submerged Sub. In the process, they can deal relatively high amounts of damage to most units it can attack.</p>
+				<p>The Stealth's trademark ability is its Hide command. When told to hide, the Stealth will become invisible to the enemy, much like submerging a Sub, only to be seen if the Stealth is adjacent to an enemy unit. The other benefit of hiding is that a Hidden Stealth may only be attacked by other Stealths and Fighters; <span class="uk-text-primary">no other unit may attack it, even on counterattacks.</span> As such, Stealths can make excellent harassment units, attacking certain areas that an opponent cannot feasibly react to.</p>
+
+				<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Stats</a></li>
+					<li><a href="#">Matchups</a></li>
+					<li><a href="#">Notes</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin uk-background-default">
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<tbody>
+								<tr>
+									<td class="uk-table-expand">Cost</td>
+									<td>24000</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Movement</td>
+									<td>6 (Air)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Fuel</td>
+									<td>60 (-5)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Range</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Primary Weapon</td>
+									<td>Omni-Missiles</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Ammo</td>
+									<td>6</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Secondary Weapon</td>
+									<td>None</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Vision</td>
+									<td>4</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Special Commands</td>
+									<td>Hide</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<thead>
+						        <tr>
+						            <th class="uk-table-expand">Targetable Unit</th>
+						            <th>Damage Given</th>
+						            <th>Damage Taken</th>
+						        </tr>
+						    </thead>
+							<tbody>
+								<tr><td>Infantry</td><td>90</td><td>-</td>
+								</tr>
+								<tr><td>Mech</td><td>90</td><td>-</td>
+								</tr>
+								<tr><td>Recon</td><td>85</td><td>-</td>
+								</tr>
+								<tr><td>APC</td><td>85</td><td>-</td>
+								</tr>
+								<tr><td>Tank</td><td>75</td><td>-</td>
+								</tr>
+								<tr><td>Medium Tank</td><td>70</td><td>-</td>
+								</tr>
+								<tr><td>Anti-Air</td><td>50</td><td>75</td>
+								</tr>
+								<tr><td>Artillery</td><td>75</td><td>-</td>
+								</tr>
+								<tr><td>Rocket</td><td>85</td><td>-</td>
+								</tr>
+								<tr><td>Missile</td><td>85</td><td>100</td>
+								</tr>
+								<tr><td>Neotank</td><td>60</td><td>-</td>
+								</tr>
+								<tr><td>Megatank</td><td>15</td><td>-</td>
+								</tr>
+								<tr><td>Piperunner</td><td>80</td><td>75</td>
+								</tr>
+								<tr><td>T-Copter</td><td>95</td><td>-</td>
+								</tr>
+								<tr><td>B-Copter</td><td>85</td><td>-</td>
+								</tr>
+								<tr><td>Fighter</td><td>45</td><td>85</td>
+								</tr>
+								<tr><td>Bomber</td><td>70</td><td>-</td>
+								</tr>
+								<tr><td>Stealth</td><td>55</td><td>55</td>
+								</tr>
+								<tr><td>Lander</td><td>65</td><td>-</td>
+								</tr>
+								<tr><td>Cruiser</td><td>35</td><td>100</td>
+								</tr>
+								<tr><td>Battleship</td><td>45</td><td>-</td>
+								</tr>
+								<tr><td>Sub</td><td>55</td><td>-</td>
+								</tr>
+								<tr><td>Carrier</td><td>45</td><td>100</td>
+								</tr>
+								<tr><td>Black Boat</td><td>65</td><td>-</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<ul class="uk-padding-small uk-list uk-list-bullet">
+							<li>Stealths will do minimal damage to Mega Tanks. Attacking Anti-Airs, Fighters or Cruisers is also ill-advised, as even on counterattack, these units will generally come out ahead of the Stealth in those engagements.</li>
+							<li>If an enemy unit tries to move to a square a Hidden Stealth is on, they will be ambushed, and that unit's turn will immediately end without it being able to take any other actions. Stealths can make excellent shielding units in a pinch due to this feature, thanks to its general difficulty of attacking.</li>
+							<li>The main drawback to hiding a Stealth is it will rapidly consume Fuel; a Hidden Stealth burns 8 fuel at the start of each day, which combined with movement costs and its low fuel capacity, will cause it to run out of fuel in just a few days if it remains hidden. Stealths will have to be kept near an Airport or an APC in order to remain combat-ready throughout the battle.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<a name="blackbomb" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Black Bomb</h3>
+			</div>
+			<div class="uk-padding-small">
+				<p><img data-src="assets/units/BBomb.png" style="image-rendering:crisp-edges;" width="200" class="uk-align-right@s uk-align-center" uk-img>
+				Black Bombs, alongside Fighters, are the fastest units in the game, being able to move nine spaces a turn and are not hindered by terrain.</p>
+				<p>Black Bombs do not attack other units in a traditional fashion, and instead have an "Explode" command. When directed to Explode, the Black Bomb will detonate on the spot, dealing 5 HP damage to all units within three spaces of the black bomb, regardless of unit type or allegiance. This will instantly destroy the Black Bomb in the process, but will never destroy other units (any units with 5 or less HP will be reduced to 1 HP).</p>
+				<p>The only shortcoming of the Black Bomb is its high fuel usage and low fuel capacity. It consumes 5 fuel at the start of each day, and if told to move its maximum distance for even a few days will quickly deplete its fuel stock. If a black bomb runs out of fuel, it will crash and be destroyed on the start of the turn of whomever owns it, dealing no damage whatsoever. To use Black Bombs further away from Airports, an APC is recommended to keep its fuel stock high.</p>
+
+				<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Stats</a></li>
+					<li><a href="#">Matchups</a></li>
+					<li><a href="#">Notes</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin uk-background-default">
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<tbody>
+								<tr>
+									<td class="uk-table-expand">Cost</td>
+									<td>25000</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Movement</td>
+									<td>9 (Air)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Fuel</td>
+									<td>45 (-5)</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Vision</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td class="uk-table-expand">Special Commands</td>
+									<td>Explode</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-divider uk-table-hover">
+							<thead>
+						        <tr>
+						            <th class="uk-table-expand">Targetable Unit</th>
+						            <th>Damage Taken</th>
+						        </tr>
+						    </thead>
+							<tbody>
+								<tr><td>Anti-Air</td><td>120</td>
+								</tr>
+								<tr><td>Missile</td><td>120</td>
+								</tr>
+								<tr><td>Piperunner</td><td>120</td>
+								</tr>
+								<tr><td>Fighter</td><td>120</td>
+								</tr>
+								<tr><td>Stealth</td><td>120</td>
+								</tr>
+								<tr><td>Cruiser</td><td>120</td>
+								</tr>
+								<tr><td>Carrier</td><td>120</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<ul class="uk-padding-small uk-list uk-list-bullet">
+							<li>Damage dealt from a Black Bomb is not considered to be combat damage, so it is not subject to <a href="index.html#luck" class="uk-text-primary">Luck</a>, will not damage <a href="map.html#pipe" class="uk-text-primary">Pipe Seams</a> and will not charge the CO Power Bar of any armies damaged by it.</li>
+							<li>While any unit capable of attacking Plane-Type units can OHKO a Black Bomb at 8 HP or above, the high movement of the Black Bomb makes it difficult to attack without leaving your own units vulnerable in the process. It is not worth it to attack a Black Bomb unless you can completely destroy it, as unlike other units, having lower HP does not reduce the Black Bomb's combat effectiveness.</li>
+						    <li>The easiest way to combat a Black Bomb is to try to block it from reaching your more valuable units with cheaper, more expendable units, such as Infantry.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="uk-container uk-container-xsmall uk-margin-medium-bottom">
+		<a href="" uk-totop></a>
+		<p class="uk-text-meta">All content is sourced from the <a href="https://advancewars.fandom.com/wiki/Advance_Wars_Wiki" target="_blank">Advance Wars Wiki</a>, <a href="https://awbw.fandom.com/wiki/Advance_Wars_By_Web_Wiki" target="_blank">Advance Wars By Web (AWBW) Wiki</a> and individual Advance Wars Wikipedia pages. Images and Sprites sourced from Trigononamous and the <a href="https://www.spriters-resource.com/ds_dsi/advancewarsds/" target="_blank">Sprite Resource</a></p>
+	</div>
+</body>
+</html>

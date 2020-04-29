@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advance Wars - Map Elements</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <link href="css/styles.css" rel="stylesheet">
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+</head>
+<body>
+	<a name="intro"></a>
+	<div class="uk-background-primary" uk-sticky
+	style="height:50px">
+		<span uk-icon="icon:menu;ratio:1.2" class="uk-align-right uk-padding-small uk-hidden@l" uk-toggle="target:#mobilenav" style="color:white"></span>
+		<img data-src="assets/advance_wars_logo.png" width="250px" height="" alt="" uk-img class="uk-padding-small">
+	</div>
+
+	<div class="uk-visible@l uk-padding uk-background-secondary uk-light" 
+	style="position:fixed;width:250px;height:100vh;overflow-y:scroll;box-sizing:border-box;top:50">
+		<ul class="uk-nav uk-nav-primary uk-margin-small-top" uk-nav>
+			<li class="uk-parent">
+				<a href="#">Overview</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent uk-open">
+						<a class="uk-hidden"></a>
+						<ul>
+							<li><a href="index.html#intro">Introduction</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Gameplay</a>
+						<ul>
+							<li><a href="index.html#commands">Commands</a></li>
+							<li><a href="index.html#units">Units</a></li>
+							<li><a href="index.html#combat">Combat</a></li>
+							<li><a href="index.html#COPower">COs/CO Powers</a></li>
+							<li><a href="index.html#luck">Luck</a></li>
+							<li><a href="index.html#dual">Dual Front</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="uk-parent">
+				<a href="">Units</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Land</a>
+						<ul class="uk-nav-sub">
+							<li><a href="landUnits.html#infantry">Infantry</a></li>
+							<li><a href="landUnits.html#mech">Mech</a></li>
+							<li><a href="landUnits.html#recon">Recon</a></li>
+							<li><a href="landUnits.html#apc">APC</a></li>
+							<li><a href="landUnits.html#tank">Tank</a></li>
+							<li><a href="landUnits.html#mdtank">Md. Tank</a></li>
+							<li><a href="landUnits.html#antiair">Anti-Air</a></li>
+							<li><a href="landUnits.html#artillery">Artillery</a></li>
+							<li><a href="landUnits.html#rocket">Rocket</a></li>
+							<li><a href="landUnits.html#missile">Missile</a></li>
+							<li><a href="landUnits.html#neotank">Neotank</a></li>
+							<li><a href="landUnits.html#megatank">Megatank</a></li>
+							<li><a href="landUnits.html#piperunner">Piperunner</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Air</a>
+						<ul class="uk-nav-sub">
+							<li><a href="airUnits.html#tcopter">T-Copter</a></li>
+							<li><a href="airUnits.html#bcopter">B-Copter</a></li>
+							<li><a href="airUnits.html#fighter">Fighter</a></li>
+							<li><a href="airUnits.html#bomber">Bomber</a></li>
+							<li><a href="airUnits.html#stealth">Stealth</a></li>
+							<li><a href="airUnits.html#blackbomb">Black Bomb</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Sea</a>
+						<ul class="uk-nav-sub">
+							<li><a href="seaUnits.html#lander">Lander</a></li>
+							<li><a href="seaUnits.html#cruiser">Cruiser</a></li>
+							<li><a href="seaUnits.html#battleship">Battleship</a></li>
+							<li><a href="seaUnits.html#sub">Sub</a></li>
+							<li><a href="seaUnits.html#carrier">Carrier</a></li>
+							<li><a href="seaUnits.html#blackboat">Black Boat</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="uk-parent">
+				<a href="">COs</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Orange Star</a>
+						<ul class="uk-nav-sub">
+							<li><a href="COs.html#andy">Andy</a></li>
+							<li><a href="COs.html#max">Max</a></li>
+							<li><a href="COs.html#sami">Sami</a></li>
+							<li><a href="COs.html#jake">Jake</a></li>
+							<li><a href="COs.html#rachel">Rachel</a></li>
+							<li><a href="COs.html#nell">Nell</a></li>
+					</ul></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Blue Moon</a>
+						<ul class="uk-nav-sub">
+							<li><a href="BMCOs.html#olaf">Olaf</a></li>
+							<li><a href="BMCOs.html#grit">Grit</a></li>
+							<li><a href="BMCOs.html#colin">Colin</a></li>
+							<li><a href="BMCOs.html#sasha">Sasha</a></li>
+					</ul></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Green Earth</a>
+						<ul class="uk-nav-sub">
+							<li><a href="GECOs.html#drake">Drake</a></li>
+							<li><a href="GECOs.html#eagle">Eagle</a></li>
+							<li><a href="GECOs.html#jess">Jess</a></li>
+							<li><a href="GECOs.html#javier">Javier</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Yellow Comet</a>
+						<ul class="uk-nav-sub">
+							<li><a href="YCCOs.html#kanbei">Kanbei</a></li>
+							<li><a href="YCCOs.html#sonja">Sonja</a></li>
+							<li><a href="YCCOs.html#sensei">Sensei</a></li>
+							<li><a href="YCCOs.html#grimm">Grimm</a></li>
+					</ul></li>
+				</ul>
+			</li>
+			<li class="uk-parent uk-open">
+				<a href="">Map Elements</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent uk-open">
+						<a href="#" class="uk-nav-header">Fog of War</a></li>
+					<li class="uk-parent uk-open">
+						<a href="#" class="uk-nav-header">Terrain</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#road">Roads & Bridges</a></li>
+							<li><a href="#plain">Plains</a></li>
+							<li><a href="#city">Properties</a></li>
+							<li><a href="#wood">Woods</a></li>
+							<li><a href="#mountain">Mountains</a></li>
+							<li><a href="#river">River</a></li>
+							<li><a href="#shoal">Shoal</a></li>
+							<li><a href="#sea">Sea</a></li>
+							<li><a href="#reef">Reef</a></li>
+							<li><a href="#pipe">Pipes & Seams</a></li>
+					</ul></li>
+					<li class="uk-nav-sub">
+						<a href="#weather" class="uk-nav-header">Weather</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div id="mobilenav" uk-offcanvas="flip:true">
+		<div class="uk-offcanvas-bar uk-padding uk-background-secondary uk-light" style="position:fixed;width:250px;height:100vh;overflow-y:scroll;box-sizing:border-box;top:50">
+			<button class="uk-offcanvas-close" type="button" uk-close></button>
+			<ul class="uk-nav uk-nav-primary uk-margin-small-top" uk-nav>
+				<li class="uk-parent">
+					<a href="#">Overview</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent uk-open">
+							<a class="uk-hidden"></a>
+							<ul>
+								<li><a href="index.html#intro">Introduction</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Gameplay</a>
+							<ul>
+								<li><a href="index.html#commands">Commands</a></li>
+								<li><a href="index.html#units">Units</a></li>
+								<li><a href="index.html#combat">Combat</a></li>
+								<li><a href="index.html#COPower">COs/CO Powers</a></li>
+								<li><a href="index.html#luck">Luck</a></li>
+								<li><a href="index.html#dual">Dual Front</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="uk-parent">
+					<a href="">Units</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Land</a>
+							<ul class="uk-nav-sub">
+								<li><a href="landUnits.html#infantry">Infantry</a></li>
+								<li><a href="landUnits.html#mech">Mech</a></li>
+								<li><a href="landUnits.html#recon">Recon</a></li>
+								<li><a href="landUnits.html#apc">APC</a></li>
+								<li><a href="landUnits.html#tank">Tank</a></li>
+								<li><a href="landUnits.html#mdtank">Md. Tank</a></li>
+								<li><a href="landUnits.html#antiair">Anti-Air</a></li>
+								<li><a href="landUnits.html#artillery">Artillery</a></li>
+								<li><a href="landUnits.html#rocket">Rocket</a></li>
+								<li><a href="landUnits.html#missile">Missile</a></li>
+								<li><a href="landUnits.html#neotank">Neotank</a></li>
+								<li><a href="landUnits.html#megatank">Megatank</a></li>
+								<li><a href="landUnits.html#piperunner">Piperunner</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Air</a>
+							<ul class="uk-nav-sub">
+								<li><a href="airUnits.html#tcopter">T-Copter</a></li>
+								<li><a href="airUnits.html#bcopter">B-Copter</a></li>
+								<li><a href="airUnits.html#fighter">Fighter</a></li>
+								<li><a href="airUnits.html#bomber">Bomber</a></li>
+								<li><a href="airUnits.html#stealth">Stealth</a></li>
+								<li><a href="airUnits.html#blackbomb">Black Bomb</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Sea</a>
+							<ul class="uk-nav-sub">
+								<li><a href="seaUnits.html#lander">Lander</a></li>
+								<li><a href="seaUnits.html#cruiser">Cruiser</a></li>
+								<li><a href="seaUnits.html#battleship">Battleship</a></li>
+								<li><a href="seaUnits.html#sub">Sub</a></li>
+								<li><a href="seaUnits.html#carrier">Carrier</a></li>
+								<li><a href="seaUnits.html#blackboat">Black Boat</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="uk-parent">
+					<a href="">COs</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Orange Star</a>
+							<ul class="uk-nav-sub">
+								<li><a href="COs.html#andy">Andy</a></li>
+								<li><a href="COs.html#max">Max</a></li>
+								<li><a href="COs.html#sami">Sami</a></li>
+								<li><a href="COs.html#jake">Jake</a></li>
+								<li><a href="COs.html#rachel">Rachel</a></li>
+								<li><a href="COs.html#nell">Nell</a></li>
+						</ul></li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Blue Moon</a>
+							<ul class="uk-nav-sub">
+								<li><a href="BMCOs.html#olaf">Olaf</a></li>
+								<li><a href="BMCOs.html#grit">Grit</a></li>
+								<li><a href="BMCOs.html#colin">Colin</a></li>
+								<li><a href="BMCOs.html#sasha">Sasha</a></li>
+						</ul></li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Green Earth</a>
+							<ul class="uk-nav-sub">
+								<li><a href="GECOs.html#drake">Drake</a></li>
+								<li><a href="GECOs.html#eagle">Eagle</a></li>
+								<li><a href="GECOs.html#jess">Jess</a></li>
+								<li><a href="GECOs.html#javier">Javier</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Yellow Comet</a>
+							<ul class="uk-nav-sub">
+								<li><a href="YCCOs.html#kanbei">Kanbei</a></li>
+								<li><a href="YCCOs.html#sonja">Sonja</a></li>
+								<li><a href="YCCOs.html#sensei">Sensei</a></li>
+								<li><a href="YCCOs.html#grimm">Grimm</a></li>
+						</ul></li>
+					</ul>
+				</li>
+				<li class="uk-parent uk-open">
+					<a href="">Map Elements</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent uk-open">
+							<a href="#" class="uk-nav-header">Fog of War</a></li>
+						<li class="uk-parent uk-open">
+							<a href="#" class="uk-nav-header">Terrain</a>
+							<ul class="uk-nav-sub">
+								<li><a href="#road">Roads & Bridges</a></li>
+								<li><a href="#plain">Plains</a></li>
+								<li><a href="#city">Properties</a></li>
+								<li><a href="#wood">Woods</a></li>
+								<li><a href="#mountain">Mountains</a></li>
+								<li><a href="#river">River</a></li>
+								<li><a href="#shoal">Shoal</a></li>
+								<li><a href="#sea">Sea</a></li>
+								<li><a href="#reef">Reef</a></li>
+								<li><a href="#pipe">Pipes & Seams</a></li>
+						</ul></li>
+						<li class="uk-nav-sub">
+							<a href="#weather" class="uk-nav-header">Weather</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="uk-container uk-container-xsmall uk-margin-medium-top uk-margin-xlarge-bottom">
+
+		<h1 class="uk-heading-small">Map Elements</h1>
+		<hr>
+
+		<h1>Fog of War</h1>
+
+		<p>Fog of War is a special condition in which a dark fog envelops the battlefield.</p>
+		<p>Games with Fog of War enabled prevent units from seeing, as well as attacking, enemy units beyond their collective vision range.</p>
+		<p>In addition, moving units into tiles beyond vision range carries a risk of being "ambushed" by a hidden enemy unit occupying any tile in the movement path. Upon encountering the hidden enemy unit, the ambushed unit's actions are immediately interrupted at the first point of contact, and the unit is unable to move or complete any other actions for the remainder of the turn.</p>
+		<p>Woods and Reefs are always hidden from vision range, unless an allied unit is directly adjacent to these tiles. Mountains boost vision range of Infantry and Mechs by 2 when placed on them. Units on allied Properties are always visible, except for hidden Stealths and Subs.</p>
+
+		<a name="road" class="anchor"></a>
+		<h1>Types of Terrain</h1>
+
+		<hr>
+		<div class="uk-flex">
+			<div class="uk-width-expand"><h3>Roads & Bridges</h3></div>
+			<div class="uk-width-small uk-flex-right uk-grid-small" uk-grid>
+			<div><img data-src="assets/map/road.png" style="image-rendering:crisp-edges;" width="40" uk-img></div>
+			<div><img data-src="assets/map/bridge.png" style="image-rendering:crisp-edges;" width="40" uk-img></div>
+			</div>
+		</div>
+		<p class="uk-text-uppercase uk-text-primary uk-margin-remove-top">Defense: 0</p>
+		<p>Roads and Bridges are the most basic terrain feature in the game. They are always the quickest route of travel for land units, always costing only 1 Movement Point to traverse per tile, even if it is Raining or Snowing. While efficient for quick travel, the downside of Roads and Bridges is that they provide no defensive bonuses to units stationed on them. Any unit on a Road or Bridge will take full damage from any given attack.</p>
+
+		<a name="plain" class="anchor"></a>
+		<hr>
+		<div class="uk-flex">
+			<div class="uk-width-expand"><h3>Plains</h3></div>
+			<div class="uk-width-small uk-flex-right uk-grid-small" uk-grid>
+			<div><img data-src="assets/map/plain.png" style="image-rendering:crisp-edges;" width="40" uk-img></div>
+			</div>
+		</div>
+		<p class="uk-text-uppercase uk-text-primary uk-margin-remove-top">Defense: 1</p>
+		<p>Plains are typically the most common terrain feature on any given map. They provide quick, efficient movement for most units, and also provides a very slight defense boost when units are stationed in plains. Rain and Snow will slow down vehicles on Plains, so Roads may be the preferable method of travel during adverse weather conditions.</p>
+
+		<a name="city" class="anchor"></a><hr>
+		<div class="uk-flex">
+			<div class="uk-width-expand"><h3>Properties</h3></div>
+			<div class="uk-width-small uk-flex-right uk-grid-small" uk-grid>
+			<div><img data-src="assets/map/city.png" style="image-rendering:crisp-edges;" width="40" uk-img></div>
+			</div>
+		</div>
+		<p class="uk-text-uppercase uk-text-primary uk-margin-remove-top">Defense: 3</p>
+		<p>Properties are one of the main elements of an AWBW battle, heavily influencing the game both on and off the battlefield. With the exception of HQs, properties have 3 Stars of defense, reducing incoming damage by 30% on full health units. Properties also can repair and resupply certain units, but will only do so for the property owner's units (they will not repair units from different armies, even if they are on the same team.)</p>
+		<h3>Types of Properties</h3>
+		<ul uk-accordion="multiple:true">
+			<li class="uk-padding uk-padding-remove-vertical">
+		        <a class="uk-accordion-title" href="#">Cities</a>
+		        <div class="uk-accordion-content">
+		        	<img data-src="assets/map/city.png" class="uk-align-left" style="image-rendering:crisp-edges;" width="40" uk-img>
+		            <p>The most common property type. Cities provide funding, and repair/resupply Ground units.</p>
+		        </div></li>
+		    <li class="uk-padding uk-padding-remove-vertical">
+		        <a class="uk-accordion-title" href="#">HQ</a>
+		        <div class="uk-accordion-content">
+		        	<img data-src="assets/map/hq.png" class="uk-align-left" style="image-rendering:crisp-edges;" width="40" uk-img>
+		            <p>The HQ is the most important property of the game. Capturing an opponent's HQ will eliminate them from the game instantly, regardless of any other factors. The HQ also provides 4 Stars of defense, repairs/resupplies Ground units, and provides the funding of one property.</p>
+		        </div></li>
+		    <li class="uk-padding uk-padding-remove-vertical">
+		        <a class="uk-accordion-title" href="#">Base</a>
+		        <div class="uk-accordion-content">
+		        	<img data-src="assets/map/base.png" class="uk-align-left" style="image-rendering:crisp-edges;" width="40" uk-img>
+		            <p>Similar to cities, Bases provide funding and repair/resupply ground units. They also allow for the production of Ground units.</p>
+		        </div></li>
+		    <li class="uk-padding uk-padding-remove-vertical">
+		        <a class="uk-accordion-title" href="#">Airport</a>
+		        <div class="uk-accordion-content">
+		        	<img data-src="assets/map/airport.png" class="uk-align-left" style="image-rendering:crisp-edges;" width="40" uk-img>
+		            <p>Airports provide funding, as well as build, repair, and resupply Air units.</p>
+		        </div></li>
+		    <li class="uk-padding uk-padding-remove-vertical">
+		        <a class="uk-accordion-title" href="#">Port</a>
+		        <div class="uk-accordion-content">
+		        	<img data-src="assets/map/port.png" class="uk-align-left" style="image-rendering:crisp-edges;" width="40" uk-img>
+		            <p>Ports provide funding, as well as build, repair, and resupply Sea units.</p>
+		        </div></li>
+		    <li class="uk-padding uk-padding-remove-vertical">
+		        <a class="uk-accordion-title" href="#">Comm. Tower</a>
+		        <div class="uk-accordion-content">
+		        	<img data-src="assets/map/comm.png" class="uk-align-left" style="image-rendering:crisp-edges;" width="40" uk-img>
+		            <p>Comm. Towers do not provide funding or repairs. Capturing and holding a Comm. Tower will increase every unit's attack power by 10% per Tower as long as they are held.</p>
+		        </div></li>
+		    <li class="uk-padding uk-padding-remove-vertical">
+		        <a class="uk-accordion-title" href="#">Missile Silo</a>
+		        <div class="uk-accordion-content">
+		        	<img data-src="assets/map/silo.png" class="uk-align-left uk-margin-large-bottom" style="image-rendering:crisp-edges;" width="40" uk-img>
+		            <p>Missile Silos cannot be captured. Instead moving an infantry to one will give you the "Launch" command, which will launch the missile to the desginated spot on the map. The missile does 3 HP damage to any unit within 2 spaces of the selected tile, regardless of unit type, but will never destroy a unit. Once used, the Silo is empty, and only functions as a 3 Star terrain feature.</p>
+		        </div></li>
+		</ul>
+
+		<a name="wood" class="anchor"></a><hr>
+		<div class="uk-flex">
+			<div class="uk-width-expand"><h3>Woods</h3></div>
+			<div class="uk-width-small uk-flex-right uk-grid-small" uk-grid>
+			<div><img data-src="assets/map/woods.png" style="image-rendering:crisp-edges;" width="40" uk-img></div>
+			</div>
+		</div>
+		<p class="uk-text-uppercase uk-text-primary uk-margin-remove-top">Defense: 2</p>
+		<p>Woods may be difficult for vehicles to traverse, but they provide benefits for units that do travel to them. Units stationed in Woods will gain 2 Defense stars, translating to 20% less damage taken from enemy attacks.</p>
+		<p>Woods have another benefit in Fog of War games; any Land unit stationed in Woods will be hidden from enemy view, unless they have a unit of their own adjacent to the woods. Since units may only be attacked if they are seen, this can be used to protect more valuable units from attacks in Fog games. This bonus only applies to Land units, however; Air units flying over Woods will still be able to be seen normally by the enemy.</p>
+
+		<a name="mountain" class="anchor"></a><hr>
+		<div class="uk-flex">
+			<div class="uk-width-expand"><h3>Mountains</h3></div>
+			<div class="uk-width-small uk-flex-right uk-grid-small" uk-grid>
+			<div><img data-src="assets/map/mountain.png" style="image-rendering:crisp-edges;" width="40" uk-img></div>
+			</div>
+		</div>
+		<p class="uk-text-uppercase uk-text-primary uk-margin-remove-top">Defense: 4</p>
+		<p>Mountains are difficult terrain to navigate, being only passable by Foot Soldiers (and even then slowing Infantry) and Air units. Foot Soldiers benefit from very high defensive bonuses when stationed in Mountains, taking 40% less damage while they are there.</p>
+		<p>Land Vehicles may not traverse them at all, and must find a way around any mountains in their way. Indirect Combat units may fire over them without issue, however, so they provide excellent defensive terrain for Indirect units.</p>
+		<p>Another benefit of Mountains is in Fog of War games. Any foot soldiers on mountains will have their vision increased from 2 to 5 so long as they are on the mountain, providing high vision on the spot should the need arise.</p>
+
+		<a name="river" class="anchor"></a><hr>
+		<div class="uk-flex">
+			<div class="uk-width-expand"><h3>River</h3></div>
+			<div class="uk-width-small uk-flex-right uk-grid-small" uk-grid>
+			<div><img data-src="assets/map/river.png" style="image-rendering:crisp-edges;" width="40" uk-img></div>
+			</div>
+		</div>
+		<p class="uk-text-uppercase uk-text-primary uk-margin-remove-top">Defense: 0</p>
+		<p>Rivers are one of the less ideal terrain features in the game to travel through or around. Land vehicles cannot cross them, requiring another path to get to areas blocked off by Rivers. Foot soldiers may ford them, but Infantry will be slowed down considerably in the process. Like Roads, Rivers provide absolutely no defense.</p>
+
+		<a name="shoal" class="anchor"></a><hr>
+		<div class="uk-flex">
+			<div class="uk-width-expand"><h3>Shoal</h3></div>
+			<div class="uk-width-small uk-flex-right uk-grid-small" uk-grid>
+			<div><img data-src="assets/map/shoal.png" style="image-rendering:crisp-edges;" width="40" uk-img></div>
+			</div>
+		</div>
+		<p class="uk-text-uppercase uk-text-primary uk-margin-remove-top">Defense: 0</p>
+		<p>Shoals are the most universally traversed terrain in Advance Wars. Only <a href="" class="uk-text-primary">Piperunners</a> and non-<a href="" class="uk-text-primary">Lander</a> or <a href="" class="uk-text-primary">Black Boat</a> Naval units are prohibited from traveling on Shoals. They always cost only 1 movement point to traverse, regardless of weather (this benefit does not apply to Air units). The downside of this is the fact that Shoals provide no defensive bonuses whatsoever, so units left on Shoals will be vulnerable.</p>
+		<p>Shoals, alongside Ports, are the only tiles that allow Landers and Black Boats to Load and Unload units. To unload units on land, the Lander or Black Boat itself must be on the Shoals tile, they may not unload units if they are on a Sea tile.</p>
+
+		<a name="sea" class="anchor"></a><hr>
+		<div class="uk-flex">
+			<div class="uk-width-expand"><h3>Sea</h3></div>
+			<div class="uk-width-small uk-flex-right uk-grid-small" uk-grid>
+			<div><img data-src="assets/map/sea.png" style="image-rendering:crisp-edges;" width="40" uk-img></div>
+			</div>
+		</div>
+		<p class="uk-text-uppercase uk-text-primary uk-margin-remove-top">Defense: 0</p>
+		<p>Functioning similarly to Roads, but for Naval units, Sea tiles offer quick movement, at the cost of providing no defensive benefits whatsoever.</p>
+		<p>Only Naval and Air units may traverse Sea tiles. Land units are incapable of doing so, and will need the assistance of a Transport unit to do so.</p>
+
+		<a name="reef" class="anchor"></a><hr>
+		<div class="uk-flex">
+			<div class="uk-width-expand"><h3>Reef</h3></div>
+			<div class="uk-width-small uk-flex-right uk-grid-small" uk-grid>
+			<div><img data-src="assets/map/reef.png" style="image-rendering:crisp-edges;" width="40" uk-img></div>
+			</div>
+		</div>
+		<p class="uk-text-uppercase uk-text-primary uk-margin-remove-top">Defense: 1</p>
+		<p>Similar to Woods, Reefs provide some degree of defense to Naval Units, at the cost of being slower to move through. Note that Reefs only provide 10% additional defense, while Woods provide 20%</p>
+		<p>Like Woods, Reefs will hide any Naval unit within it in a Fog of War game, only being revealed if the enemy has a unit adjacent to it. Similarly, this feature does not extend to Air units; they will be seen as normal if they are flying over a Reef.</p>
+
+		<a name="pipe" class="anchor"></a><hr>
+		<div class="uk-flex">
+			<div class="uk-width-expand"><h3>Pipes & Pipe Seams</h3></div>
+			<div class="uk-width-small uk-flex-right uk-grid-small" uk-grid>
+			<div><img data-src="assets/map/pipe.png" style="image-rendering:crisp-edges;" width="40" uk-img></div>
+			<div><img data-src="assets/map/pipeseam.png" style="image-rendering:crisp-edges;" width="40" uk-img></div>
+			</div>
+		</div>
+		<p class="uk-text-uppercase uk-text-primary uk-margin-remove-top">Defense: 0</p>
+		<p>Pipes are terrain in which no unit may cross, including Air units. The only exception to this are <a href="" class="uk-text-primary">Piperunners</a>, which traverse exclusively on Pipes (and Properties).</p>
+		<p>Pipe Seams have the same characteristics as Pipe, but they may be targeted and broken by units. Once broken, the Seam turns into a Broken Seam, which serves as a Plains tile. When a Seam is broken, a Piperunner may not traverse it, but any other land/air unit may.</p>
+		<p>Pipe Seams have 99 hit points and the same defensive value as a 100/100 neotank on 0 star terrain. Damage dealt to them is not impacted by luck, though normal CO attack bonuses and towers will impact damage output.</p>
+
+
+		
+		<a name="weather" class="anchor"></a>
+		<h1>Weather</h1>
+
+		<p>Two types of weather are implemented in Advance Wars: Snow and Rain (and Clear). During rain, sight of all units is reduced one space (minimum of 1). When creating a game, a user can choose weather options as Clear, Rain, Snow, and Random. During random conditions there is a 10% chance for rain, 10% chance for snow, and 80% chance for clear weather to occur every turn.</p>
+		<p>Two COs, <a href="" class="uk-text-primary">Drake</a> and <a href="" class="uk-text-primary">Olaf</a>, have powers that can change the weather during a game. During random weather, Drake has an additional 5% chance of rain occuring (15% rain, 5% snow).</p>
+		<p>Weather can also affect the movement costs of certain movement types, as shown below:</p>
+		<ul class="uk-subnav" uk-switcher uk-tab>
+					<li><a href="#">Clear</a></li>
+					<li><a href="#">Rain</a></li>
+					<li><a href="#">Snow</a></li>
+				</ul>
+				<ul class="uk-switcher uk-margin">
+					<li>
+						<table class="uk-table uk-table-small uk-table-striped uk-table-hover">
+							<thead>
+								<tr>
+									<th>Terrain</th><th>Foot</th><th>Tread</th><th>Wheel</th><th>Air</th><th>Sea</th><th>Lander</th><th>Pipe</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Road/Bridge</td>
+									<td>1</td><td>1</td><td>1</td><td>1</td><td>-</td><td>-</td><td>-</td>
+								</tr>
+								<tr>
+									<td>Plains</td>
+									<td>1</td><td>1</td><td>2</td><td>1</td><td>-</td><td>-</td><td>-</td>
+								</tr>
+								<tr>
+									<td>Properties (& HQ)</td>
+									<td>1</td><td>1</td><td>1</td><td>1</td><td><p>1</p><div uk-drop="pos: right-center;delay-hide:0;offset:200">Note that Sea and Lander movement types can only traverse over Ports.</div></td><td><p>1</p><div uk-drop="pos: right-center;delay-hide:0;offset:100">Note that Sea and Lander movement types can only traverse over Ports.</div></td><td>1</td>
+								</tr>
+
+								<tr>
+									<td>Woods</td>
+									<td>1</td><td>2</td><td>3</td><td>1</td><td>-</td><td>-</td><td>-</td>
+								</tr>
+								<tr>
+									<td>Mountains</td>
+									<td>2</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td>
+								</tr>
+								<tr>
+									<td>River</td>
+									<td>2</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td>
+								</tr>
+								<tr>
+									<td>Shoal</td>
+									<td>1</td><td>1</td><td>1</td><td>1</td><td>-</td><td>1</td><td>-</td>
+								</tr>
+								<tr>
+									<td>Sea</td>
+									<td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>1</td><td>-</td>
+								</tr>
+								<tr>
+									<td>Reef</td>
+									<td>-</td><td>-</td><td>-</td><td>1</td><td>2</td><td>2</td><td>-</td>
+								</tr>
+								<tr>
+									<td>Pipe</td>
+									<td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-striped uk-table-hover">
+							<thead>
+								<tr>
+									<th>Terrain</th><th>Foot</th><th>Tread</th><th>Wheel</th><th>Air</th><th>Sea</th><th>Lander</th><th>Pipe</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Road/Bridge</td>
+									<td>1</td><td>1</td><td>1</td><td>1</td><td>-</td><td>-</td><td>-</td>
+								</tr>
+								<tr>
+									<td>Plains</td>
+									<td>1</td><td>2</td><td>3</td><td>1</td><td>-</td><td>-</td><td>-</td>
+								</tr>
+								<tr>
+									<td>Properties (& HQ)</td>
+									<td>1</td><td>1</td><td>1</td><td>1</td><td><p>1</p><div uk-drop="pos: right-center;delay-hide:0;offset:200">Note that Sea and Lander movement types can only traverse over Ports.</div></td><td><p>1</p><div uk-drop="pos: right-center;delay-hide:0;offset:100">Note that Sea and Lander movement types can only traverse over Ports.</div></td><td>1</td>
+								</tr>
+								<tr>
+									<td>Woods</td>
+									<td>1</td><td>3</td><td>4</td><td>1</td><td>-</td><td>-</td><td>-</td>
+								</tr>
+								<tr>
+									<td>Mountains</td>
+									<td>2</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td>
+								</tr>
+								<tr>
+									<td>River</td>
+									<td>2</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td>
+								</tr>
+								<tr>
+									<td>Shoal</td>
+									<td>1</td><td>1</td><td>1</td><td>1</td><td>-</td><td>1</td><td>-</td>
+								</tr>
+								<tr>
+									<td>Sea</td>
+									<td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>1</td><td>-</td>
+								</tr>
+								<tr>
+									<td>Reef</td>
+									<td>-</td><td>-</td><td>-</td><td>1</td><td>2</td><td>2</td><td>-</td>
+								</tr>
+								<tr>
+									<td>Pipe</td>
+									<td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+					<li>
+						<table class="uk-table uk-table-small uk-table-striped uk-table-hover">
+							<thead>
+								<tr>
+									<th>Terrain</th><th>Foot</th><th>Tread</th><th>Wheel</th><th>Air</th><th>Sea</th><th>Lander</th><th>Pipe</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Road/Bridge</td>
+									<td>1</td><td>1</td><td>1</td><td>2</td><td>-</td><td>-</td><td>-</td>
+								</tr>
+								<tr>
+									<td>Plains</td>
+									<td>2</td><td>2</td><td>3</td><td>2</td><td>-</td><td>-</td><td>-</td>
+								</tr>
+								<tr>
+									<td>Properties (& HQ)</td>
+									<td>1</td><td>1</td><td>1</td><td>2</td><td><p>2</p><div uk-drop="pos: right-center;delay-hide:0;offset:200">Note that Sea and Lander movement types can only traverse over Ports.</div></td><td><p>2</p><div uk-drop="pos: right-center;delay-hide:0;offset:100">Note that Sea and Lander movement types can only traverse over Ports.</div></td><td>1</td>
+								</tr>
+								<tr>
+									<td>Woods</td>
+									<td>2</td><td>3</td><td>4</td><td>2</td><td>-</td><td>-</td><td>-</td>
+								</tr>
+								<tr>
+									<td>Mountains</td>
+									<td>4</td><td>-</td><td>-</td><td>2</td><td>-</td><td>-</td><td>-</td>
+								</tr>
+								<tr>
+									<td>River</td>
+									<td>2</td><td>-</td><td>-</td><td>2</td><td>-</td><td>-</td><td>-</td>
+								</tr>
+								<tr>
+									<td>Shoal</td>
+									<td>1</td><td>1</td><td>1</td><td>2</td><td>-</td><td>1</td><td>-</td>
+								</tr>
+								<tr>
+									<td>Sea</td>
+									<td>-</td><td>-</td><td>-</td><td>2</td><td>2</td><td>2</td><td>-</td>
+								</tr>
+								<tr>
+									<td>Reef</td>
+									<td>-</td><td>-</td><td>-</td><td>2</td><td>2</td><td>2</td><td>-</td>
+								</tr>
+								<tr>
+									<td>Pipe</td>
+									<td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td>
+								</tr>
+							</tbody>
+						</table>
+					</li>
+				</ul>
+
+	</div>
+
+
+
+	<div class="uk-container uk-container-xsmall uk-margin-medium-bottom">
+		<a href="" uk-totop></a>
+		<p class="uk-text-meta">All content is sourced from the <a href="https://advancewars.fandom.com/wiki/Advance_Wars_Wiki" target="_blank">Advance Wars Wiki</a>, <a href="https://awbw.fandom.com/wiki/Advance_Wars_By_Web_Wiki" target="_blank">Advance Wars By Web (AWBW) Wiki</a> and individual Advance Wars Wikipedia pages. Images and Sprites sourced from Trigononamous and the <a href="https://www.spriters-resource.com/ds_dsi/advancewarsds/" target="_blank">Sprite Resource</a></p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advance Wars - Orange Star</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <link href="css/styles.css" rel="stylesheet">
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+</head>
+<body>
+	<a name="intro"></a>
+	<div class="uk-background-primary" uk-sticky
+	style="height:50px">
+		<span uk-icon="icon:menu;ratio:1.2" class="uk-align-right uk-padding-small uk-hidden@l" uk-toggle="target:#mobilenav" style="color:white"></span>
+		<img data-src="assets/advance_wars_logo.png" width="250px" height="" alt="" uk-img class="uk-padding-small">
+	</div>
+
+	<div class="uk-visible@l uk-padding uk-background-secondary uk-light" 
+	style="position:fixed;width:250px;height:100vh;overflow-y:scroll;box-sizing:border-box;top:50">
+		<ul class="uk-nav uk-nav-primary uk-margin-small-top" uk-nav>
+			<li class="uk-parent">
+				<a href="#">Overview</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent uk-open">
+						<a class="uk-hidden"></a>
+						<ul>
+							<li><a href="index.html#intro">Introduction</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Gameplay</a>
+						<ul>
+							<li><a href="index.html#commands">Commands</a></li>
+							<li><a href="index.html#units">Units</a></li>
+							<li><a href="index.html#combat">Combat</a></li>
+							<li><a href="index.html#COPower">COs/CO Powers</a></li>
+							<li><a href="index.html#luck">Luck</a></li>
+							<li><a href="index.html#dual">Dual Front</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="uk-parent">
+				<a href="">Units</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Land</a>
+						<ul class="uk-nav-sub">
+							<li><a href="landUnits.html#infantry">Infantry</a></li>
+							<li><a href="landUnits.html#mech">Mech</a></li>
+							<li><a href="landUnits.html#recon">Recon</a></li>
+							<li><a href="landUnits.html#apc">APC</a></li>
+							<li><a href="landUnits.html#tank">Tank</a></li>
+							<li><a href="landUnits.html#mdtank">Md. Tank</a></li>
+							<li><a href="landUnits.html#antiair">Anti-Air</a></li>
+							<li><a href="landUnits.html#artillery">Artillery</a></li>
+							<li><a href="landUnits.html#rocket">Rocket</a></li>
+							<li><a href="landUnits.html#missile">Missile</a></li>
+							<li><a href="landUnits.html#neotank">Neotank</a></li>
+							<li><a href="landUnits.html#megatank">Megatank</a></li>
+							<li><a href="landUnits.html#piperunner">Piperunner</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Air</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#">T-Copter</a></li>
+							<li><a href="#">B-Copter</a></li>
+							<li><a href="#">Fighter</a></li>
+							<li><a href="#">Bomber</a></li>
+							<li><a href="#">Stealth</a></li>
+							<li><a href="#">Black Bomb</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Sea</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#">Lander</a></li>
+							<li><a href="#">Cruiser</a></li>
+							<li><a href="#">Battleship</a></li>
+							<li><a href="#">Sub</a></li>
+							<li><a href="#">Carrier</a></li>
+							<li><a href="#">Black Boat</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="uk-parent uk-open">
+				<a href="">COs</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li class="uk-parent uk-open">
+						<a href="#" class="uk-nav-header">Orange Star</a>
+						<ul class="uk-nav-sub">
+							<li><a href="#andy">Andy</a></li>
+							<li><a href="#max">Max</a></li>
+							<li><a href="#sami">Sami</a></li>
+							<li><a href="#jake">Jake</a></li>
+							<li><a href="#rachel">Rachel</a></li>
+							<li><a href="#nell">Nell</a></li>
+					</ul></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Blue Moon</a>
+						<ul class="uk-nav-sub">
+							<li><a href="BMCOs.html#olaf">Olaf</a></li>
+							<li><a href="BMCOs.html#grit">Grit</a></li>
+							<li><a href="BMCOs.html#colin">Colin</a></li>
+							<li><a href="BMCOs.html#sasha">Sasha</a></li>
+					</ul></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Green Earth</a>
+						<ul class="uk-nav-sub">
+							<li><a href="GECOs.html#drake">Drake</a></li>
+							<li><a href="GECOs.html#eagle">Eagle</a></li>
+							<li><a href="GECOs.html#jess">Jess</a></li>
+							<li><a href="GECOs.html#javier">Javier</a></li>
+						</ul>
+					</li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Yellow Comet</a>
+						<ul class="uk-nav-sub">
+							<li><a href="YCCOs.html#kanbei">Kanbei</a></li>
+							<li><a href="YCCOs.html#sonja">Sonja</a></li>
+							<li><a href="YCCOs.html#sensei">Sensei</a></li>
+							<li><a href="YCCOs.html#grimm">Grimm</a></li>
+					</ul></li>
+				</ul>
+			</li>
+			<li class="uk-parent">
+				<a href="">Map Elements</a>
+				<ul class="uk-nav-sub" uk-nav="multiple:true">
+					<li><a href="map.html" class="uk-nav-header">Fog of War</a></li>
+					<li class="uk-parent">
+						<a href="#" class="uk-nav-header">Terrain</a>
+						<ul class="uk-nav-sub">
+							<li><a href="map.html#road">Roads & Bridges</a></li>
+							<li><a href="map.html#plain">Plains</a></li>
+							<li><a href="map.html#city">Properties</a></li>
+							<li><a href="map.html#wood">Woods</a></li>
+							<li><a href="map.html#mountain">Mountains</a></li>
+							<li><a href="map.html#river">River</a></li>
+							<li><a href="map.html#shoal">Shoal</a></li>
+							<li><a href="map.html#sea">Sea</a></li>
+							<li><a href="map.html#reef">Reef</a></li>
+							<li><a href="map.html#pipe">Pipes & Seams</a></li>
+					</ul></li>
+					<li class="uk-nav-sub">
+						<a href="map.html#weather" class="uk-nav-header">Weather</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div id="mobilenav" uk-offcanvas="flip:true">
+		<div class="uk-offcanvas-bar uk-padding uk-background-secondary uk-light" style="position:fixed;width:250px;height:100vh;overflow-y:scroll;box-sizing:border-box;top:50">
+			<button class="uk-offcanvas-close" type="button" uk-close></button>
+			<ul class="uk-nav uk-nav-primary uk-margin-small-top" uk-nav>
+				<li class="uk-parent">
+					<a href="#">Overview</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent uk-open">
+							<a class="uk-hidden"></a>
+							<ul>
+								<li><a href="index.html#intro">Introduction</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Gameplay</a>
+							<ul>
+								<li><a href="index.html#commands">Commands</a></li>
+								<li><a href="index.html#units">Units</a></li>
+								<li><a href="index.html#combat">Combat</a></li>
+								<li><a href="index.html#COPower">COs/CO Powers</a></li>
+								<li><a href="index.html#luck">Luck</a></li>
+								<li><a href="index.html#dual">Dual Front</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="uk-parent">
+					<a href="">Units</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Land</a>
+							<ul class="uk-nav-sub">
+								<li><a href="landUnits.html#infantry">Infantry</a></li>
+								<li><a href="landUnits.html#mech">Mech</a></li>
+								<li><a href="landUnits.html#recon">Recon</a></li>
+								<li><a href="landUnits.html#apc">APC</a></li>
+								<li><a href="landUnits.html#tank">Tank</a></li>
+								<li><a href="landUnits.html#mdtank">Md. Tank</a></li>
+								<li><a href="landUnits.html#antiair">Anti-Air</a></li>
+								<li><a href="landUnits.html#artillery">Artillery</a></li>
+								<li><a href="landUnits.html#rocket">Rocket</a></li>
+								<li><a href="landUnits.html#missile">Missile</a></li>
+								<li><a href="landUnits.html#neotank">Neotank</a></li>
+								<li><a href="landUnits.html#megatank">Megatank</a></li>
+								<li><a href="landUnits.html#piperunner">Piperunner</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Air</a>
+							<ul class="uk-nav-sub">
+								<li><a href="#">T-Copter</a></li>
+								<li><a href="#">B-Copter</a></li>
+								<li><a href="#">Fighter</a></li>
+								<li><a href="#">Bomber</a></li>
+								<li><a href="#">Stealth</a></li>
+								<li><a href="#">Black Bomb</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Sea</a>
+							<ul class="uk-nav-sub">
+								<li><a href="#">Lander</a></li>
+								<li><a href="#">Cruiser</a></li>
+								<li><a href="#">Battleship</a></li>
+								<li><a href="#">Sub</a></li>
+								<li><a href="#">Carrier</a></li>
+								<li><a href="#">Black Boat</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="uk-parent uk-open">
+					<a href="">COs</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li class="uk-parent uk-open">
+							<a href="#" class="uk-nav-header">Orange Star</a>
+							<ul class="uk-nav-sub">
+								<li><a href="#andy">Andy</a></li>
+								<li><a href="#max">Max</a></li>
+								<li><a href="#sami">Sami</a></li>
+								<li><a href="#jake">Jake</a></li>
+								<li><a href="#rachel">Rachel</a></li>
+								<li><a href="#nell">Nell</a></li>
+						</ul></li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Blue Moon</a>
+							<ul class="uk-nav-sub">
+								<li><a href="BMCOs.html#olaf">Olaf</a></li>
+								<li><a href="BMCOs.html#grit">Grit</a></li>
+								<li><a href="BMCOs.html#colin">Colin</a></li>
+								<li><a href="BMCOs.html#sasha">Sasha</a></li>
+						</ul></li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Green Earth</a>
+							<ul class="uk-nav-sub">
+								<li><a href="GECOs.html#drake">Drake</a></li>
+								<li><a href="GECOs.html#eagle">Eagle</a></li>
+								<li><a href="GECOs.html#jess">Jess</a></li>
+								<li><a href="GECOs.html#javier">Javier</a></li>
+							</ul>
+						</li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Yellow Comet</a>
+							<ul class="uk-nav-sub">
+								<li><a href="YCCOs.html#kanbei">Kanbei</a></li>
+								<li><a href="YCCOs.html#sonja">Sonja</a></li>
+								<li><a href="YCCOs.html#sensei">Sensei</a></li>
+								<li><a href="YCCOs.html#grimm">Grimm</a></li>
+						</ul></li>
+					</ul>
+				</li>
+				<li class="uk-parent">
+					<a href="">Map Elements</a>
+					<ul class="uk-nav-sub" uk-nav="multiple:true">
+						<li><a href="map.html" class="uk-nav-header">Fog of War</a></li>
+						<li class="uk-parent">
+							<a href="#" class="uk-nav-header">Terrain</a>
+							<ul class="uk-nav-sub">
+								<li><a href="map.html#road">Roads & Bridges</a></li>
+								<li><a href="map.html#plain">Plains</a></li>
+								<li><a href="map.html#city">Properties</a></li>
+								<li><a href="map.html#wood">Woods</a></li>
+								<li><a href="map.html#mountain">Mountains</a></li>
+								<li><a href="map.html#river">River</a></li>
+								<li><a href="map.html#shoal">Shoal</a></li>
+								<li><a href="map.html#sea">Sea</a></li>
+								<li><a href="map.html#reef">Reef</a></li>
+								<li><a href="map.html#pipe">Pipes & Seams</a></li>
+						</ul></li>
+						<li class="uk-nav-sub">
+							<a href="map.html#weather" class="uk-nav-header">Weather</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="uk-container uk-container-xsmall uk-margin-medium-top uk-margin-xlarge-bottom">
+
+		<h1 class="uk-heading-small">Orange Star Commanders</h1>
+		<hr>
+
+		<a name="andy" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-medium-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Andy</h3>
+			</div>
+			<div class="uk-padding-small uk-flex">
+				<!-- <div class="uk-flex-last uk-background-top-left uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-middle uk-flex-center" style="background-image:url(assets/co/Andy.png);min-height:200px;min-width:200px;"></div> -->
+				<div class="uk-flex-last uk-visible@m"><img data-src="assets/co/Andy.png" style="object-fit:none;object-position:top left;max-height:600px;min-width:250px;" width="600" uk-img></div>
+				<div>
+					<img data-src="assets/co/AndyIcon.png" style="image-rendering:crisp-edges;" width="100" class="uk-hidden@m uk-align-center" uk-img>
+					<p>Andy is an Orange Star CO whose lack of any strengths or weaknesses allows for more versatile play. As such, Andy is a good CO choice for beginners.</p>
+					<table class="uk-table uk-table-small uk-table-divider uk-table-hover uk-background-default">
+						<tbody>
+							<tr>
+								<td class="uk-table-expand">Power Bar</td>
+								<td><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span></td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Strength</td>
+								<td>None</td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Weakness</td>
+								<td>None</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<dl class="uk-description-list uk-description-list-divider">
+					    <dt>Day-to-Day Effects</dt>
+					    <dd>None. All of Andy's units have regular offense and defense.</dd>
+					    <dt>Power: Hyper Repair</dt>
+					    <dd>Restores 2 HP to all of his Units and increases their defense by 10% (And offense by 10% in Dual Strike).</dd>
+					    <dt>Super Power: Hyper Upgrade</dt>
+					    <dd>Restores 5 HP to all of his Units, increases firepower by 30%, defense by 10%, and movement by 1 space.</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+		<a name="max" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Max</h3>
+			</div>
+			<div class="uk-padding-small uk-flex">
+				<!-- <div class="uk-flex-last uk-background-top-left uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-middle uk-flex-center" style="background-image:url(assets/co/Andy.png);min-height:200px;min-width:200px;"></div> -->
+				<div class="uk-flex-last uk-visible@m"><img data-src="assets/co/Max.png" style="object-fit:none;object-position:top left;max-height:600px;min-width:250px;" uk-img></div>
+				<div>
+					<img data-src="assets/co/MaxIcon.png" style="image-rendering:crisp-edges;" width="100" class="uk-hidden@m uk-align-center" uk-img>
+					<p>Max is a direct-combat specialist, possesing significant firepower bonuses to ground, air, and naval direct-attack units. The added firepower is usually enough to overwhelm most other CO's directs and put armies on the defensive, especially on maps spacious enough for direct units to roam free.</p>
+					<p>This advantage is offset by range and firepower penalties for his indirects, usually putting Max into situations where he must gain a decisive advantage before the opposing army fully develops and pushes him back with superior indirects.</p>
+					<table class="uk-table uk-table-small uk-table-divider uk-table-hover uk-background-default">
+						<tbody>
+							<tr>
+								<td class="uk-table-expand">Power Bar</td>
+								<td><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span></td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Strength</td>
+								<td>Direct Combat</td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Weakness</td>
+								<td>Indirect Combat</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<dl class="uk-description-list uk-description-list-divider">
+					    <dt>Day-to-Day Effects</dt>
+					    <dd>All of Max's Direct Combat units have 20% increased offense, and all of his Indirect Combat units suffer -1 Range.</dd>
+					    <dt>Power: Max Force</dt>
+					    <dd>Firepower of all non-infantry Direct Combat is increased by 40%. All units gain a 10% defence bonus.</dd>
+					    <dt>Super Power: Max Blast</dt>
+					    <dd>Firepower of all non-infantry Direct Combat is increased by 60%. All units gain a 10% defence bonus.</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+		<a name="sami" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Sami</h3>
+			</div>
+			<div class="uk-padding-small uk-flex">
+				<div class="uk-flex-last uk-visible@m"><img data-src="assets/co/Sami.png" style="object-fit:none;object-position:top left;max-height:600px;min-width:250px;" uk-img></div>
+				<div>
+					<img data-src="assets/co/SamiIcon.png" style="image-rendering:crisp-edges;" width="100" class="uk-hidden@m uk-align-center" uk-img>
+					<p>Sami is a CO who specializes in Foot soldiers and capturing properties. Her increased capture speed will allow her to take contested properties more easily, and her high offensive boost for foot soldiers will ensure any enemy Infantry will take significant damage while she is capturing.</p>
+					<table class="uk-table uk-table-small uk-table-divider uk-table-hover uk-background-default">
+						<tbody>
+							<tr>
+								<td class="uk-table-expand">Power Bar</td>
+								<td><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span></td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Strength</td>
+								<td>Infantry, Transports</td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Weakness</td>
+								<td>Direct Combat</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<dl class="uk-description-list uk-description-list-divider">
+					    <dt>Day-to-Day Effects</dt>
+					    <dd>All of Sami's foot soldiers have 20% increased offense and capture properties 50% faster (rounded down). Direct combat vehicles have 10% decreased offense.</dd>
+					    <dt>Power: Double Time</dt>
+					    <dd>Increases movement range by one for all Infantry and Mechs by 1 space, and their firepower is raised by 60%. They also receive a 10% defence bonus. All other Units get a 10% boost in firepower and defence.</dd>
+					    <dt>Super Power: Victory March</dt>
+					    <dd>Increases movement range of Infantry and Mech units by 2 spaces. All foot soldiers gain a 90% increase in firepower and may capture in one turn, regardless of HP.</dd>
+					</dl>
+					<hr>
+				</div>
+			</div>
+			<div class="uk-padding-small">
+				<p>Below is a table outlining how many Capture Points Sami's foot soldiers progress at each HP level with her Day-to-day and CO Power.</p>
+				<table class="uk-table uk-table-small uk-table-divider uk-background-default">
+						<tbody>
+							<tr>
+								<td>Unit HP</td>
+								<td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td>
+							</tr>
+							<tr>
+								<td>Capture Points</td>
+								<td>15</td><td>13</td><td>12</td><td>10</td><td>9</td><td>7</td><td>6</td><td>4</td><td>3</td><td>1</td>
+							</tr>
+						</tbody>
+					</table>
+			</div>
+		</div>
+
+		<a name="jake" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Jake</h3>
+			</div>
+			<div class="uk-padding-small uk-flex">
+				<div class="uk-flex-last uk-visible@m"><img data-src="assets/co/Jake.png" style="object-fit:none;object-position:top left;max-height:600px;min-width:250px;" uk-img></div>
+				<div>
+					<img data-src="assets/co/JakeIcon.png" style="image-rendering:crisp-edges;" width="100" class="uk-hidden@m uk-align-center" uk-img>
+					<p>Jake is a CO that specializes in fighting on Plains. Jake is a good CO choice for beginners, as his powers offer him a degree of flexibility in play, while having no real weaknesses.</p>
+					<p>He is solid on many common maps, with no inherent weaknesses and better than average offensive power on plains. One of the most interesting aspects of Jake is not actually his passive abilities, though. His CO Power charges fairly early, and with it you get an okay attack boost added to plains on top of his passive, but usually more importantly, a boost to the range of your indirect units.</p>
+					<table class="uk-table uk-table-small uk-table-divider uk-table-hover uk-background-default">
+						<tbody>
+							<tr>
+								<td class="uk-table-expand">Power Bar</td>
+								<td><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span></td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Strength</td>
+								<td>Plains Combat</td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Weakness</td>
+								<td>None</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<dl class="uk-description-list uk-description-list-divider">
+					    <dt>Day-to-Day Effects</dt>
+					    <dd>All of Jake's units have 10% increased offense if they are fighting on a Plains tile. This bonus extends to Air units as well.</dd>
+					    <dt>Power: Beat Down</dt>
+					    <dd>All of Jake's Land Indirect units gain +1 Range. All of Jake's units gain 20% increased offense when fighting on Plains, 10% otherwise. Jake's units gain 10% increased defense as well.</dd>
+					    <dt>Super Power: Block Rock</dt>
+					    <dd>All of Jake's Land Indirect units gain +1 range, and all of Jake's Land vehicles gain +2 movement. All of Jake's units gain 40% increased offense when fighting on Plains, 10% otherwise. Jake's units gain 10% increased defense as well.</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+		<a name="rachel" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Rachel</h3>
+			</div>
+			<div class="uk-padding-small uk-flex">
+				<div class="uk-flex-last uk-visible@m"><img data-src="assets/co/Rachel.png" style="object-fit:none;object-position:top left;max-height:600px;min-width:250px;" uk-img></div>
+				<div>
+					<img data-src="assets/co/RachelIcon.png" style="image-rendering:crisp-edges;" width="100" class="uk-hidden@m uk-align-center" uk-img>
+					<p>Rachel is a CO with a diverse set of bonuses, allowing higher potential for both aggressive and defensive play. Her Units are hardworking which allows her units to increase base repairs.</p>
+					<table class="uk-table uk-table-small uk-table-divider uk-table-hover uk-background-default">
+						<tbody>
+							<tr>
+								<td class="uk-table-expand">Power Bar</td>
+								<td><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span></td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Strength</td>
+								<td>Increased Repair Speed</td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Weakness</td>
+								<td>None</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<dl class="uk-description-list uk-description-list-divider">
+					    <dt>Day-to-Day Effects</dt>
+					    <dd>All of Rachel's properties heal units for up to 3 HP damage, instead of up to 2 HP damage. Rachel is still liable for the repair costs.</dd>
+					    <dt>Power: Lucky Lass</dt>
+					    <dd>Rachel gains increased <a href="index.html#luck" class="uk-text-primary">Luck</a> (Luck range is set to +0% to +39%). All of Rachel's units gain 10% increased offense and defense.</dd>
+					    <dt>Super Power: Covering Fire</dt>
+					    <dd>All of Rachel's units gain 10% increased offense and defense. Three missiles with the same range/damage as silos are fired. These missiles are aimed automatically, targeted, respectively as follow:
+					    	<ul class="uk-margin-small-top">
+					    		<li>The first missile targets the largest group of Infantry it can find, with priority given to capturing Infantry.</li>
+					    		<li>The second missile does as much damage in funds as it can. The value of Rachel's own troops is subtracted from this calculation.</li>
+					    		<li>The third and final missile does as much HP damage as it possibly can, but will do the most damage in funds if there is a tie. The HP Rachel's own troops would lose is subtracted from this calculation.</li>
+					    	</ul></dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+
+		<a name="nell" class="anchor"></a>
+		<div class="uk-background-muted uk-margin-top">
+			<div class="uk-background-primary uk-light">
+				<h3 class="uk-padding-small uk-text-uppercase">Nell</h3>
+			</div>
+			<div class="uk-padding-small uk-flex">
+				<div class="uk-flex-last uk-visible@m"><img data-src="assets/co/Nell.png" style="object-fit:none;object-position:top left;max-height:600px;min-width:250px;" uk-img></div>
+				<div>
+					<img data-src="assets/co/NellIcon.png" style="image-rendering:crisp-edges;" width="100" class="uk-hidden@m uk-align-center" uk-img>
+					<p>Nell is a CO whose lucky nature allows her to occasionally do significantly more damage on any given attack than expected.</p>
+					<table class="uk-table uk-table-small uk-table-divider uk-table-hover uk-background-default">
+						<tbody>
+							<tr>
+								<td class="uk-table-expand">Power Bar</td>
+								<td><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio:0.8"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span><span uk-icon="icon: star; ratio: 1.2"></span></td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Strength</td>
+								<td>High Luck</td>
+							</tr>
+							<tr>
+								<td class="uk-table-expand">Weakness</td>
+								<td>None</td>
+							</tr>
+						</tbody>
+					</table>
+					<hr>
+					<dl class="uk-description-list uk-description-list-divider">
+					    <dt>Day-to-Day Effects</dt>
+					    <dd>All of Nell's units have increased luck (0% to +19%). Otherwise, all of Nell's units are average, with no strengths or weaknesses.</dd>
+					    <dt>Power: Lucky Star</dt>
+					    <dd>Nell's units have an increased Luck Cap (0% to 59%). Nell's units gain 10% increased offense and defense.</dd>
+					    <dt>Super Power: Covering Fire</dt>
+					    <dd>Nell's units have a further increased Luck Cap (0% to 99%). Nell's units gain 10% increased offense and defense.</dd>
+					</dl>
+					<hr>
+					<p>Bear in mind, <a href="index.html#luck" class="uk-text-primary">luck is still luck</a>. That damage counter may actually be right, and that could spell the end of your brave little recon.</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="uk-container uk-container-xsmall uk-margin-medium-bottom">
+		<a href="" uk-totop></a>
+		<p class="uk-text-meta">All content is sourced from the <a href="https://advancewars.fandom.com/wiki/Advance_Wars_Wiki" target="_blank">Advance Wars Wiki</a>, <a href="https://awbw.fandom.com/wiki/Advance_Wars_By_Web_Wiki" target="_blank">Advance Wars By Web (AWBW) Wiki</a> and individual Advance Wars Wikipedia pages. Images and Sprites sourced from Trigononamous and the <a href="https://www.spriters-resource.com/ds_dsi/advancewarsds/" target="_blank">Sprite Resource</a></p>
+	</div>
+</body>
+</html>

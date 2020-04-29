@@ -1,0 +1,10 @@
+.anchor{
+	position:relative;
+	top:-50px;
+}
+.sidenote{
+	position:fixed;
+	top:100px;
+	right:2%;
+	max-width:20%;
+}
